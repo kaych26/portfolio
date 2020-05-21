@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import logo from '../assets/icons/kay_logo.png';
 
@@ -10,9 +11,6 @@ const StyledHeader = styled.header`
   /* z-index: 9999; */
   top: 0;
   width: 100%;
-  /* display: flex;
-  justify-content: space-between;
-  align-items: center; */
 `;
 
 const HeaderContainer = styled.div`
@@ -24,8 +22,6 @@ const HeaderContainer = styled.div`
 
 const HeaderImg = styled.img`
   padding: 1em 2em;
-  /* width: 100px;
-  height: 100px; */
 `;
 
 const NavContainer = styled.div`
@@ -33,11 +29,13 @@ const NavContainer = styled.div`
   justify-content: flex-end;
   margin-right: 3em;
 `;
-
-const HeaderNav = styled.nav`
+const NavLink = styled(Link)`
   font-size: 16px;
   padding: 1.8em;
+  text-decoration: none;
+  color: #000;
 `;
+
 
 export default function Header() {
   return (
@@ -45,9 +43,9 @@ export default function Header() {
       <HeaderContainer>
         <HeaderImg src={logo} />
         <NavContainer>
-          <HeaderNav>About</HeaderNav>
-          <HeaderNav>Work</HeaderNav>
-          <HeaderNav>Contact</HeaderNav>
+          <NavLink to="/about">About</NavLink>
+          <NavLink to="/Work">Work</NavLink>
+          <NavLink to="/Contact">Contact</NavLink>
         </NavContainer>
       </HeaderContainer>
     </StyledHeader>
