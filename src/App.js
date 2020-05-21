@@ -6,8 +6,9 @@ import Header from './components/Header';
 import Body from './components/Body';
 import Home from './components/Home';
 import Contact from './components/Contact';
+import Work from './components/Work';
 import Footer from './components/Footer';
-// import Hero from './components/Hero';
+
 function App() {
   return (
     <>
@@ -21,6 +22,9 @@ function App() {
           <Route exact path="/contact">
             <Contact />
           </Route>
+          <Route exact path="/work">
+            <Work />
+          </Route>
         </Body>
 
         <Footer />
@@ -29,13 +33,5 @@ function App() {
   );
 }
 
-// function App() {
-//   return (
-//     <>
-//       <GlobalStyle />
-//       <Main></Main>
-//     </>
-//   );
-// }
 
 export default App;

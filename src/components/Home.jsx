@@ -1,22 +1,26 @@
 import React from 'react';
 import styled from 'styled-components';
-import BodyChild from './Body';
 
 const StyledHome = styled.section``;
-const HomeDiv = styled.div``;
-const HomeTitle = styled.h1``;
-const HomeSubTitle = styled.h2``;
 
+const HomeTitle = styled.h1`
+  font-size: 3em;
+  padding: 1em;
+  letter-spacing: 0.2em;
+  text-align: center;
+`;
+const HomeSubTitle = styled.h2`
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+`;
 
 export default function Home() {
   return (
-   
     <StyledHome>
-      <HomeDiv>
-        <HomeTitle>
-          Kay Chan
-        </HomeTitle>
-      </HomeDiv>
+      <HomeTitle>Kay Chan</HomeTitle>
+      <HomeSubTitle>
+        Software Engineer | Web Developer | Finance Techology
+      </HomeSubTitle>
     </StyledHome>
   );
 }
