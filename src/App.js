@@ -1,12 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import GlobalStyle from './components/GlobalStyle';
+import Main from './components/Main';
+import Header from './components/Header';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello Ladies</h1>
-    </div>
+    <>
+      <GlobalStyle />
+      <Main>
+        {/* <h1>Hello Ladies</h1> */}
+        {/* <Header /> */}
+      </Main>
+    </>
   );
 }
 
