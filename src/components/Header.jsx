@@ -6,17 +6,24 @@ const StyledHeader = styled.header`
   height: 100px;
   position: relative;
   height: 100px;
-  /* position: fixed; */
+  position: fixed;
   /* z-index: 9999; */
   top: 0;
+  width: 100%;
+  /* display: flex;
+  justify-content: space-between;
+  align-items: center; */
+`;
+
+const HeaderContainer = styled.div`
+  /* background-color: yellow; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 `;
 
 const HeaderImg = styled.img`
-padding: 2em;
+  padding: 1em 2em;
   /* width: 100px;
   height: 100px; */
 `;
@@ -35,12 +42,14 @@ const HeaderNav = styled.nav`
 export default function Header() {
   return (
     <StyledHeader>
-      <HeaderImg src={logo} />
-      <NavContainer>
-        <HeaderNav>About</HeaderNav>
-        <HeaderNav>Work</HeaderNav>
-        <HeaderNav>Contact</HeaderNav>
-      </NavContainer>
+      <HeaderContainer>
+        <HeaderImg src={logo} />
+        <NavContainer>
+          <HeaderNav>About</HeaderNav>
+          <HeaderNav>Work</HeaderNav>
+          <HeaderNav>Contact</HeaderNav>
+        </NavContainer>
+      </HeaderContainer>
     </StyledHeader>
   );
 }

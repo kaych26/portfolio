@@ -7,10 +7,7 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <Main>
-        {/* <h1>Hello Ladies</h1> */}
-        {/* <Header /> */}
-      </Main>
+      <Main />
     </>
   );
 }

@@ -7,12 +7,18 @@ import Home from './Home';
 import Footer from './Footer';
 
 const StyledHero = styled.section`
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(192, 192, 192, 0.6)), url(${hero_img});
-  /* background-image: url(${hero_img}); */
+  background-image: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(192, 192, 192, 0.6)
+    ),
+    url(${hero_img});
   background-size: cover;
   height: 771px;
-  
 
+/* display: grid; */
+  /* display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
 `;
 
 export default function Main() {
