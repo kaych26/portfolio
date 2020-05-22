@@ -9,17 +9,26 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Work from './components/Work';
 import Footer from './components/Footer';
+{
+  /* <Route exact path="/" render={(props) => <Home {...props}/>} /> */
+}
 
 function App() {
   return (
     <>
       <Hero>
         <GlobalStyle />
-        <Header />
+
+        <Route
+          path='/'
+          render={route =>
+            (<Header {...route} />)} />
+        
         <Body>
           <Route exact path="/">
             <Home />
           </Route>
+
           <Route exact path="/about">
             <About />
           </Route>

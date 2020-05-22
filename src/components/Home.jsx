@@ -11,17 +11,20 @@ const StyledHome = styled.section`
 `;
 
 const HomeTitle = styled.h1`
+font-family: 'Fredericka the Great', cursive;
   font-size: 3em;
   padding: 1em;
   letter-spacing: 0.2em;
   text-align: center;
 `;
 const HomeSubTitle = styled.h2`
+font-family: 'Josefin Sans', sans-serif;
   font-size: 1.2em;
   letter-spacing: 0.1em;
 `;
 
-export default function Home() {
+export default function Home(props) {
+  // debugger
   return (
     <StyledHome>
       <HomeTitle>Kay Chan</HomeTitle>
