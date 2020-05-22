@@ -45,7 +45,7 @@ const NavLink = styled(Link)`
   padding: 1em 1.8em;
   text-decoration: none;
   color: #000;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(252, 251, 248, 0.8);
   border-radius: 10px;
 `;
 

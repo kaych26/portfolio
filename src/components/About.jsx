@@ -10,7 +10,6 @@ const StyledAbout = styled.section`
   align-items: center;
   /* align-self: center; */
   justify-content: center;
-
 `;
 const AboutMyself = styled.p`
   /* width: 70%; */
@@ -26,16 +25,13 @@ const AboutMore = styled.a`
   color: #000;
   cursor: pointer;
 `;
-const AboutResume = styled.img`
-`;
+const AboutResume = styled.img``;
 
 export default function About() {
   const aboutMe =
-    'Hi, my name is Kay Chan.  I am a versatile Software Engineer who holds 10+ years experience working as a Senior Programmer and Manager for major financial corporations. After becoming a mom, I have extended my passion to web development.';
-  
-    // 'Hi, my name is Kay Chan.  I am a versatile Software Engineer who holds 10+ years experience working as a Senior Programmer and Manager for major financial corporations. After becoming a mom, I have extended my passion to web development and inspired to use my skills to make a differences for the commnunity.';
+    'Hi, my name is Kay Chan, a software engineer with 10+ years working as a programmer and manager in major financial corporation. After becoming a mom, I have extended my passion to web development and inspired to apply technology to create solutions.';
 
-  const [moreDetail, setMoreDetail] = useState(false);
+  // 'Hi, my name is Kay Chan.  I am a versatile Software Engineer who holds 10+ years experience working as a Senior Programmer and Manager for major financial corporations. After becoming a mom, I have extended my passion to web development and inspired to use my skills to make a differences for the commnunity.';
 
   return (
     <StyledAbout>
