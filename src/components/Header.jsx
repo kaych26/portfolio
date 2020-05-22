@@ -4,14 +4,17 @@ import styled from 'styled-components';
 import logo from '../assets/icons/kay_logo.png';
 
 const StyledHeader = styled.header`
+
   height: 100px;
-  position: relative;
-  height: 100px;
+  /* position: relative; */
+  /* height: 100px; */
   position: fixed;
   /* z-index: 9999; */
-  top: 0;
+  /* top: 0; */
   width: 100%;
-`;
+  /* background-color: linear-gradient(rgba(255,255,255 1)); */
+  /* background-color: rgba(255,255,255, .5); */
+  `;
 
 const HeaderContainer = styled.div`
   /* background-color: yellow; */
@@ -29,20 +32,24 @@ const NavContainer = styled.div`
   justify-content: flex-end;
   margin-right: 3em;
 `;
+const LogoLink = styled(Link)``;
+
 const NavLink = styled(Link)`
   font-size: 16px;
   padding: 1em 1.8em;
   text-decoration: none;
   color: #000;
+  background-color: rgba(255,255,255, .8);
+  border-radius: 10px;
 `;
 
 export default function Header() {
   return (
     <StyledHeader>
       <HeaderContainer>
-        <NavLink to="/">
+        <LogoLink to="/">
           <HeaderImg src={logo} />
-        </NavLink>
+        </LogoLink>
         <NavContainer>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/Work">Work</NavLink>

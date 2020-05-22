@@ -8,6 +8,9 @@ const StyledAbout = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* align-self: center; */
+  justify-content: center;
+
 `;
 const AboutMyself = styled.p`
   /* width: 70%; */
@@ -23,7 +26,8 @@ const AboutMore = styled.a`
   color: #000;
   cursor: pointer;
 `;
-const AboutResume = styled.img``;
+const AboutResume = styled.img`
+`;
 
 export default function About() {
   const aboutMe =

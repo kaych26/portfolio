@@ -13,8 +13,8 @@ import Footer from './components/Footer';
 function App() {
   return (
     <>
-      <GlobalStyle />
       <Hero>
+        <GlobalStyle />
         <Header />
         <Body>
           <Route exact path="/">
@@ -36,6 +36,5 @@ function App() {
     </>
   );
 }
-
 
 export default App;

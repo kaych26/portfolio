@@ -3,9 +3,6 @@ import styled from 'styled-components';
 import linkedin_icon from '../assets/icons/linkedin.png';
 
 
-
-
-
 const StyledContact = styled.section`
   /* background-color: red; */
   /* display: flex;

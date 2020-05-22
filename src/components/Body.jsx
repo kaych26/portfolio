@@ -2,26 +2,21 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledBody = styled.section`
-  height: 60%;
-  display: grid;
+  /* height: 60%; */
+  padding-top: 130px;
+  /* display: grid;
   grid-template-rows: auto;
-  align-items: center;
+  align-items: enter; */
 
   /* overflow: hidden; */
-  display: relative;
-
-`;
-
-const BodyContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* display: relative; */
 `;
 
 export default function Body(props) {
   return (
     <StyledBody>
-      <BodyContainer>{props.children}</BodyContainer>
+      {props.children}
+     
     </StyledBody>
   );
 }
