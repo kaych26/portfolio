@@ -7,7 +7,7 @@ const HomeTitle = styled.h1`
   font-size: 3em;
   padding: 1em;
   letter-spacing: 0.2em;
-  text-align: center;
+  text-align: center;im
 `;
 const HomeSubTitle = styled.h2`
   font-size: 1.2em;

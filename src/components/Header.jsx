@@ -21,7 +21,7 @@ const HeaderContainer = styled.div`
 `;
 
 const HeaderImg = styled.img`
-  padding: 1em 2em;
+  /* padding: 0 1em; */
 `;
 
 const NavContainer = styled.div`
@@ -31,17 +31,18 @@ const NavContainer = styled.div`
 `;
 const NavLink = styled(Link)`
   font-size: 16px;
-  padding: 1.8em;
+  padding: 1em 1.8em;
   text-decoration: none;
   color: #000;
 `;
-
 
 export default function Header() {
   return (
     <StyledHeader>
       <HeaderContainer>
-        <HeaderImg src={logo} />
+        <NavLink to="/">
+          <HeaderImg src={logo} />
+        </NavLink>
         <NavContainer>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/Work">Work</NavLink>
