@@ -24,13 +24,14 @@ const StyledAbout = styled.section`
 
 const AboutTitle = styled.h1`
   font-size: 1.6em;
-  padding: 1em 0 2.5em 0;
+  padding: 2.8em 0 2.5em 0;
   letter-spacing: .1em;
   font-weight: 600;
 `;
 
 const AboutPostItFrame = styled.div`
-display: flex;
+  display: flex;
+  align-content: space-between;
 `;
 
 const AboutPostItTitle = styled.h3`
@@ -41,29 +42,31 @@ text-align: center;
 `;
 
 const AboutPostItList = styled.li`
-  padding-bottom: .8em;
+  padding-bottom: .6em;
+`;
+
+const ImgLinkFrame = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-bottom: 13px;
+ 
 `;
 
 const AboutPostItImg = styled.img`
-width: 25px;
+width: 28px;
+/* align-self: flex-end; */
 `;
 
 const AboutPostItLink = styled.a`
 text-decoration: none;
-font-size: .7em;
+font-size: .8em;
 color: #000;
-/* display: block; */
-`;
-
-
-const AboutMore = styled.a`
-  padding: 1em;
-  text-decoration: none;
-  color: #000;
-  cursor: pointer;
+padding-left: .5em;
 
 `;
-const AboutResume = styled.img``;
+
+
 
 export default function About() {
   const linkedin_link = 'https://www.linkedin.com/in/kaych26/';
@@ -74,7 +77,7 @@ export default function About() {
   const whoami = 'Hi, I\'m Kay, a software engineer and web developer.';
   const title = 'Highlights'
   const aboutMe = [
-    'Worked 10+ years in major financial coporations as a C/C++ programmer and manager.',
+    'Worked 10+ years in major financial coporations as a Unix C/C++ programmer and manager.',
     'Developed passion in web development using \'React\' and \'Javascript\' after becoming a mom.'
   ];
   // const aboutMe =
@@ -84,7 +87,7 @@ export default function About() {
   const myPassions = [
     'Enjoy listening and interacting with people.',
     'Love using technology to transform innovative \'ideas\' into \'products\'. ',
-    'Keep learning, keep playing and stay inspired !'
+    'Keep learning, keep exploring and stay inspired !'
   ];
 
   const title3 = 'Links...';
@@ -101,7 +104,7 @@ export default function About() {
       </AboutTitle>
       <AboutPostItFrame>
 
-        <PostIt>
+        <PostIt rotate='2deg'>
           <AboutPostItTitle>
             {title}
           </AboutPostItTitle>
@@ -113,7 +116,7 @@ export default function About() {
 
         </PostIt>
 
-        <PostIt>
+        <PostIt rotate='-2deg'>
           <AboutPostItTitle>
             {title2}
           </AboutPostItTitle>
@@ -125,36 +128,53 @@ export default function About() {
           )}
         </PostIt>
 
-        <PostIt>
+        <PostIt rotate='3deg'>
           <AboutPostItTitle>
             {title3}
           </AboutPostItTitle>
 
-          <AboutPostItLink href={resume_link}>
-            <AboutPostItImg src={resume_icon} alt='resume' />
-            Resume
-          </AboutPostItLink>
+          <ImgLinkFrame>
 
-          <AboutPostItLink href={linkedin_link}>
-            <AboutPostItImg src={linkedin_icon} alt='linkedin' />
-            https://www.linkedin.com/in/kaych26/
-          </AboutPostItLink>
-
-          <AboutPostItLink href={github_link}>
-            <AboutPostItImg src={github_icon} alt='github' />
-            https://github.com/
+            {/* <AboutPostItLink href="https://drive.google.com/file/d/1dgD9TQ2uK9CvewjmYTQ1WXZJHm2dtQZH/view" target="_blank"> */}
+            <AboutPostItLink href={resume_link} target="_blank" rel="noopener noreferrer">
+              <AboutPostItImg src={resume_icon} alt='resume' />
             </AboutPostItLink>
+            <AboutPostItLink href={resume_link} target="_blank" rel="noopener noreferrer">
+              Resume
+            </AboutPostItLink>
+          </ImgLinkFrame>
+
+          <ImgLinkFrame>
+            <AboutPostItLink href="mailto:kaych26@gmail.com">
+              <AboutPostItImg src={mail_icon} alt='email' />
+            </AboutPostItLink>
+            <AboutPostItLink href="mailto:kaych26@gmail.com">
+              kaych26@gmail.com
+          </AboutPostItLink>
+          </ImgLinkFrame>
+
+          <ImgLinkFrame>
+            <AboutPostItLink href={linkedin_link} target="_blank" rel="noopener noreferrer">
+              <AboutPostItImg src={linkedin_icon} alt='linkedin' />
+            </AboutPostItLink>
+            <AboutPostItLink href={linkedin_link} target="_blank" rel="noopener noreferrer">
+              www.linkedin.com/in/kaych26/
+          </AboutPostItLink>
+          </ImgLinkFrame>
+
+          <ImgLinkFrame>
+            <AboutPostItLink href={github_link} target="_blank" rel="noopener noreferrer">
+              <AboutPostItImg src={github_icon} alt='github' />
+            </AboutPostItLink>
+            <AboutPostItLink href={github_link} target="_blank" rel="noopener noreferrer">
+              www.github.com/kaych26
+            </AboutPostItLink>
+          </ImgLinkFrame>
 
         </PostIt>
 
-
       </AboutPostItFrame>
-      <AboutMore
-        href="https://drive.google.com/file/d/1dgD9TQ2uK9CvewjmYTQ1WXZJHm2dtQZH/view"
-        target="_blank"
-      >
-        <AboutResume src={resume_icon} alt="resume" />
-      </AboutMore>
+
     </StyledAbout>
   );
 }

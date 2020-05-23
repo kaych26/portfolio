@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import github_icon from '../assets/icons/github_icon.png';
-import linkedin_icon from '../assets/icons/linkedin.png';
-import mail_icon from '../assets/icons/mail_icon.png';
+import resume_icon from '../assets/icons/resume_simple.svg';
+import github_icon from '../assets/icons/github_simple.svg';
+import linkedin_icon from '../assets/icons/linkedin_simple.svg';
+import mail_icon from '../assets/icons/mail_simple.svg';
 
 const StyledFooter = styled.section`
   /* background-color: blue; */
@@ -30,6 +31,7 @@ const FooterIcon = styled.img`
 `;
 
 export default function Footer() {
+  const resume_link = 'https://drive.google.com/file/d/1dgD9TQ2uK9CvewjmYTQ1WXZJHm2dtQZH/view';
   const linkedin_link = 'https://www.linkedin.com/in/kaych26/';
   const github_link = 'https://github.com/kaych26';
   // const mail_addr = 'kaych26@gmail.com';
@@ -37,21 +39,22 @@ export default function Footer() {
   return (
     <StyledFooter>
       <FooterContainer>
-        <a href={linkedin_link}>
+        <a href={resume_link} target="_blank" rel="noopener noreferrer">
           <FooterIcon
-            src={linkedin_icon}
-            target="_blank"
-            rel="noopener noreferrer"
+            src={resume_icon} alt='resume' />
+        </a>
+
+        <a href={linkedin_link} target="_blank" rel="noopener noreferrer">
+          <FooterIcon
+            src={linkedin_icon} alt='linkedIn'
           />
         </a>
+
         <a href={github_link} target="_blank" rel="noopener noreferrer">
-          <FooterIcon src={github_icon} alt='github'/>
+          <FooterIcon src={github_icon} alt='github' />
         </a>
-        <a
-          href="mailto:kaych26@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+
+        <a href="mailto:kaych26@gmail.com" target="_blank" rel="noopener noreferrer">
           <FooterIcon src={mail_icon} alt='mail' />
         </a>
       </FooterContainer>

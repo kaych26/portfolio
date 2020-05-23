@@ -5,13 +5,16 @@ import { slideInDown } from 'react-animations';
 const StyledPostIt = styled.section`
   font-family: 'Shadows Into Light Two', cursive;
   position: relative;
+  padding: 10px;
 `;
 
 const PostItQuote = styled.p`
+
+  
   color: #333;
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 280px;
+  height: 280px;
   margin: 0 auto;
   padding: 20px;
   font-size: 1.16em;
@@ -24,7 +27,8 @@ const PostItQuote = styled.p`
   -moz-transform: rotate()(2deg);
   -o-transform: rotate(2deg);
   -ms-transform: rotate(2deg); */
-  transform: rotate(2deg);
+  /* transform: rotate(2deg); */
+  transform: rotate(${(props) => props.rotate});
   
 `;
 
@@ -80,10 +84,11 @@ const PostItPin = styled.i`
 
 export default function PostIt(props) {
 
+  
   return (
     <StyledPostIt>
       <PostItPin></PostItPin>
-      <PostItQuote>
+      <PostItQuote rotate={props.rotate}>
         {props.children}
 
       </PostItQuote>
