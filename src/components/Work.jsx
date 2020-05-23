@@ -7,38 +7,52 @@ import cathay22_img from '../assets/projects/cathay22.png';
 import superhero_img from '../assets/projects/superhero.png';
 
 const StyledWork = styled.section`
-  /* display: absolute; */
-  /* overflow: auto; */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
-  /* align-content: center; */
+ display: flex;
+ flex-direction: column;
+
+ align-items: center;
+ /* align-content: flex-start; */
+ 
 `;
 
 const ProjectTitle = styled.h1`
-text-align: center;
+
   font-size: 1.8em;
-  /* padding-bottom: .3em; */
+  text-align: center;
+  padding-bottom: .3em;
 `;
 
 const ProjectFrame = styled.div`
 display: flex;
-  height: 400px;
-  flex-direction: column;
-  align-items: center;
-  overflow: auto;
-  /* height: 60%;
-  width: 80%; */
-  /* overflow: auto; */
+  /* height: 400px; */
+  width: 59%;
+  flex-direction: row;
+  align-items: flex-start;
+  /* align-content: flex-start; */
+  overflow: auto; 
+ 
 `;
 
 const ProjectImg = styled.img`
   width: 40em;
-  padding: 2em;
-/* align-self: center; */
+  
+  padding: 0 15px 0 0;
+  align-self: center;
 `;
 
-const ProjectLink = styled.a``;
+const ProjectLink = styled.a`
+text-decoration: none;
+text-align: center;
+
+`;
+
+const ProjectDesc = styled.p`
+/* width: 420px; */
+  font-size: 1em;
+  padding: 0.5em 2em;
+  /* text-align: center; */
+  /* padding: 1em 4em 4em 0; */
+`;
 
 export default function Work() {
   const theRecipeBox_link = 'https://therecipesbox.netlify.app/';
@@ -51,25 +65,48 @@ export default function Work() {
     <StyledWork>
       <ProjectTitle>Work</ProjectTitle>
       <ProjectFrame>
+
         <ProjectLink href={theRecipeBox_link}>
           <ProjectImg src={theRecipeBox_img} alt="theRecipeBox"></ProjectImg>
+          <ProjectDesc>
+            theRecipeBox, a full CRUD app for users to share recipe and stories and allowing families to connect throught food.  Developed in React, react router, ruby on rails.
+          </ProjectDesc>
+
         </ProjectLink>
+
         <ProjectLink href={cathay22_link}>
           <ProjectImg src={cathay22_img} alt="Cathay22"></ProjectImg>
+          <ProjectDesc>
+            Cathay22, a React applicaton devloped with UX collaboration for a local Chinese restaurant.
+          </ProjectDesc>
         </ProjectLink>
+
         <ProjectLink href={supernovaGems_link}>
           <ProjectImg src={supernovaGems_img} alt="SupernovaGems"></ProjectImg>
+          <ProjectDesc>
+            SuperNovaGems, a Fullstack ecommerce app developed in React and MongoDB.
+          </ProjectDesc>
         </ProjectLink>
+
         <ProjectLink href={theWeatherGenie_link}>
           <ProjectImg
             src={theWeatherGenie_img}
             alt="theWeatherGenie"
           ></ProjectImg>
+          <ProjectDesc>
+            theWeatherGenie, developed using HTML, CSS and Openweather API.
+          </ProjectDesc>
         </ProjectLink>
+
         <ProjectLink href={superhero_link}>
-          <ProjectImg src={superhero_img} alt="SupernovaGems"></ProjectImg>
+
+          <ProjectImg src={superhero_img} alt="superhero"></ProjectImg>
+          <ProjectDesc>
+            Superhero, developed using HTML, CSS and Marvel API.
+          </ProjectDesc>
         </ProjectLink>
       </ProjectFrame>
+
     </StyledWork>
   );
 }
