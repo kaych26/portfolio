@@ -22,27 +22,30 @@ function App() {
 
         <Route
           path='/'
-          render={route =>
-            (<Header {...route} />)} />
+          render={route => (<Header {...route} />)}
+        />
+
 
         <Body>
           <Route exact path="/">
             <Home />
+            <Footer />
           </Route>
 
           <Route exact path="/about">
             <About />
-            <Skills />
+            <Footer />
           </Route>
           <Route exact path="/work">
             <Work />
+            <Skills />
           </Route>
           {/* <Route exact path="/contact">
             <Contact />
           </Route> */}
         </Body>
 
-        <Footer />
+        {/* <Footer /> */}
       </Hero>
     </>
   );
