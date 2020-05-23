@@ -7,7 +7,7 @@ import Body from './components/Body';
 import Home from './components/Home';
 import About from './components/About';
 import Skills from './components/Skills';
-// import Contact from './components/OLDontact';
+
 import Work from './components/Work';
 import Footer from './components/Footer';
 {

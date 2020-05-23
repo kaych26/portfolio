@@ -7,12 +7,16 @@ const StyledPostIt = styled.section`
   position: relative;
 `;
 
-const PostItQuote = styled.blockquote`
+const PostItQuote = styled.p`
   color: #333;
   position: relative;
   width: 300px;
+  height: 300px;
   margin: 0 auto;
   padding: 20px;
+  font-size: 1.16em;
+  line-height: 1.3em;
+  letter-spacing: .1em;
   box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
 
   background: #eae672;
@@ -20,10 +24,11 @@ const PostItQuote = styled.blockquote`
   -moz-transform: rotate()(2deg);
   -o-transform: rotate(2deg);
   -ms-transform: rotate(2deg); */
-  transform: rotate()(2deg);
-
+  transform: rotate(2deg);
+  
 `;
 
+// create small metal part of the pin
 const PostItPin = styled.i`
 
   background-color: #aaa;
@@ -35,9 +40,12 @@ const PostItPin = styled.i`
   top: -16px;
   z-index: 1;
 
+/* using gradient and box shadow to make the ball top of the pin and its shadow */
   :after {
     background-color: #A31;
     background-image: radial-gradient()(25% 25%, circle, hsla(0, 0%, 100%, .3), hsla(0, 0%, 0%, .3));
+
+    border-radius: 50%;
 
     box-shadow: inset 0 0 0 1px hsla(0,0%, 0%, .1), 
     inset 3px 3px 3px hsla(0, 0%, 0%, .2),
@@ -52,6 +60,8 @@ const PostItPin = styled.i`
     width: 12px;
   }
 
+  /* rotate the shadow of the metal part of the pin */
+
   :before {
     background-color: hsla(0, 0%, 0%, 0.1);
     box-shadow: 0 0 .25em hsla(0,0%, 0%, .1);
@@ -62,23 +72,20 @@ const PostItPin = styled.i`
     position: absolute;
     top: 8px;
 
-    transform: rotate()(57.5deg);
-
+    transform: rotate(57.5deg);
     transform-origin: 50% 100%;
   }
-  
 `;
 
 
-
-export default function PostIt() {
+export default function PostIt(props) {
 
   return (
     <StyledPostIt>
       <PostItPin></PostItPin>
       <PostItQuote>
+        {props.children}
 
-        Hello PostIt
       </PostItQuote>
     </StyledPostIt>
   )

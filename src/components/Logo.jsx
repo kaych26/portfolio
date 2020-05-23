@@ -11,7 +11,7 @@ const LogoFrame = styled.div`
   border: 1px solid #ccc;
   border-radius: 3px;
   box-shadow: 0 8px 10px #878;
-  transform: rotate(-2deg);
+  /* transform: rotate(-2deg); */
   background-color: #F9F7F2;
 `;
 

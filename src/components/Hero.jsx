@@ -5,7 +5,6 @@ import hero_img from '../assets/heros/BG_white_floor.png';
 
 import Header from './Header';
 import Body from './Body';
-import Contact from './OLDontact';
 import Footer from './Footer';
 
 const StyledHero = styled.section`
@@ -17,10 +16,7 @@ const StyledHero = styled.section`
   background-size: cover;
   height: 771px;
 
-  /* display: grid; */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: space-between; */
+
 `;
 
 export default function Hero(props) {
