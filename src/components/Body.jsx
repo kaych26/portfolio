@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledBody = styled.section`
   /* height: 60%; */
-  padding-top: 90px;
+  padding-top: 80px;
   /* display: grid;
   grid-template-rows: auto;
   align-items: enter; */
