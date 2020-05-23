@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { slideInDown} from 'react-animations';
+import { slideInDown } from 'react-animations';
 
 import theRecipeBox_img from '../assets/projects/theRecipeBox.png';
 import theWeatherGenie_img from '../assets/projects/theWeatherGenie.png';
@@ -29,7 +29,6 @@ display: flex;
   flex-direction: row;
   align-items: flex-start;
   overflow: auto; 
- 
 `;
 
 const ProjectImg = styled.img`
@@ -40,8 +39,8 @@ const ProjectImg = styled.img`
 `;
 
 const ProjectLink = styled.a`
-text-decoration: none;
-text-align: center;
+  text-decoration: none;
+  text-align: center;
 
 `;
 

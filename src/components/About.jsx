@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+
 // import { motion, AnimatePresence } from 'framer-motion';
 // import resume from '../assets/kayResume.jpg';
+
+
+import PostIt from './PostIt';
 import resume_icon from '../assets/icons/resume_icon.png';
 
 const StyledAbout = styled.section`
@@ -40,6 +44,7 @@ export default function About() {
 
   return (
     <StyledAbout>
+      <PostIt></PostIt>
       <AboutMyself>{aboutMe}</AboutMyself>
       <AboutMore
         href="https://drive.google.com/file/d/1dgD9TQ2uK9CvewjmYTQ1WXZJHm2dtQZH/view"
