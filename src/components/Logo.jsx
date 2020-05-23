@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledLogo = styled.section`
   /* font-family: 'Londrina Shadow', cursive; */
   font-family: 'Fredericka the Great', cursive;
-  padding: 0.3em 1em;
+  padding: 0.5em 1em;
 `;
 
 const LogoFrame = styled.div`
@@ -16,16 +16,17 @@ const LogoFrame = styled.div`
 `;
 
 const LogoFname = styled.p`
-  font-size: 0.8em;
+  font-size: 1em;
   letter-spacing: 0.2em;
   color: black;
-  padding: 0.3em 0.2em 0.1em 0.3em;
+  padding: 0.3em 0.2em 0.2em 0.3em;
 `;
 
 const LogoLname = styled.p`
-  font-size: 0.8em;
+  font-size: 1em;
   color: black;
-  padding: 0 0.3em 0.3em 0.3em;
+  
+  padding: 0em 0.3em 0.3em 0.5em;
   /* padding: 0.1em 0.2em; */
 `;
 

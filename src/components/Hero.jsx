@@ -5,7 +5,7 @@ import hero_img from '../assets/heros/BG_white_floor.png';
 
 import Header from './Header';
 import Body from './Body';
-import Contact from './Contact';
+import Contact from './OLDontact';
 import Footer from './Footer';
 
 const StyledHero = styled.section`

@@ -13,10 +13,12 @@ const StyledAbout = styled.section`
 `;
 const AboutMyself = styled.p`
   /* width: 70%; */
+  font-family: 'Shadows Into Light Two', cursive;
   text-align: center;
   padding: 0 6em;
   font-size: 1.3em;
   line-height: 1.5em;
+  letter-spacing: .1em;
 `;
 
 const AboutMore = styled.a`
@@ -29,7 +31,7 @@ const AboutResume = styled.img``;
 
 export default function About() {
   const aboutMe =
-    'Hi, my name is Kay Chan, a software engineer with 10+ years working as a programmer and manager in major financial corporation. After becoming a mom, I have extended my passion to web development and inspired to apply technology to create solutions.';
+    'Hi, my name is Kay Chan, a software engineer with 10+ years working as a programmer and manager in major financial corporation. After becoming a mom, I have extended my passion to web development and tranforming ideas to products.';
 
   // 'Hi, my name is Kay Chan.  I am a versatile Software Engineer who holds 10+ years experience working as a Senior Programmer and Manager for major financial corporations. After becoming a mom, I have extended my passion to web development and inspired to use my skills to make a differences for the commnunity.';
 

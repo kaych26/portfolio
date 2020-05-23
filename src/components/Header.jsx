@@ -61,17 +61,16 @@ export default function Header(props) {
       <HeaderContainer>
         {!homePage ? (
           <LogoLink to="/">
-            <Logo/>
+            <Logo />
             {/* <HeaderImg src={logo} /> */}
           </LogoLink>
         ) : (
-          <div />
-        )}
+            <div />
+          )}
 
         <NavContainer>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/Work">Work</NavLink>
-          <NavLink to="/Contact">Contact</NavLink>
         </NavContainer>
       </HeaderContainer>
     </StyledHeader>

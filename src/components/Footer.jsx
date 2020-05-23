@@ -45,14 +45,14 @@ export default function Footer() {
           />
         </a>
         <a href={github_link} target="_blank" rel="noopener noreferrer">
-          <FooterIcon src={github_icon} />
+          <FooterIcon src={github_icon} alt='github'/>
         </a>
         <a
           href="mailto:kaych26@gmail.com"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <FooterIcon src={mail_icon} />
+          <FooterIcon src={mail_icon} alt='mail' />
         </a>
       </FooterContainer>
     </StyledFooter>

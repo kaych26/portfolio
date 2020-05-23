@@ -6,7 +6,8 @@ import Header from './components/Header';
 import Body from './components/Body';
 import Home from './components/Home';
 import About from './components/About';
-import Contact from './components/Contact';
+import Skills from './components/Skills';
+// import Contact from './components/OLDontact';
 import Work from './components/Work';
 import Footer from './components/Footer';
 {
@@ -23,7 +24,7 @@ function App() {
           path='/'
           render={route =>
             (<Header {...route} />)} />
-        
+
         <Body>
           <Route exact path="/">
             <Home />
@@ -31,6 +32,7 @@ function App() {
 
           <Route exact path="/about">
             <About />
+            <Skills />
           </Route>
           <Route exact path="/work">
             <Work />
