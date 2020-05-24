@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Quote from './Quote';
 
 const StyledHome = styled.section`
   display: flex;
@@ -17,9 +18,10 @@ font-family: 'Fredericka the Great', cursive;
   letter-spacing: 0.2em;
   text-align: center;
 `;
+
 const HomeSubTitle = styled.h2`
 font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.3em;
   letter-spacing: 0.1em;
 `;
 
@@ -31,6 +33,7 @@ export default function Home(props) {
       <HomeSubTitle>
         Software Engineer | Web Developer | Finance Techology
       </HomeSubTitle>
+      <Quote />
     </StyledHome>
   );
 }

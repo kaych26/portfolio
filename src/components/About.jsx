@@ -1,5 +1,7 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React from 'react';
+import styled, { keyframes } from 'styled-components';
+import { slideInDown, swing, slideInLeft, fadeIn} from 'react-animations';
+
 import github_icon from '../assets/icons/github_simple.svg';
 import linkedin_icon from '../assets/icons/linkedin_simple.svg';
 import mail_icon from '../assets/icons/mail_simple.svg';
@@ -23,6 +25,7 @@ const StyledAbout = styled.section`
 `;
 
 const AboutTitle = styled.h1`
+  animation: 3s ${keyframes`${slideInLeft}`};
   font-size: 1.6em;
   padding: 2.8em 0 2.5em 0;
   letter-spacing: .1em;
@@ -30,6 +33,7 @@ const AboutTitle = styled.h1`
 `;
 
 const AboutPostItFrame = styled.div`
+  animation: 2s ${keyframes`${fadeIn}`};
   display: flex;
   align-content: space-between;
 `;
@@ -149,7 +153,7 @@ export default function About() {
               <AboutPostItImg src={mail_icon} alt='email' />
             </AboutPostItLink>
             <AboutPostItLink href="mailto:kaych26@gmail.com">
-              kaych26@gmail.com
+              Email
           </AboutPostItLink>
           </ImgLinkFrame>
 

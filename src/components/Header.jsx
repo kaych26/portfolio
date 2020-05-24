@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { slideInLeft } from 'react-animations';
 // import logo from '../assets/icons/kay_logo.png';
 import Logo from './Logo';
 
@@ -9,7 +10,7 @@ const StyledHeader = styled.header`
   /* position: relative; */
   /* height: 100px; */
   position: fixed;
-  /* z-index: 9999; */
+  z-index: 999;
   /* top: 0; */
   width: 100%;
   /* background-color: linear-gradient(rgba(255,255,255 1)); */
@@ -17,20 +18,16 @@ const StyledHeader = styled.header`
 `;
 
 const HeaderContainer = styled.div`
-  /* background-color: yellow; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-`;
-
-const HeaderImg = styled.img`
-  /* padding: 0 1em; */
 `;
 
 const NavContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-right: 3em;
+  padding-top: 2.8em;
 `;
 const LogoLink = styled(Link)`
   font-family: 'Londrina Shadow', cursive;
@@ -42,7 +39,7 @@ const LogoLink = styled(Link)`
 
 const NavLink = styled(Link)`
   font-size: 16px;
-  padding: 1em 1.8em;
+  padding: .4em 2em;
   text-decoration: none;
   color: #000;
   background-color: rgba(252, 251, 248, 0.8);
@@ -62,7 +59,6 @@ export default function Header(props) {
         {!homePage ? (
           <LogoLink to="/">
             <Logo />
-            {/* <HeaderImg src={logo} /> */}
           </LogoLink>
         ) : (
             <div />

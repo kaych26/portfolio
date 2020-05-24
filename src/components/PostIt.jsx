@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { slideInDown } from 'react-animations';
+import { slideInDown, swing } from 'react-animations';
 
 const StyledPostIt = styled.section`
   font-family: 'Shadows Into Light Two', cursive;
