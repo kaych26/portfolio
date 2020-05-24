@@ -20,7 +20,7 @@ const StyledHeader = styled.header`
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
 `;
 
 const NavContainer = styled.div`
@@ -44,13 +44,24 @@ const NavLink = styled(Link)`
   color: #000;
   background-color: rgba(252, 251, 248, 0.8);
   border-radius: 10px;
+  height: 26px;
+
+  &:hover {
+    color: #fff;
+    background-color: #878d8c
+  }
+  &:active {
+    background-color: #545d5c;
+  }
 `;
 
 export default function Header(props) {
   let homePage = 0;
+  
   if (props.location.pathname === '/') {
     homePage = 1;
   }
+
 
   // debugger
   return (
@@ -65,6 +76,7 @@ export default function Header(props) {
           )}
 
         <NavContainer>
+          <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>
           <NavLink to="/Work">Work</NavLink>
         </NavContainer>

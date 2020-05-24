@@ -1,9 +1,9 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { slideInDown, swing, fadeIn} from 'react-animations';
+import { slideInDown, swing, fadeIn } from 'react-animations';
 
 const StyledPostIt = styled.section`
-/* animation: ${props=> props.time} ${keyframes`${fadeIn}`}; */
+/* animation: ${props => props.time} ${keyframes`${fadeIn}`}; */
   font-family: 'Shadows Into Light Two', cursive;
   position: relative;
   padding: 10px 38px;
@@ -13,8 +13,10 @@ const PostItQuote = styled.p`
 
   color: #333;
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: ${props => props.size};
+  height: ${props => props.size};
+  /* width: 200px;
+  height: 200px; */
   margin: 0 auto;
   padding: 20px;
   font-size: 1.16em;
@@ -57,11 +59,18 @@ const PostItPin = styled.i`
     23px 20px 3px hsla(0, 0%, 0%, .15);
 
     content: '';
+    height: 10px;
+    left: -3px;
+    position: absolute;
+    top: -8px;
+    width: 10px;
+    /* content: '';
     height: 12px;
     left: -5px;
     position: absolute;
     top: -10px;
-    width: 12px;
+    width: 12px; */
+    /* width: 12px; */
   }
 
   /* rotate the shadow of the metal part of the pin */
@@ -83,12 +92,14 @@ const PostItPin = styled.i`
 
 
 export default function PostIt(props) {
-
-  
+  const size = props.size ? props.size : '200px';
   return (
     <StyledPostIt>
       <PostItPin></PostItPin>
-      <PostItQuote rotate={props.rotate}>
+      <PostItQuote
+        rotate={props.rotate}
+        size={size}
+      >
         {props.children}
 
       </PostItQuote>

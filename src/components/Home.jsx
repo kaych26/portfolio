@@ -39,6 +39,7 @@ const HomeSubTitle = styled.h2`
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.3em;
   letter-spacing: 0.1em;
+  padding-bottom: 2.3em;
 `;
 
 export default function Home(props) {
@@ -57,8 +58,8 @@ export default function Home(props) {
           Finance Techology
       </HomeSubTitle>
       </HomeSubTitleFrame>
-
-      <InfoLinks> hello </InfoLinks>
+      
+      <InfoLinks />
       <Quote />
     </StyledHome>
   );

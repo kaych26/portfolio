@@ -10,9 +10,6 @@ import Skills from './components/Skills';
 
 import Work from './components/Work';
 import Footer from './components/Footer';
-{
-  /* <Route exact path="/" render={(props) => <Home {...props}/>} /> */
-}
 
 function App() {
   return (
@@ -33,11 +30,12 @@ function App() {
 
           <Route exact path="/about">
             <About />
+            {/* <Footer /> */}
        
           </Route>
           <Route exact path="/work">
             <Work />
-            <Skills />
+            {/* <Skills /> */}
           </Route>
           {/* <Route exact path="/contact">
             <Contact />

@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import resume_icon from '../assets/icons/resume_simple.svg';
-import github_icon from '../assets/icons/github_simple.svg';
-import linkedin_icon from '../assets/icons/linkedin_simple.svg';
-import mail_icon from '../assets/icons/mail_simple.svg';
+import resume_icon from '../assets/icons/resume.svg';
+import github_icon from '../assets/icons/github.svg';
+import linkedin_icon from '../assets/icons/linkedin.svg';
+import mail_icon from '../assets/icons/mail.svg';
 
 const StyledInfo = styled.section`
   /* background-color: blue; */

@@ -7,47 +7,60 @@ import theWeatherGenie_img from '../assets/projects/theWeatherGenie.png';
 import supernovaGems_img from '../assets/projects/supernovaGems.png';
 import cathay22_img from '../assets/projects/cathay22.png';
 import superhero_img from '../assets/projects/superhero.png';
+import Skills from './Skills.jsx';
 
 const StyledWork = styled.section`
- display: flex;
- flex-direction: column;
- align-items: center;
- 
- animation: 3s ${keyframes`${slideInDown}`};
+  animation: 2s ${keyframes`${slideInDown}`};
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+  overflow: auto;
+  /* height: 570px; */
+  /* max-width: 600px; */
+  padding: 0 20px;
+
+  
+
+
+
 `;
 
 const ProjectTitle = styled.h1`
 
   font-size: 1.8em;
   text-align: center;
-  padding-bottom: .8em;
+  padding-bottom: .6em;
 `;
 
 const ProjectFrame = styled.div`
-display: flex;
-  width: 59%;
-  flex-direction: row;
-  align-items: flex-start;
-  overflow: auto; 
+
+display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+
+ 
 `;
 
 const ProjectImg = styled.img`
-  width: 40em;
-  
-  padding: 0 15px 0 0;
+  width: 20em;
   align-self: center;
 `;
 
 const ProjectLink = styled.a`
   text-decoration: none;
   text-align: center;
+  /* align-self: center; */
 
 `;
 
 const ProjectDesc = styled.p`
-
-  font-size: 1em;
-  padding: 0.5em 2em;
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8em;
+  /* padding: 0.3em 2em .6em 2em; */
+  padding: 0.2em 1em 1.6em 1em;
+  color: black;
+  text-align: center;
+  /* width: 24em; */
 
 `;
 
@@ -98,7 +111,7 @@ export default function Work() {
             Superhero, developed using HTML, CSS and Marvel API.
           </ProjectDesc>
         </ProjectLink>
-
+        <Skills />
       </ProjectFrame>
     </StyledWork>
   );
