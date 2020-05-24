@@ -6,12 +6,11 @@ const StyledPostIt = styled.section`
 /* animation: ${props=> props.time} ${keyframes`${fadeIn}`}; */
   font-family: 'Shadows Into Light Two', cursive;
   position: relative;
-  padding: 10px;
+  padding: 10px 38px;
 `;
 
 const PostItQuote = styled.p`
 
-  
   color: #333;
   position: relative;
   width: 280px;

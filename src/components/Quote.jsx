@@ -7,7 +7,7 @@ const StyledQuote = styled.section`
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
   display: flex;
-  padding-top: 5em;
+  padding-top: 3em;
 
   /* transition-delay: 5s; */
 `;

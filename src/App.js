@@ -29,12 +29,11 @@ function App() {
         <Body>
           <Route exact path="/">
             <Home />
-            <Footer />
           </Route>
 
           <Route exact path="/about">
             <About />
-            <Footer />
+       
           </Route>
           <Route exact path="/work">
             <Work />

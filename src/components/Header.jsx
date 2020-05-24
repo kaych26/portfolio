@@ -27,7 +27,7 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: flex-end;
   margin-right: 3em;
-  padding-top: 2.8em;
+  padding-top: 1.8em;
 `;
 const LogoLink = styled(Link)`
   font-family: 'Londrina Shadow', cursive;
@@ -39,7 +39,7 @@ const LogoLink = styled(Link)`
 
 const NavLink = styled(Link)`
   font-size: 16px;
-  padding: .4em 2em;
+  padding: .3em 2em;
   text-decoration: none;
   color: #000;
   background-color: rgba(252, 251, 248, 0.8);

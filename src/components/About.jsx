@@ -110,7 +110,8 @@ export default function About() {
   const title = 'Highlights'
   const aboutMe = [
     'Worked 10+ years in major financial coporations as a Unix C/C++ programmer and manager.',
-    'Developed passion in web development using \'React\' and \'Javascript\' after becoming a mom.'
+    'Becoming a mom has inspired me to web development, using React and Javascript.'
+    // 'Developed a passion in web development using \'React\' and \'Javascript\' after becoming a mom.'
   ];
   // const aboutMe =
   // 'Worked 10+ years in major financial coporations as a C/C++ programmer and manager. After becoming a mom, inspired and added web development to my passion.';
