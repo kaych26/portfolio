@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { slideInLeft, tada, zoomInDown, fadeInDownBig} from 'react-animations';
+import { merge, bounceInLeft, zoomInRight, flip, wobble, flipInX, slideInLeft, slideInRight, rollIn, tada, zoomInDown, fadeInDownBig, fadeIn } from 'react-animations';
 import Quote from './Quote';
 
 const StyledHome = styled.section`
@@ -13,7 +13,7 @@ const StyledHome = styled.section`
 `;
 
 const HomeTitle = styled.h1`
-  animation: .5s ${keyframes`${fadeInDownBig}`};
+  /* animation: .3s ${keyframes`${fadeIn}`}; */
   font-family: 'Fredericka the Great', cursive;
   font-size: 3em;
   padding: 1em;
@@ -21,8 +21,16 @@ const HomeTitle = styled.h1`
   text-align: center;
 `;
 
+const HomeSubTitleFrame = styled.div`
+  display: flex;
+`;
+
+const slideFlip = merge(slideInLeft, flip)
+
 const HomeSubTitle = styled.h2`
-  animation: 1s ${keyframes `${slideInLeft}`};
+  animation: ${props => props.time} ${keyframes`${zoomInRight}`};
+  /* animation: 2s ${keyframes`${slideInLeft}`}; */
+  /* animation: 2s ${keyframes`${slideInLeft}`}; */
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.3em;
   letter-spacing: 0.1em;
@@ -33,9 +41,18 @@ export default function Home(props) {
   return (
     <StyledHome>
       <HomeTitle>Kay Chan</HomeTitle>
-      <HomeSubTitle>
-        Software Engineer | Web Developer | Finance Techology
+      <HomeSubTitleFrame>
+
+        <HomeSubTitle time='1s'>
+          Software Engineer | &nbsp;
       </HomeSubTitle>
+        <HomeSubTitle time='3s'>
+          Web Developer | &nbsp;
+      </HomeSubTitle>
+        <HomeSubTitle time='5s'>
+          Finance Techology
+      </HomeSubTitle>
+      </HomeSubTitleFrame>
       <Quote />
     </StyledHome>
   );

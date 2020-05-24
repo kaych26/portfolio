@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { bounce, slideInDown, flipInX, rollIn } from 'react-animations';
+import { bounce, fadeIn, swing, bounceIn, bounceInLeft, slideInDown, flipInX, rollIn, rotateInDownRight} from 'react-animations';
 
 const StyledQuote = styled.section`
   /* font-family: 'Roboto', sans-serif; */
@@ -8,6 +8,8 @@ const StyledQuote = styled.section`
   font-size: 1.5em;
   display: flex;
   padding-top: 5em;
+
+  /* transition-delay: 5s; */
 `;
 
 
@@ -18,7 +20,9 @@ align-items: baseline;
 
 
 const ColorChar = styled.h2`
-  animation: 2s ${keyframes`${rollIn}`};
+  /* animation: 5s ${keyframes`${rollIn}`}; */
+  animation: 3s ${keyframes`${fadeIn}`};
+  animation: 8s ${keyframes`${swing}`} infinite;
   color: ${props => props.color};
   font-size: 1.8em;
   font-weight: bold;
@@ -32,14 +36,10 @@ const Sign = styled.h2`
   align-self: center;
 `;
 
-
-
 const Word = styled.h3`
-  animation: 1s ${keyframes`${rollIn}`};
+  animation: 5s ${keyframes`${bounceIn}`};
   font-size: .9em;
 `;
-
-
 
 export default function Quote() {
 

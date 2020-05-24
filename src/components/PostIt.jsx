@@ -1,8 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
-import { slideInDown, swing } from 'react-animations';
+import styled, { keyframes } from 'styled-components';
+import { slideInDown, swing, fadeIn} from 'react-animations';
 
 const StyledPostIt = styled.section`
+/* animation: ${props=> props.time} ${keyframes`${fadeIn}`}; */
   font-family: 'Shadows Into Light Two', cursive;
   position: relative;
   padding: 10px;
