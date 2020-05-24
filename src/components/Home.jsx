@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { slideInLeft, tada, zoomInDown, fadeInDownBig} from 'react-animations';
 import Quote from './Quote';
 
 const StyledHome = styled.section`
@@ -12,7 +13,8 @@ const StyledHome = styled.section`
 `;
 
 const HomeTitle = styled.h1`
-font-family: 'Fredericka the Great', cursive;
+  animation: .5s ${keyframes`${fadeInDownBig}`};
+  font-family: 'Fredericka the Great', cursive;
   font-size: 3em;
   padding: 1em;
   letter-spacing: 0.2em;
@@ -20,7 +22,8 @@ font-family: 'Fredericka the Great', cursive;
 `;
 
 const HomeSubTitle = styled.h2`
-font-family: 'Josefin Sans', sans-serif;
+  animation: 1s ${keyframes `${slideInLeft}`};
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 1.3em;
   letter-spacing: 0.1em;
 `;

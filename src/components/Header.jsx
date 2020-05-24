@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { slideInLeft } from 'react-animations';
+import { slideInLeft, slideInDown} from 'react-animations';
 // import logo from '../assets/icons/kay_logo.png';
 import Logo from './Logo';
 

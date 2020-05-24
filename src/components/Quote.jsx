@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { bounce } from 'react-animations';
+import { bounce, slideInDown, flipInX, rollIn } from 'react-animations';
 
 const StyledQuote = styled.section`
   /* font-family: 'Roboto', sans-serif; */
@@ -18,6 +18,7 @@ align-items: baseline;
 
 
 const ColorChar = styled.h2`
+  animation: 2s ${keyframes`${rollIn}`};
   color: ${props => props.color};
   font-size: 1.8em;
   font-weight: bold;
@@ -34,6 +35,7 @@ const Sign = styled.h2`
 
 
 const Word = styled.h3`
+  animation: 1s ${keyframes`${rollIn}`};
   font-size: .9em;
 `;
 
