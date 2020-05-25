@@ -13,7 +13,7 @@ import arrow_icon from '../assets/icons/arrow-right.svg';
 
 const StyledAbout = styled.section`
   display: grid;
-  grid-template-columns: 25% 56% 10% 9%;
+  grid-template-columns: 25% 57% 5% 8%;
   grid-template-rows: 20% 46% 20%;
 
   font-family: 'Shadows Into Light Two', cursive;

@@ -78,7 +78,7 @@ export default function AboutMoi() {
 
       <AboutMe>
 
-        Self diven professional with broad technical skill-sets and communication skills.
+        Self driven professional with broad technical skill-sets and communication skills.
 
         </AboutMe>
 
