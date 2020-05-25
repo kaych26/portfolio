@@ -16,7 +16,7 @@ const StyledAboutMoi = styled.section`
 
   padding: 1em;
   border-radius: 10px;
-  height: 600px;
+  /* height: 600px; */
 `;
 
 const HelloDiv = styled.div`
@@ -46,13 +46,16 @@ const Title = styled.h1`
 
 
 const AboutMeOuterDiv = styled.div`
-overflow: auto;
+  height: 300px;
+  overflow: auto;
 `;
 
 const AboutMeDiv = styled.div`
 
 `;
-const AboutMeDiv2 = styled.div``;
+const AboutMeDiv2 = styled.div`
+
+`;
 
 
 
@@ -71,6 +74,7 @@ cursor: pointer;
 const AboutMe2 = styled(AboutMe)``;
 
 const MoreClick = styled.h3`
+  padding-top: 2.3em;
   text-align: center;
   cursor: pointer;
 `;
@@ -131,29 +135,39 @@ export default function AboutMoi() {
             </AboutMe2>
 
               <AboutMe2>
-                Becoming a mom has brought many joy and challenges.  My daughter, Annie was born premature and thanks to many professional guidances and online resources, she overcame many obstacles. Today, she is a strong and healthy girl!  I am intrigued to use my experience to advocate and help others to learn the unknown. Continue to build my skills and use my ability to help others to make this a better place for my daughter.
+                Becoming a mom has brought many joy and challenges.  My daughter, Annie was born premature and thanks to many professional guidances and online resources, she overcame many obstacles. Today, she is a strong and healthy girl!  I am intrigued to use my experience and my ability to advocate and help others to learn the unknown.
             </AboutMe2>
             </AboutMeDiv2>
 
-            {/* <MoreClick onClick={(e) => handleOpen(e)}> */}
-            <MoreScrollto href="#AboutPart1">
-
-              CLOSED
-          </MoreScrollto>
-            {/* </MoreClick> */}
           </>
         )}
-
       </AboutMeOuterDiv>
-      {/* {!isOpen && ( */}
-      <MoreScrollto href="#AboutPart2">
-        <MoreClick onClick={(e) => handleOpen(e)}>
+      {/* {isOpen && ( */}
+      {/* <MoreClick onClick={(e) => handleOpen(e)}> */}
 
-            Full Story ...
-        </MoreClick>
-      </MoreScrollto>
-
+      {/* < MoreScrollto href="#AboutPart1" onClick={(e) => handleOpen(e)}> */}
+      {/* CLOSED */}
+      {/* </MoreScrollto> */}
+      {/* </MoreClick> */}
       {/* )} */}
+
+      {!isOpen && (
+        <MoreScrollto href="#AboutPart2" onClick={(e) => handleOpen(e)} >
+          {/* <MoreClick onClick={(e) => handleOpen(e)}> */}
+            Full Story ...
+          {/* </MoreClick> */}
+        </MoreScrollto>
+
+      )}
+
+      {!isOpen &&
+        (
+          <a href="#AboutPart2">
+            TEST
+          </a>
+        )}
+
+
 
 
     </StyledAboutMoi>
