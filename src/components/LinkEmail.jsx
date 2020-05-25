@@ -4,13 +4,19 @@ import icon from '../assets/icons/mail.svg';
 
 const StyledImgLink = styled.section`
   font-family: 'Shadows Into Light Two', cursive;
-  letter-spacing: .2em;
+
+  display: flex;
+  justify-content: center;
 `;
-const Link = styled.a``;
+const Link = styled.a`
+text-decoration: none;
+  color: #000;
+`;
 
 const Img = styled.img`
-  width: 33px;
+  width: 35px;
 `;
+
 
 export default function Github() {
   const link = 'https://www.linkedin.com/in/kaych26/';
@@ -26,3 +32,4 @@ export default function Github() {
     </StyledImgLink>
   )
 }
+

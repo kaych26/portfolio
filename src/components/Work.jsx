@@ -11,25 +11,17 @@ import Skills from './Skills.jsx';
 
 const StyledWork = styled.section`
   animation: 2s ${keyframes`${slideInDown}`};
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   overflow: auto;
-  /* height: 570px; */
-  /* max-width: 600px; */
-  padding: 0 20px;
-
+  overflow-x: hidden;
   
-
-
+  padding: 0px 20px;
 
 `;
 
 const ProjectTitle = styled.h1`
-
-  font-size: 1.8em;
+  font-size: 1.2em;
   text-align: center;
-  padding-bottom: .6em;
+  padding: .8em 0;
 `;
 
 const ProjectFrame = styled.div`
@@ -37,26 +29,22 @@ const ProjectFrame = styled.div`
 display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
-
- 
 `;
 
 const ProjectImg = styled.img`
   width: 20em;
-  align-self: center;
+
 `;
 
 const ProjectLink = styled.a`
   text-decoration: none;
   text-align: center;
-  /* align-self: center; */
-
+ 
 `;
 
 const ProjectDesc = styled.p`
   font-family: 'Montserrat', sans-serif;
   font-size: .8em;
-  /* padding: 0.3em 2em .6em 2em; */
   padding: 0.2em 1em 1.6em 1em;
   color: black;
   text-align: center;
@@ -73,7 +61,7 @@ export default function Work() {
 
   return (
     <StyledWork>
-      <ProjectTitle>Work</ProjectTitle>
+      <ProjectTitle>PORTFOLIO</ProjectTitle>
       <ProjectFrame>
 
         <ProjectLink href={theRecipeBox_link}>

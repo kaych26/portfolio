@@ -1,5 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
+import LinkLinkedin from './LinkLinkedin';
+import LinkGithub from './LinkGithub';
+import LinkResume from './LinkResume';
+import LinkEmail from './LinkEmail';
+
 
 import resume_icon from '../assets/icons/resume.svg';
 import github_icon from '../assets/icons/github.svg';
@@ -39,24 +44,10 @@ export default function InfoLinks() {
   return (
     <StyledInfo>
       <InfoContainer>
-        <a href={resume_link} target="_blank" rel="noopener noreferrer">
-          <InfoIcon
-            src={resume_icon} alt='resume' />
-        </a>
-
-        <a href={linkedin_link} target="_blank" rel="noopener noreferrer">
-          <InfoIcon
-            src={linkedin_icon} alt='linkedIn'
-          />
-        </a>
-
-        <a href={github_link} target="_blank" rel="noopener noreferrer">
-          <InfoIcon src={github_icon} alt='github' />
-        </a>
-
-        <a href="mailto:kaych26@gmail.com" target="_blank" rel="noopener noreferrer">
-          <InfoIcon src={mail_icon} alt='mail' />
-        </a>
+        <LinkResume />
+        <LinkLinkedin />
+        <LinkGithub />
+        <LinkEmail />
       </InfoContainer>
     </StyledInfo>
   );

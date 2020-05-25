@@ -7,7 +7,7 @@ const StyledQuote = styled.section`
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
   display: flex;
-  padding-top: 3em;
+  padding-top: 2em;
 
   /* transition-delay: 5s; */
 `;
@@ -17,7 +17,6 @@ const WordFrame = styled.div`
 display: flex;
 align-items: baseline;
 `;
-
 
 const ColorChar = styled.h2`
   /* animation: 5s ${keyframes`${rollIn}`}; */

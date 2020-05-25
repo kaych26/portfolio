@@ -6,7 +6,7 @@ const StyledPostIt = styled.section`
 /* animation: ${props => props.time} ${keyframes`${fadeIn}`}; */
   font-family: 'Shadows Into Light Two', cursive;
   position: relative;
-  padding: 10px 38px;
+  
 `;
 
 const PostItQuote = styled.p`
@@ -18,9 +18,9 @@ const PostItQuote = styled.p`
   /* width: 200px;
   height: 200px; */
   margin: 0 auto;
-  padding: 20px;
+  padding: .8em;
   font-size: 1.16em;
-  line-height: 1.3em;
+  line-height: 1.2em;
   letter-spacing: .1em;
   box-shadow: 0 10px 10px 2px rgba(0,0,0,0.3);
 
