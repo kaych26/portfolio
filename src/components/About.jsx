@@ -16,9 +16,6 @@ const StyledAbout = styled.section`
   grid-template-columns: 25% 56% 10% 9%;
   grid-template-rows: 20% 46% 20%;
 
-  /* display: flex;
-  align-items: center;
-  justify-content: space-around; */
   font-family: 'Shadows Into Light Two', cursive;
 `;
 
@@ -30,8 +27,9 @@ const AboutMoiDiv = styled.div`
   grid-area: 1/2/3/3;
 `;
 const AboutArrowDiv = styled.div`
-  grid-area: 3/3/3/4;
+  grid-area: 3/4/4/5;
   align-self: end;
+  justify-items: end;
  
 `;
 
@@ -40,11 +38,10 @@ const ArrowLink = styled(Link)`
   color: #1e8ff7;
   font-family: 'Montserrat', sans-serif;
 
-
 `;
 
 const ArrowImg = styled.img`
-width: 3.5em;
+width: 3.3em;
 `;
 
 
