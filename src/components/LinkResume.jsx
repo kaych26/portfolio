@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import icon from '../assets/icons/resume.svg';
 
+
 const StyledImgLink = styled.section`
 
   font-family: 'Shadows Into Light Two', cursive;
@@ -22,16 +23,48 @@ const Img = styled.img`
   width: 35px;
 `;
 
+const NavResume = styled.h2`
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  padding: .3em 2em;
+  text-decoration: none;
+  color: #000;
+  background-color: rgba(252, 251, 248, 0.8);
+  border-radius: 10px;
+  height: 26px;
+
+  &:hover {
+    color: #fff;
+    background-color: #878d8c
+  }
+  &:active {
+    background-color: #545d5c;
+  }
+`;
+
+
 
 export default function LinkResume(props) {
+
   const link = 'https://drive.google.com/file/d/1dgD9TQ2uK9CvewjmYTQ1WXZJHm2dtQZH/view';
   return (
     <StyledImgLink>
       <Link
         href={link} target="_blank" rel="noopener noreferrer">
-        <Img
-          src={icon} alt='resume' />
-          {props.desc}
+        {!props.imgOption &&
+          <>
+            <Img
+              src={icon} alt='resume' />
+            {props.desc}
+          </>
+        }
+        {props.imgOption &&
+          <NavResume>
+            {props.children}
+          </NavResume>
+        }
+
+
       </Link>
 
     </StyledImgLink>

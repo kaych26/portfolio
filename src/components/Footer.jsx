@@ -1,63 +1,57 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+import { Link } from 'react-router-dom';
+import arrow_icon from '../assets/icons/arrow-right.svg';
+import { merge, flash, lightSpeedIn, slideInLeft} from 'react-animations';
 
-import resume_icon from '../assets/icons/resume_simple.svg';
-import github_icon from '../assets/icons/github_simple.svg';
-import linkedin_icon from '../assets/icons/linkedin_simple.svg';
-import mail_icon from '../assets/icons/mail_simple.svg';
+
+const slideSpeed = merge(slideInLeft, lightSpeedIn);
 
 const StyledFooter = styled.section`
-  /* background-color: blue; */
+
+  animation: 2s ${keyframes`${slideInLeft}`};
+  /* animation: 2s ${keyframes`${slideSpeed}`}; */
   width: 100%;
   position: fixed;
   bottom: 0px;
-  padding: 5px 0 30px 0;
+  /* padding: 5px 0 20px 0; */
 
+  padding-right: 3em;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
+
+  /* display: flex;
+  justify-content: flex-end; */
 `;
 
+
 const FooterContainer = styled.div`
-  /* background-color: red; */
-  padding-bottom: 38px;
+
+  padding-right: 3em;
   display: flex;
-  width: 30%;
   justify-content: space-between;
 `;
 
-const FooterIcon = styled.img`
-  width: 35px;
-  height: 35px;
+const FooterLink = styled(Link)`
+  padding: 0 1.5em 3em 0;
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
 `;
 
-export default function Footer() {
-  const resume_link = 'https://drive.google.com/file/d/1dgD9TQ2uK9CvewjmYTQ1WXZJHm2dtQZH/view';
-  const linkedin_link = 'https://www.linkedin.com/in/kaych26/';
-  const github_link = 'https://github.com/kaych26';
-  // const mail_addr = 'kaych26@gmail.com';
 
+const FooterImg = styled.img`
+  width: 48px;
+`;
+
+export default function Footer(props) {
+  
   return (
     <StyledFooter>
-      <FooterContainer>
-        <a href={resume_link} target="_blank" rel="noopener noreferrer">
-          <FooterIcon
-            src={resume_icon} alt='resume' />
-        </a>
-
-        <a href={linkedin_link} target="_blank" rel="noopener noreferrer">
-          <FooterIcon
-            src={linkedin_icon} alt='linkedIn'
-          />
-        </a>
-
-        <a href={github_link} target="_blank" rel="noopener noreferrer">
-          <FooterIcon src={github_icon} alt='github' />
-        </a>
-
-        <a href="mailto:kaych26@gmail.com" target="_blank" rel="noopener noreferrer">
-          <FooterIcon src={mail_icon} alt='mail' />
-        </a>
-      </FooterContainer>
+      {/* <FooterContainer> */}
+        <FooterLink to={props.nextUrl}>
+          <FooterImg src={arrow_icon} />
+        </FooterLink>
+      {/* </FooterContainer> */}
     </StyledFooter>
   );
 }

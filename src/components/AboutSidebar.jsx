@@ -81,7 +81,7 @@ export default function AboutSidebar() {
             To Do
           </PostItTitle>
           <PostItDiv>
-          'Keep hacking, keep exploring & stay inspired!'
+          Keep hacking, keep exploring & SKY is the limit !'
           </PostItDiv>
             
         </PostIt>

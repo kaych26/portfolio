@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { slideInLeft, slideInDown} from 'react-animations';
+import { slideInLeft, slideInDown } from 'react-animations';
 // import logo from '../assets/icons/kay_logo.png';
+import LinkResume from './LinkResume';
 import Logo from './Logo';
 
 const StyledHeader = styled.header`
@@ -28,6 +29,7 @@ const NavContainer = styled.div`
   justify-content: flex-end;
   margin-right: 3em;
   padding-top: 1.8em;
+  font-size: 16px;
 `;
 const LogoLink = styled(Link)`
   font-family: 'Londrina Shadow', cursive;
@@ -38,8 +40,8 @@ const LogoLink = styled(Link)`
 `;
 
 const NavLink = styled(Link)`
-  font-size: 16px;
-  padding: .3em 2em;
+  /* font-size: 16px; */
+  padding: .3em 1.5em;
   text-decoration: none;
   color: #000;
   background-color: rgba(252, 251, 248, 0.8);
@@ -55,15 +57,19 @@ const NavLink = styled(Link)`
   }
 `;
 
+const NavResume = styled.div`
+
+`;
+
+
 export default function Header(props) {
   let homePage = 0;
-  
+
   if (props.location.pathname === '/') {
     homePage = 1;
   }
 
 
-  // debugger
   return (
     <StyledHeader>
       <HeaderContainer>
@@ -76,9 +82,19 @@ export default function Header(props) {
           )}
 
         <NavContainer>
-          <NavLink to="/">Home</NavLink>
+          {!homePage &&
+            <NavLink to="/">Home</NavLink>
+          }
           <NavLink to="/about">About</NavLink>
           <NavLink to="/work">Work</NavLink>
+
+          {/* <NavResume> */}
+
+          <LinkResume imgOption='no'>
+            Resume
+          </LinkResume>
+          {/* </NavResume> */}
+
         </NavContainer>
       </HeaderContainer>
     </StyledHeader>

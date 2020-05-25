@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 import styled, { keyframes } from 'styled-components';
 import { jello, flipInY, rotateInDownRight, flip, fadeInUp, fadeInRight, slideInUp, rotateIn, slideInDown, swing, zoomInDown, zoomIn, zoomInUp, slideIn, rotateInDownLeft, slideInLeft, slideInRight, fadeIn } from 'react-animations';
 
@@ -8,15 +9,14 @@ import { jello, flipInY, rotateInDownRight, flip, fadeInUp, fadeInRight, slideIn
 
 import AboutMoi from './AboutMoi';
 import AboutSidebar from './AboutSidebar';
-import arrow_icon from '../assets/icons/arrow-right.svg';
-
 
 const StyledAbout = styled.section`
   display: grid;
-  grid-template-columns: 25% 57% 5% 8%;
+  grid-template-columns: 28% 57% 5% 5%;
   grid-template-rows: 20% 46% 20%;
 
   font-family: 'Shadows Into Light Two', cursive;
+  padding-top: 1.5em;
 `;
 
 const AboutSidebarDiv = styled.div`
@@ -26,31 +26,6 @@ const AboutSidebarDiv = styled.div`
 const AboutMoiDiv = styled.div`
   grid-area: 1/2/3/3;
 `;
-const AboutArrowDiv = styled.div`
-  grid-area: 3/4/4/5;
-  align-self: end;
-  justify-items: end;
- 
-`;
-
-const ArrowLink = styled(Link)`
-  text-decoration: none;
-  color: #1e8ff7;
-  font-family: 'Montserrat', sans-serif;
-
-`;
-
-const ArrowImg = styled.img`
-width: 3.3em;
-`;
-
-
-const AboutPostItFrame = styled.div`
-  /* animation: ${props => props.time} ${keyframes`${fadeIn}`}; */
-  /* animation: 2s ${keyframes`${fadeIn}`}; */
-  /* display: flex; */
-  align-content: space-between;
-`;
 
 export default function About() {
 
@@ -58,7 +33,6 @@ export default function About() {
   // const myPassions = [
   //   'Keep hacking, keep exploring & stay inspired!'
   // ];
-
 
   return (
     <StyledAbout>
@@ -68,13 +42,7 @@ export default function About() {
       <AboutMoiDiv>
         <AboutMoi />
       </AboutMoiDiv>
-      <AboutArrowDiv>
-        <ArrowLink to="/work">
-          View Portfolio
-          <ArrowImg src={arrow_icon} />
-        </ArrowLink>
-
-      </AboutArrowDiv>
+    
     </StyledAbout>
   );
 }
