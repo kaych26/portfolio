@@ -10,12 +10,12 @@ import PostIt from './PostIt';
 import LinkNavbar from './LinkNavbar';
 
 const StyledAboutSidebar = styled.section`
-  padding: 0 20px 0 25px;
+  /* padding: 0 20px 0 25px; */
 
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 3em;
-  /* column-gap: 1em; */
+  column-gap: 1em;
  
   `;
 

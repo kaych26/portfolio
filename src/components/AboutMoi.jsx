@@ -12,7 +12,7 @@ const StyledAboutMoi = styled.section`
   font-family: 'Montserrat', sans-serif;
   letter-spacing: .03em;
   /* font-weight: 600; */
-  width: 50%;
+  /* width: 50%; */
   padding: 1em;
   border-radius: 10px;
   overflow: auto;
@@ -42,8 +42,6 @@ const Title = styled.h1`
   color: #191b1b;
   font-size: 1.9em;
   padding-bottom: .8em;
-
-
 `;
 
 const AboutMe = styled.p`
@@ -57,7 +55,6 @@ const SpanTxt = styled.span`
   color: #175be3;
   font-weight: 500;
 `;
-
 
 
 export default function AboutMoi() {

@@ -78,7 +78,7 @@ export default function Header(props) {
         <NavContainer>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/about">About</NavLink>
-          <NavLink to="/Work">Work</NavLink>
+          <NavLink to="/work">Work</NavLink>
         </NavContainer>
       </HeaderContainer>
     </StyledHeader>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { bounce, bounceInLeft, slideInDown, slideInRight, fadeInRightBig, fadeInLeft, rollIn, rotateInDownLeft } from 'react-animations';
+import { bounce, bounceInLeft, flip, swing, slideInDown, slideInRight, fadeInRightBig, fadeInLeft, rollIn, rotateInDownLeft } from 'react-animations';
 
 import react_img from '../assets/skills/react2.png';
 import rails_img from '../assets/skills/rails.svg';
@@ -14,6 +14,8 @@ import css_img from '../assets/skills/css.svg';
 import github_img from '../assets/skills/github.png';
 import mongoose_img from '../assets/skills/mongoose.png';
 
+import LinkGithub2 from './LinkGithub2';
+
 const StyledSkills = styled.section`
   animation: 3s ${keyframes`${slideInRight}`} ;
   display: flex;
@@ -25,9 +27,14 @@ const StyledSkills = styled.section`
 const SkillFrame = styled.div`
   /* animation: 5s ${keyframes`${bounceInLeft}`} ; */
   animation: 3s ${keyframes`${bounce}`} ;
-  
-  padding: 0.2em .5em;
+  padding: 0.2em .8em;
 `;
+const GithubFrame = styled.div`
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8em;
+  animation: 8s ${keyframes`${swing}`} infinite;
+`;
+
 
 
 export default function Skills() {
@@ -84,10 +91,12 @@ export default function Skills() {
           src={cplus_img} alt='c++' width='60px' />
       </SkillFrame>
 
-      <SkillFrame>
-        <img
-          src={github_img} alt='git' width='40px' />
-      </SkillFrame>
+      <GithubFrame>
+        <LinkGithub2 />
+        Kay's Github
+        {/* <img
+          src={github_img} alt='git' width='50px' /> */}
+      </GithubFrame>
 
     </StyledSkills >
   )

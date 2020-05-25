@@ -14,14 +14,13 @@ const StyledWork = styled.section`
   overflow: auto;
   overflow-x: hidden;
   
-  padding: 0px 20px;
-
+  padding: 0px 18px;
 `;
 
 const ProjectTitle = styled.h1`
   font-size: 1.2em;
   text-align: center;
-  padding: .8em 0;
+  padding: .7em 0;
 `;
 
 const ProjectFrame = styled.div`
@@ -45,7 +44,7 @@ const ProjectLink = styled.a`
 const ProjectDesc = styled.p`
   font-family: 'Montserrat', sans-serif;
   font-size: .8em;
-  padding: 0.2em 1em 1.6em 1em;
+  padding: 0.2em 1em 1.5em 1em;
   color: black;
   text-align: center;
   /* width: 24em; */

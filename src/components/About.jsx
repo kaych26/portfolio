@@ -1,43 +1,51 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import styled, { keyframes } from 'styled-components';
 import { jello, flipInY, rotateInDownRight, flip, fadeInUp, fadeInRight, slideInUp, rotateIn, slideInDown, swing, zoomInDown, zoomIn, zoomInUp, slideIn, rotateInDownLeft, slideInLeft, slideInRight, fadeIn } from 'react-animations';
 
 // import { motion, AnimatePresence } from 'framer-motion';
-// import resume from '../assets/kayResume.jpg';
 
-
-import PostIt from './PostIt';
 import AboutMoi from './AboutMoi';
 import AboutSidebar from './AboutSidebar';
+import arrow_icon from '../assets/icons/arrow-right.svg';
 
 
 const StyledAbout = styled.section`
-  display: flex;
-  /* flex-direction: column; */
+  display: grid;
+  grid-template-columns: 25% 56% 10% 9%;
+  grid-template-rows: 20% 46% 20%;
+
+  /* display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-around; */
   font-family: 'Shadows Into Light Two', cursive;
 `;
 
-// const AboutTitle = styled.h1`
+const AboutSidebarDiv = styled.div`
+  grid-area: 2/1/2/1;
+`;
 
-//   /* animation: 2s ${keyframes`${slideInLeft}`}; */
-//   font-size: 1.5em;
-//   padding: 2em 0 1em 0;
-//   /* padding: 2.8em 0 2.5em 0; */
-//   letter-spacing: .1em;
-//   font-weight: 600;
+const AboutMoiDiv = styled.div`
+  grid-area: 1/2/3/3;
+`;
+const AboutArrowDiv = styled.div`
+  grid-area: 3/3/3/4;
+  align-self: end;
+ 
+`;
 
-// `;
+const ArrowLink = styled(Link)`
+  text-decoration: none;
+  color: #1e8ff7;
+  font-family: 'Montserrat', sans-serif;
 
-// const AboutTitle2 = styled(AboutTitle)`
-//   animation: 2s ${keyframes`${fadeIn}`};
-//   /* animation: 8s ${keyframes`${rotateIn}`}; */
-//   padding: 0 0 2em 0;
-//   font-weight: normal;
-//   /* transition-delay: 5s;
-//   transition-duration: 2; */
-// `;
+
+`;
+
+const ArrowImg = styled.img`
+width: 3.5em;
+`;
 
 
 const AboutPostItFrame = styled.div`
@@ -47,69 +55,29 @@ const AboutPostItFrame = styled.div`
   align-content: space-between;
 `;
 
-const PostItFrame = styled.div`
-  animation: ${props => props.time} ${keyframes`${slideInLeft}`};    
-  /* animation: ${props => props.time} ${keyframes`${jello}`};     */
-`;
-const PostItFrame2 = styled.div`
-  animation: ${props => props.time} ${keyframes`${slideInUp}`};    
-  /* animation: ${props => props.time} ${keyframes`${jello}`};     */
-`;
-const PostItFrame3 = styled.div`
-  animation: ${props => props.time} ${keyframes`${slideInRight}`};    
-  /* animation: ${props => props.time} ${keyframes`${jello}`};     */
-`;
-
-const PostItTitle = styled.h3`
-text-align: center;
-  padding-bottom: .3em;
-  font-weight: 800;
-  color: #ff69b4;
-`;
-
-const PostItList = styled.p`
-  padding-bottom: .6em;
-  font-size: .8em;
-  text-align: center;
-`;
-
-
 export default function About() {
 
-  const title = 'To Do';
-  const myPassions = [
-    'Keep hacking, keep exploring & stay inspired!'
-  ];
+  // const title = 'To Do';
+  // const myPassions = [
+  //   'Keep hacking, keep exploring & stay inspired!'
+  // ];
 
 
   return (
     <StyledAbout>
-      <AboutSidebar>
-      </AboutSidebar>
-      <AboutMoi />
-     
-        <AboutPostItFrame>
+      <AboutSidebarDiv>
+        <AboutSidebar />
+      </AboutSidebarDiv>
+      <AboutMoiDiv>
+        <AboutMoi />
+      </AboutMoiDiv>
+      <AboutArrowDiv>
+        <ArrowLink to="/work">
+          View Portfolio
+          <ArrowImg src={arrow_icon} />
+        </ArrowLink>
 
-          {/* <PostItFrame2 time='2.5s'>
-            
-            <PostIt rotate='-2deg' size='150px'>
-              <PostItTitle>
-                {title}
-              </PostItTitle>
-              {myPassions.map((passion, idx) =>
-                <PostItList key={idx}>
-                  {passion}
-                </PostItList>
-
-              )}
-            </PostIt>
-          </PostItFrame2> */}
-
-
-
-        </AboutPostItFrame>
-
-
+      </AboutArrowDiv>
     </StyledAbout>
   );
 }

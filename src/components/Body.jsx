@@ -10,8 +10,7 @@ const StyledBody = styled.section`
 export default function Body(props) {
   return (
     <StyledBody>
-      {props.children}
-     
+      {props.children}    
     </StyledBody>
   );
 }

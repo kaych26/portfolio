@@ -21,8 +21,6 @@ function App() {
           path='/'
           render={route => (<Header {...route} />)}
         />
-
-
         <Body>
           <Route exact path="/">
             <Home />
@@ -30,16 +28,12 @@ function App() {
 
           <Route exact path="/about">
             <About />
-            {/* <Footer /> */}
        
           </Route>
           <Route exact path="/work">
             <Work />
-            {/* <Skills /> */}
           </Route>
-          {/* <Route exact path="/contact">
-            <Contact />
-          </Route> */}
+          
         </Body>
 
         {/* <Footer /> */}
