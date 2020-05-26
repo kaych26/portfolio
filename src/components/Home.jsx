@@ -6,6 +6,7 @@ import Quote from './Quote';
 import InfoLinks from './InfoLinks';
 
 const StyledHome = styled.section`
+  padding-top: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;

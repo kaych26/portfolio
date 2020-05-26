@@ -15,7 +15,8 @@ const StyledWork = styled.section`
   overflow: auto;
   overflow-x: hidden;
   
-  padding: 1.3em 2em;
+  /* padding: 1.3em 2em; */
+  padding: 1.6em 2em 2em 1.2em;
 `;
 
 const ProjectTitle = styled.h1`

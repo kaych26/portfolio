@@ -7,7 +7,7 @@ import LinkResume from './LinkResume';
 import Logo from './Logo';
 
 const StyledHeader = styled.header`
-  height: 100px;
+  height: 80px;
   /* position: relative; */
   /* height: 100px; */
   position: fixed;
@@ -26,6 +26,8 @@ const HeaderContainer = styled.div`
 
 const NavContainer = styled.div`
   display: flex;
+  /* justify-content: flex-end; */
+  height: 60px;
   justify-content: flex-end;
   margin-right: 3em;
   padding-top: 1.8em;
@@ -68,21 +70,19 @@ const NavLink = styled(Link)`
 
 const NavResume = styled.div`
 
-padding: .3em 1.5em;
+/* padding: .3em 1.5em; */
   text-decoration: none;
   /* color: ${props => props.color === '' ? props.color : '#000'}; */
   color: ${props => props.color};
   background-color: rgba(252, 251, 248, 0.8);
   border-radius: 10px;
   height: 26px;
-&:hover {
-   
+
+  &:hover {
     border: 1px solid #ffa500;
   
   }
-
 `;
-
 
 export default function Header(props) {
   let home = '#000';
@@ -106,12 +106,11 @@ export default function Header(props) {
     resume = '#ffa500';
   }
 
-
-
   return (
     <StyledHeader>
       <HeaderContainer>
-        {props.location.pathname !== '/'? (
+        {(props.location.pathname !== '/' && props.location.pathname !== '/work')
+          ? (
           <LogoLink to="/">
             <Logo />
           </LogoLink>

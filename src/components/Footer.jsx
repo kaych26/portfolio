@@ -5,6 +5,14 @@ import arrow_right_icon from '../assets/icons/arrow_right.svg';
 import arrow_left_icon from '../assets/icons/arrow_left.svg';
 import { merge, flash, lightSpeedIn, slideInLeft, slideInRight} from 'react-animations';
 
+const size = {
+  mobile: '414px',
+  tablet: '768px',
+  tablet_max: '1024px',
+  max_mid: '1110px',
+  max_large: '1280px',
+};
+
 
 const slideSpeed = merge(slideInLeft, lightSpeedIn);
 
@@ -21,9 +29,18 @@ const StyledFooter = styled.section`
   display: flex;
   /* justify-content: flex-end; */
   justify-content: space-between;
-  /* justify-content: center; */
 
   padding: 3em 15em;
+  /* padding: 3em 10em; */
+
+  @media (max-width: ${size.tablet_max}) {
+    padding: 3em 6em;
+  }
+
+  @media (max-width: ${size.mobile}) {
+    padding: 3em 1em;
+  }
+
 `;
 
 

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const StyledBody = styled.section`
   /* height: 60%; */
-  padding-top: 60px;
+  padding-top: 35px;
   
 `;
 

@@ -14,13 +14,13 @@ const StyledResumeSummary = styled.section`
   font-weight: 300;
   /* letter-spacing: .03em; */
   overflow: auto;
-  padding: .5em 0;
+  /* padding: .3em 0; */
 `;
 
 const SummaryHeading = styled.h1`
   color: #175be3;
   font-size: 1.9em;
-  padding-bottom: .3em;
+  padding: .2em 0 .4em 0em;
 `;
 
 const Summary = styled.p`
@@ -30,7 +30,6 @@ const Summary = styled.p`
 const Experience = styled.div`
   overflow: auto;
 `;
-
 
 const Title = styled.h3`
   font-size: 1.1em;
@@ -42,7 +41,7 @@ const Title = styled.h3`
 
 const DescDiv = styled.div`
   display: grid;
-  grid-template-columns: 65% 35%;
+  grid-template-columns: 68% auto;
   align-items: center;
   padding: .1em 0;
  
@@ -75,7 +74,7 @@ const Education = styled.h3`
 `;
 
 const LinkResumeDiv = styled.div`
-  padding-top: .8em;
+  padding-top: .9em;
 `;
 
 const Span = styled.span`
