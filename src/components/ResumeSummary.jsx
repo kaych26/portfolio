@@ -19,14 +19,16 @@ const StyledResumeSummary = styled.section`
 
 const SummaryHeading = styled.h1`
   color: #175be3;
-  /* color: #191b1b; */
   font-size: 1.9em;
-  /* font-weight: bold; */
   padding-bottom: .3em;
 `;
 
 const Summary = styled.p`
   font-size: .95em;
+`;
+
+const Experience = styled.div`
+  overflow: auto;
 `;
 
 
@@ -40,9 +42,10 @@ const Title = styled.h3`
 
 const DescDiv = styled.div`
   display: grid;
-  grid-template-columns: 62% 38%;
+  grid-template-columns: 65% 35%;
   align-items: center;
   padding: .1em 0;
+ 
 
   /* grid-template-rows:  */
 `;
@@ -106,62 +109,66 @@ export default function ResumeSummary() {
         EXPERIENCE
       </Title>
 
-      <DescDiv>
-        <Company>
-          Consultant
-          <Desc>
-            Automation Software Engineer
-          </Desc>
-        </Company>
-        <Time>
-          2013-Present
-        </Time>
+      <Experience>
 
-      </DescDiv>
-      <DescDiv>
-        <Desc>
-          Parental Leave (Mom)
+
+        <DescDiv>
+          <Company>
+            Consultant
+          <Desc>
+              Automation Software Engineer
+          </Desc>
+          </Company>
+          <Time>
+            2013-Present
+        </Time>
+        </DescDiv>
+
+        <DescDiv>
+          <Desc>
+            Parental Leave (Mom)
         </Desc>
-        <Time>
-          2004 - 2013
+          <Time>
+            2004 - 2013
         </Time>
-      </DescDiv>
+        </DescDiv>
 
-      <DescDiv>
-        <Company>
-          Bank of New York
+        <DescDiv>
+          <Company>
+            Bank of New York
           <Desc>
-            Senior Programmer / Manager, VP - Market Data Group
+              Senior Programmer / Manager, VP - Market Data Group
           </Desc>
-        </Company>
-        <Time>
-          1999 - 2003
+          </Company>
+          <Time>
+            1999 - 2003
         </Time>
-      </DescDiv>
+        </DescDiv>
 
-      <DescDiv>
-        <Company>
-          Societe Generale / SG Cowen
+        <DescDiv>
+          <Company>
+            Societe Generale / SG Cowen
           <Desc>
-            Senior Programmer, Assistant Treasurer - Finance Techology Group
+              Senior Programmer, Assistant Treasurer - Finance Techology Group
           </Desc>
-        </Company>
-        <Time>
-          1998 - 1999
+          </Company>
+          <Time>
+            1998 - 1999
         </Time>
-      </DescDiv>
+        </DescDiv>
 
-      <DescDiv>
-        <Company>
-          Citi Group (Formerly Salomon Brothers)
+        <DescDiv>
+          <Company>
+            Citi Group (Formerly Salomon Brothers)
           <Desc>
-            Team Leader Global Develpment & Deployment Servies
+              Team Leader Global Develpment & Deployment Servies
           </Desc>
-        </Company>
-        <Time>
-          1994 - 1998
+          </Company>
+          <Time>
+            1994 - 1998
         </Time>
-      </DescDiv>
+        </DescDiv>
+      </Experience>
 
       <Title>
         EDUCATION
