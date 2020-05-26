@@ -83,7 +83,6 @@ export default function AboutSidebar() {
           <PostItDiv>
           Keep hacking, keep exploring & SKY is the limit !'
           </PostItDiv>
-            
         </PostIt>
 
 

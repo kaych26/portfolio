@@ -17,7 +17,12 @@ const Img = styled.img`
 
 
 export default function LinkGithub(props) {
-  const link = 'https://github.com/kaych26';
+  let link = 'https://github.com/kaych26';
+  // const linkto = 'https://github.com/kaych26';
+  if (props.link) {
+    link = props.link;
+  }
+  
   return (
     <StyledImgLink>
       <Link

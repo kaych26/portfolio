@@ -23,7 +23,7 @@ const StyledFooter = styled.section`
   justify-content: space-between;
   /* justify-content: center; */
 
-  padding: 3em 10em;
+  padding: 3em 18em;
 `;
 
 

@@ -131,7 +131,7 @@ export default function ResumeSummary() {
         <Company>
           Bank of New York
           <Desc>
-            Senior Programmer / Manager, VP - Market Data
+            Senior Programmer / Manager, VP - Market Data Group
           </Desc>
         </Company>
         <Time>

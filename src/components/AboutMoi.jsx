@@ -50,12 +50,13 @@ const Title = styled.h1`
 
 
 const AboutMeOuterDiv = styled.div`
-  /* height: 350px; */
+  height: 400px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 320px auto;
+  grid-template-rows: 1fr 60px;
+  /* grid-template-rows: 380px auto; */
   /* align-items: end; */
-  /* overflow: auto; */
+  overflow: hidden;
 `;
 
 const AboutMeDiv = styled.div`
@@ -70,7 +71,7 @@ const AboutMe = styled.p`
 `;
 
 const LinkResumeDiv = styled.div`
-  padding: .8em 0;
+  padding: .6em 0 0em 0;
 `;
 
 
@@ -170,7 +171,7 @@ export default function AboutMoi() {
         {isOpen &&
           (
             <ScrollTo href="#AboutPart1" onClick={(e) => handleOpen(e)}>
-              PREV
+              PREVIOUS
             </ScrollTo>
           )}
 
