@@ -1,63 +1,68 @@
 import React from 'react';
-import styled, {keyframes} from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
-import arrow_icon from '../assets/icons/arrow-right.svg';
-import { merge, flash, lightSpeedIn, slideInLeft} from 'react-animations';
+import arrow_right_icon from '../assets/icons/arrow_right.svg';
+import arrow_left_icon from '../assets/icons/arrow_left.svg';
+import { merge, flash, lightSpeedIn, slideInLeft, slideInRight} from 'react-animations';
 
 
 const slideSpeed = merge(slideInLeft, lightSpeedIn);
 
 const StyledFooter = styled.section`
 
-  animation: 2s ${keyframes`${slideInLeft}`};
-  /* animation: 2s ${keyframes`${slideSpeed}`}; */
+  /* animation: 2s ${keyframes`${slideInLeft}`}; */
+
   width: 100%;
   position: fixed;
   bottom: 0px;
-  /* padding: 5px 0 20px 0; */
-
-  
-  padding-right: 3em;
-
-  /* display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  align-items: flex-end; */
 
 
   z-index: auto;
   display: flex;
-  justify-content: flex-end;
+  /* justify-content: flex-end; */
+  justify-content: space-between;
+  /* justify-content: center; */
+
+  padding: 3em 10em;
 `;
 
 
-const FooterContainer = styled.div`
+const FooterRightContainer = styled.div`
+animation: 2s ${keyframes`${slideInLeft}`};
+  
+`;
 
-  padding-right: 3em;
-  display: flex;
-  justify-content: space-between;
+const FooterLeftContainer = styled.div`
+animation: 2s ${keyframes`${slideInRight}`};
+ 
 `;
 
 const FooterLink = styled(Link)`
-  padding: 0 1.5em 3em 0;
+  /* animation: 2s ${keyframes`${slideInLeft}`}; */
+  /* padding: 0 0em 3em 5em;; */
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
 `;
-
 
 const FooterImg = styled.img`
   width: 48px;
 `;
 
 export default function Footer(props) {
-  
+
   return (
     <StyledFooter>
-      {/* <FooterContainer> */}
-        <FooterLink to={props.nextUrl}>
-          <FooterImg src={arrow_icon} />
+      <FooterRightContainer>
+        <FooterLink to={props.prevUrl}>
+          <FooterImg src={arrow_left_icon} />
         </FooterLink>
-      {/* </FooterContainer> */}
+      </FooterRightContainer>
+
+      <FooterLeftContainer>
+        <FooterLink to={props.nextUrl}>
+          <FooterImg src={arrow_right_icon} />
+        </FooterLink>
+      </FooterLeftContainer>
     </StyledFooter>
   );
 }

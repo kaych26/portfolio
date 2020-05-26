@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as Scroll from 'react-scroll';
-import { jello, flipInY, rotateInDownRight, flip, fadeInRight, slideInUp, rotateIn, slideInDown, swing, zoomInDown, zoomIn, zoomInUp, slideIn, rotateInDownLeft, slideInLeft, slideInRight, fadeIn } from 'react-animations';
+import { jello, flash, bounce, flipInY, rotateInDownRight, flip, fadeInRight, slideInUp, rotateIn, slideInDown, swing, zoomInDown, zoomIn, zoomInUp, slideIn, rotateInDownLeft, slideInLeft, slideInRight, fadeIn } from 'react-animations';
+
+import LinkResume from './LinkResume';
 
 const StyledAboutMoi = styled.section`
   /* animation: 2s ${keyframes`${slideInDown}`}; */
@@ -67,12 +69,19 @@ const AboutMe = styled.p`
   padding: .5em 0;
 `;
 
+const LinkResumeDiv = styled.div`
+  padding: .8em 0;
+`;
+
+
 const ScrollTo = styled.a`
+  animation: 2s ${keyframes`${flash}`};
   cursor: pointer;
   /* padding-top: 5em; */
   text-align: center;
   text-decoration: none;
   color: #175be3;
+  font-weight: 500;
   z-index: 1;
 `;
 
@@ -133,13 +142,19 @@ export default function AboutMoi() {
             </AboutMe2>
 
               <AboutMe2>
-                Hobbies include <Span>cooking</Span>, <Span>traveling</Span> with my family, <Span>gardening</Span> and <Span>building construction</Span>. Most would agreed, travel and food are great energy boost for the mind and body. 
+                Hobbies include <Span>cooking</Span>, <Span>traveling</Span>, <Span>gardening</Span> and <Span>building construction</Span>. Most would agreed, travel and food are great energy boost for the mind and body.
 
             </AboutMe2>
 
               <AboutMe2>
-                Becoming a mom has brought many joy and challenges.  My daughter, Annie was born premature and thanks to many professional guidances and online resources, we overcame many obstacles. Today, she is fully recovered and healthy! Nowe, I want to pay forward to share and support other families to learn the unknown.
+                Becoming a mom has brought many joy and challenges.  My daughter, Annie was born premature and thanks to many professional guidances and online resources, we overcame many obstacles. Today, she is fully recovered and healthy! Now, using my experience to actively supporting other families to learn and overcome the unknowns.
             </AboutMe2>
+
+              <LinkResumeDiv>
+              <LinkResume imgOption='1'>
+                View Resume
+              </LinkResume>
+              </LinkResumeDiv>
             </AboutMeDiv>
 
           </>
@@ -148,7 +163,7 @@ export default function AboutMoi() {
         {!isOpen &&
           (
             <ScrollTo href="#AboutPart2" onClick={(e) => handleOpen(e)}>
-              NEXT
+              MORE about me ...
             </ScrollTo>
           )}
 
@@ -160,7 +175,6 @@ export default function AboutMoi() {
           )}
 
       </AboutMeOuterDiv>
-
 
     </StyledAboutMoi>
   )

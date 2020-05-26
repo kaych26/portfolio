@@ -41,20 +41,26 @@ const LogoLink = styled(Link)`
 
 const NavLink = styled(Link)`
   /* font-size: 16px; */
+  /* {props.color? color=props.color : color='#000'} */
+  /* if (props.color === '') {
+    color = 'red';
+  }; */
+
   padding: .3em 1.5em;
   text-decoration: none;
-  color: #000;
+  /* color: ${props => props.color === '' ? props.color : '#000'}; */
+  color: ${props => props.color};
   background-color: rgba(252, 251, 248, 0.8);
   border-radius: 10px;
   height: 26px;
 
   &:hover {
-    color: #fff;
-    background-color: #878d8c
+    border: 1px solid #ffa500;
+
   }
-  &:active {
+  /* &:active {
     background-color: #545d5c;
-  }
+  } */
   /* &::visited {
     background-color: pink;
   } */
@@ -62,21 +68,50 @@ const NavLink = styled(Link)`
 
 const NavResume = styled.div`
 
+padding: .3em 1.5em;
+  text-decoration: none;
+  /* color: ${props => props.color === '' ? props.color : '#000'}; */
+  color: ${props => props.color};
+  background-color: rgba(252, 251, 248, 0.8);
+  border-radius: 10px;
+  height: 26px;
+&:hover {
+   
+    border: 1px solid #ffa500;
+  
+  }
+
 `;
 
 
 export default function Header(props) {
-  let homePage = 0;
+  let home = '#000';
+  let about = '#000';
+  let work = '#000';
+  let resume = '#000'
+
+  // let home, about, work, resume = '#000';
 
   if (props.location.pathname === '/') {
-    homePage = 1;
+    home = '#ffa500';
   }
+  if (props.location.pathname === '/about') {
+    about = '#ffa500';
+    // about = '#175be3';
+  }
+  if (props.location.pathname === '/work') {
+    work = '#ffa500';
+  }
+  if (props.location.pathname === '/resume') {
+    resume = '#ffa500';
+  }
+
 
 
   return (
     <StyledHeader>
       <HeaderContainer>
-        {!homePage ? (
+        {props.location.pathname !== '/'? (
           <LogoLink to="/">
             <Logo />
           </LogoLink>
@@ -85,17 +120,21 @@ export default function Header(props) {
           )}
 
         <NavContainer>
-          {!homePage &&
-            <NavLink to="/">Home</NavLink>
-          }
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/work">Work</NavLink>
+          {/* {!home && */}
+          <NavLink to="/" color={home}>Home</NavLink>
+          {/* } */}
+          <NavLink to="/about" color={about}>About</NavLink>
+          <NavLink to="/work" color={work}>Work</NavLink>
+          <NavLink to="/resume" color={resume}>Resume</NavLink>
 
           {/* <NavResume> */}
 
-          <LinkResume imgOption='no'>
+              
+          {/* <LinkResume imgOption='no' color={resume}>
+            <NavResume color={resume}>
             Resume
-          </LinkResume>
+            </NavResume>
+          </LinkResume> */}
           {/* </NavResume> */}
 
         </NavContainer>

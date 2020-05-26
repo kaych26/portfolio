@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Body from './components/Body';
 import Home from './components/Home';
 import About from './components/About';
+import Resume from './components/Resume';
 import Skills from './components/Skills';
 
 import Work from './components/Work';
@@ -26,17 +27,17 @@ function App() {
             path="/"
             render={route => (
               <>
-            <Home />
-              <Footer {...route} nextUrl="/about" /> </>)}
-         />
+                <Home />
+                <Footer {...route} nextUrl="/about" /> </>)}
+          />
           <Route exact
             path="/about"
             render={route => (
               <>
                 <About />
-                <Footer {...route} nextUrl="/work" /> 
-                </>
-            )}          
+                <Footer {...route} prevUrl="/" nextUrl="/work" />
+              </>
+            )}
           />
 
           <Route exact
@@ -44,11 +45,18 @@ function App() {
             render={route => (
               <>
                 <Work />
-                <Footer {...route} nextUrl="/" /> 
-                </>
-                
+                <Footer {...route} prevUrl="about" nextUrl="/resume" />
+              </>
             )}
-          
+          />
+          <Route exact
+            path="/resume"
+            render={route => (
+              <>
+                <Resume />
+                <Footer {...route} prevUrl="work" nextUrl="/" />
+              </>
+            )}
           />
 
         </Body>

@@ -8,7 +8,7 @@ const StyledImgLink = styled.section`
   font-family: 'Shadows Into Light Two', cursive;
   letter-spacing: .1em;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
 
 `;
 
@@ -28,13 +28,14 @@ const NavResume = styled.h2`
   font-size: 16px;
   padding: .3em 2em;
   text-decoration: none;
-  color: #000;
-  background-color: rgba(252, 251, 248, 0.8);
+  color: #fff;
+  background-color: #878d8c;
+  /* background-color: rgba(252, 251, 248, 0.8); */
   border-radius: 10px;
   height: 26px;
 
   &:hover {
-    color: #fff;
+    /* color: #fff; */
     background-color: #878d8c
   }
   &:active {
@@ -46,7 +47,8 @@ const NavResume = styled.h2`
 
 export default function LinkResume(props) {
 
-  const link = 'https://drive.google.com/file/d/1dgD9TQ2uK9CvewjmYTQ1WXZJHm2dtQZH/view';
+  // const link = 'https://drive.google.com/file/d/1dgD9TQ2uK9CvewjmYTQ1WXZJHm2dtQZH/view';
+  const link = 'https://drive.google.com/file/d/1D5qEa7BiQs2DNpuOEX81wkibF2fvfz1z/view';
   return (
     <StyledImgLink>
       <Link

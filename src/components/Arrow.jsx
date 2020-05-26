@@ -65,11 +65,9 @@ z-index: 1; */
 export default function Arrow() {
   return (
 
-    <StyledArrow>
+    <StyledArrow/>
       
-     
 
-    </StyledArrow>
   )
 
 }

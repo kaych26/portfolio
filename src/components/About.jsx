@@ -20,6 +20,7 @@ const StyledAbout = styled.section`
 `;
 
 const AboutSidebarDiv = styled.div`
+  padding-top: 1.5em;
   grid-area: 2/1/2/1;
 `;
 
