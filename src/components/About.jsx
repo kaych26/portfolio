@@ -1,12 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
-
 import styled, { keyframes } from 'styled-components';
 import { jello, flipInY, rotateInDownRight, flip, fadeInUp, fadeInRight, slideInUp, rotateIn, slideInDown, swing, zoomInDown, zoomIn, zoomInUp, slideIn, rotateInDownLeft, slideInLeft, slideInRight, fadeIn } from 'react-animations';
 
 // import { motion, AnimatePresence } from 'framer-motion';
-
 import AboutMoi from './AboutMoi';
 import AboutSidebar from './AboutSidebar';
 
@@ -30,11 +27,6 @@ const AboutMoiDiv = styled.div`
 
 export default function About() {
 
-  // const title = 'To Do';
-  // const myPassions = [
-  //   'Keep hacking, keep exploring & stay inspired!'
-  // ];
-
   return (
     <StyledAbout>
       <AboutSidebarDiv>
@@ -43,7 +35,6 @@ export default function About() {
       <AboutMoiDiv>
         <AboutMoi />
       </AboutMoiDiv>
-    
     </StyledAbout>
   );
 }

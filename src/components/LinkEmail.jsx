@@ -4,12 +4,12 @@ import icon from '../assets/icons/mail.svg';
 
 const StyledImgLink = styled.section`
   font-family: 'Shadows Into Light Two', cursive;
-
   display: flex;
   justify-content: center;
 `;
+
 const Link = styled.a`
-text-decoration: none;
+  text-decoration: none;
   color: #000;
 `;
 
@@ -19,7 +19,6 @@ const Img = styled.img`
 
 
 export default function Github() {
-  const link = 'https://www.linkedin.com/in/kaych26/';
   return (
     <StyledImgLink>
       <Link
@@ -28,7 +27,6 @@ export default function Github() {
           src={icon} alt='email' />
         
       </Link>
-
     </StyledImgLink>
   )
 }

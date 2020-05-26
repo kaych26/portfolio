@@ -13,14 +13,11 @@ const StyledAboutMoi = styled.section`
   flex-direction: column;
   background-image: linear-gradient(rgba(246, 244, 241, 0.3), rgba(205, 205, 203, 0.3));
 
-/* font-family: 'Roboto', sans-serif; */
   font-family: 'Montserrat', sans-serif;
   letter-spacing: .03em;
 
   padding: 1em;
   border-radius: 10px;
-
-  /* height: 600px; */
 `;
 
 const HelloDiv = styled.div`
@@ -48,14 +45,11 @@ const Title = styled.h1`
   padding-bottom: .7em;
 `;
 
-
 const AboutMeOuterDiv = styled.div`
   height: 400px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 60px;
-  /* grid-template-rows: 380px auto; */
-  /* align-items: end; */
   overflow: hidden;
 `;
 
@@ -74,11 +68,9 @@ const LinkResumeDiv = styled.div`
   padding: .6em 0 0em 0;
 `;
 
-
 const ScrollTo = styled.a`
   animation: 2s ${keyframes`${flash}`};
   cursor: pointer;
-  /* padding-top: 5em; */
   text-align: center;
   text-decoration: none;
   color: #175be3;
@@ -87,7 +79,6 @@ const ScrollTo = styled.a`
 `;
 
 const AboutMe2 = styled(AboutMe)``;
-
 
 const Span = styled.span`
   color: #175be3;
@@ -136,7 +127,6 @@ export default function AboutMoi() {
         )}
         {isOpen && (
           <>
-
             <AboutMeDiv id="AboutPart2">
               <AboutMe2>
                 Developed core application to provide real-time <Span>Market Data</Span> to 24x7 institutional investors and online customers. Responsive and proactive in making preventative measures to ensure product <Span>stability</Span>.  Designed and implemented application for <Span>fault tolerance</Span> and <Span>high availability</Span>.
@@ -157,7 +147,6 @@ export default function AboutMoi() {
               </LinkResume>
               </LinkResumeDiv>
             </AboutMeDiv>
-
           </>
         )}
 
@@ -174,9 +163,7 @@ export default function AboutMoi() {
               PREVIOUS
             </ScrollTo>
           )}
-
       </AboutMeOuterDiv>
-
     </StyledAboutMoi>
   )
 

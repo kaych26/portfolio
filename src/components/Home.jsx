@@ -37,9 +37,7 @@ const HomeSubTitle = styled.h2`
   padding-bottom: 1.8em;
 `;
 
-
 export default function Home(props) {
-  // debugger
   return (
     <>
       <StyledHome>
@@ -59,7 +57,6 @@ export default function Home(props) {
         <InfoLinks />
         <Quote />
       </StyledHome>
-
     </>
   );
 }

@@ -3,30 +3,27 @@ import styled, { keyframes } from 'styled-components';
 import { bounce, fadeIn, swing, bounceIn, bounceInLeft, slideInDown, flipInX, rollIn, rotateInDownRight} from 'react-animations';
 
 const StyledQuote = styled.section`
-  /* font-family: 'Roboto', sans-serif; */
+
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
   display: flex;
   padding-top: 2em;
 
-  /* transition-delay: 5s; */
 `;
 
 
 const WordFrame = styled.div`
-display: flex;
-align-items: baseline;
+  display: flex;
+  align-items: baseline;
 `;
 
 const ColorChar = styled.h2`
-  /* animation: 5s ${keyframes`${rollIn}`}; */
   animation: 3s ${keyframes`${fadeIn}`};
   animation: 8s ${keyframes`${swing}`} infinite;
   color: ${props => props.color};
   font-size: 1.8em;
   font-weight: bold;
   transform: rotate(${props => props.rotate});
-
 `;
 
 const Sign = styled.h2`
@@ -41,7 +38,6 @@ const Word = styled.h3`
 `;
 
 export default function Quote() {
-
   return (
     <StyledQuote>
       

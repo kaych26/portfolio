@@ -4,16 +4,10 @@ import LinkResume from './LinkResume';
 
 const StyledResumeSummary = styled.section`
   font-family: 'Montserrat', sans-serif;
-  /* font-family: 'Roboto', sans-serif; */
-  /* font-family: 'Josefin Sans', sans-serif; */
-  /* font-family: 'Londrina Shadow', cursive; */
   background-image: linear-gradient(rgba(246, 244, 241, 0.3), rgba(205, 205, 203, 0.3));
-  /* letter-spacing: .01em; */
   word-spacing: .02em;
   font-weight: 300;
-  /* letter-spacing: .03em; */
-  overflow: auto;
-  /* padding: .3em 0; */
+  /* overflow: auto; */
 `;
 
 const SummaryHeading = styled.h1`
@@ -32,7 +26,6 @@ const Skills = styled.p`
   font-size: .95em;
 `;
 
-
 const Experience = styled.div`
   /* overflow: auto; */
 `;
@@ -50,9 +43,6 @@ const DescDiv = styled.div`
   grid-template-columns: auto 130px;
   align-items: center;
   padding: .1em 0;
- 
-
-  /* grid-template-rows:  */
 `;
 
 const Company = styled.h2`
@@ -78,7 +68,6 @@ const Time = styled.h3`
 const Education = styled.h3`
   font-size: .95em;
   line-height: 1em;
-  /* padding-top: .1em; */
 `;
 
 const LinkResumeDiv = styled.div`
@@ -86,7 +75,6 @@ const LinkResumeDiv = styled.div`
 `;
 
 const Span = styled.span`
-  /* color: #175be3; */
   font-size: .95em;
   font-weight: 600;
 `;
@@ -94,7 +82,6 @@ const Span = styled.span`
 const Span2 = styled.span`
   font-size: .9em;
 `;
-
 
 
 export default function ResumeSummary() {
@@ -122,8 +109,6 @@ export default function ResumeSummary() {
       </Title>
 
       <Experience>
-
-
         <DescDiv>
           <Company>
             Consultant
@@ -154,7 +139,7 @@ export default function ResumeSummary() {
           </Company>
           <Time>
             1999 - 2003
-        </Time>
+          </Time>
         </DescDiv>
 
         <DescDiv>
@@ -166,7 +151,7 @@ export default function ResumeSummary() {
           </Company>
           <Time>
             1998 - 1999
-        </Time>
+          </Time>
         </DescDiv>
 
         <DescDiv>
@@ -178,7 +163,7 @@ export default function ResumeSummary() {
           </Company>
           <Time>
             1994 - 1998
-        </Time>
+          </Time>
         </DescDiv>
       </Experience>
 
@@ -223,5 +208,4 @@ export default function ResumeSummary() {
 
     </StyledResumeSummary>
   )
-
 }

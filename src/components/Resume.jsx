@@ -10,19 +10,16 @@ const StyledResume = styled.section`
 
   font-family: 'Shadows Into Light Two', cursive;
   padding-top: 1.5em;
-
 `;
 
 const AboutSidebarDiv = styled.div`
   padding-top: 1.5em;
   grid-area: 2/1/2/1;
 `;
+
 const ResumeSummaryDiv = styled.div`
   grid-area: 1/2/3/3;
-
-
 `;
-
 
 export default function Resume() {
   return (
@@ -34,7 +31,6 @@ export default function Resume() {
       <ResumeSummaryDiv>
         <ResumeSummary />
       </ResumeSummaryDiv>
-
     </StyledResume>
   )
 }

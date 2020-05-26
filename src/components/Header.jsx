@@ -68,36 +68,17 @@ const NavLink = styled(Link)`
   } */
 `;
 
-const NavResume = styled.div`
-
-/* padding: .3em 1.5em; */
-  text-decoration: none;
-  /* color: ${props => props.color === '' ? props.color : '#000'}; */
-  color: ${props => props.color};
-  background-color: rgba(252, 251, 248, 0.8);
-  border-radius: 10px;
-  height: 26px;
-
-  &:hover {
-    border: 1px solid #ffa500;
-  
-  }
-`;
-
 export default function Header(props) {
   let home = '#000';
   let about = '#000';
   let work = '#000';
   let resume = '#000'
 
-  // let home, about, work, resume = '#000';
-
   if (props.location.pathname === '/') {
     home = '#ffa500';
   }
   if (props.location.pathname === '/about') {
     about = '#ffa500';
-    // about = '#175be3';
   }
   if (props.location.pathname === '/work') {
     work = '#ffa500';
@@ -125,16 +106,6 @@ export default function Header(props) {
           <NavLink to="/about" color={about}>About</NavLink>
           <NavLink to="/work" color={work}>Work</NavLink>
           <NavLink to="/resume" color={resume}>Resume</NavLink>
-
-          {/* <NavResume> */}
-
-              
-          {/* <LinkResume imgOption='no' color={resume}>
-            <NavResume color={resume}>
-            Resume
-            </NavResume>
-          </LinkResume> */}
-          {/* </NavResume> */}
 
         </NavContainer>
       </HeaderContainer>
