@@ -10,7 +10,6 @@ const StyledResumeSummary = styled.section`
   background-image: linear-gradient(rgba(246, 244, 241, 0.3), rgba(205, 205, 203, 0.3));
   /* letter-spacing: .01em; */
   word-spacing: .02em;
-  line-height: 1.1em;
   font-weight: 300;
   /* letter-spacing: .03em; */
   overflow: auto;
@@ -20,20 +19,27 @@ const StyledResumeSummary = styled.section`
 const SummaryHeading = styled.h1`
   color: #175be3;
   font-size: 1.9em;
-  padding: .2em 0 .4em 0em;
+  padding: .2em 0 .1em 0em;
 `;
 
 const Summary = styled.p`
+  line-height: 1.15em;
   font-size: .95em;
 `;
 
+const Skills = styled.p`
+  line-height: 1.15em;
+  font-size: .95em;
+`;
+
+
 const Experience = styled.div`
-  overflow: auto;
+  /* overflow: auto; */
 `;
 
 const Title = styled.h3`
   font-size: 1.1em;
-  padding: .8em 0 0.1em 0;
+  padding: .8em 0 0.15em 0;
   font-weight: 600;
   color: #175be3;
   /* text-align: center; */
@@ -41,7 +47,7 @@ const Title = styled.h3`
 
 const DescDiv = styled.div`
   display: grid;
-  grid-template-columns: 68% auto;
+  grid-template-columns: auto 130px;
   align-items: center;
   padding: .1em 0;
  
@@ -56,20 +62,22 @@ const Company = styled.h2`
 `;
 
 const Desc = styled.p`
-  font-size: .95em;
-  line-height: 1.15em;
+  font-size: .9em;
+  line-height: 1.13em;
   /* letter-spacing: .03em; */
   font-weight: normal;
   padding-top: .1em;
+  overflow: none;
 `;
 
 const Time = styled.h3`
   font-size: .85em;
+  padding-right: 2em;
 `;
 
 const Education = styled.h3`
   font-size: .95em;
-  line-height: .3em;
+  line-height: 1em;
   /* padding-top: .1em; */
 `;
 
@@ -82,6 +90,11 @@ const Span = styled.span`
   font-size: .95em;
   font-weight: 600;
 `;
+
+const Span2 = styled.span`
+  font-size: .9em;
+`;
+
 
 
 export default function ResumeSummary() {
@@ -100,9 +113,9 @@ export default function ResumeSummary() {
         SKILLS
       </Title>
 
-      <Desc>
+      <Skills>
         ReactJS, JavaScript, HTML, CSS, NodeJS, MongoDB, Mongoose JS, Express JS, Ruby, Ruby on Rails, Jest, RestfulAPI, Sequelize, C/C++, Python3, Perl, Shell, SQL, Oracle, Sybase, Github, SCCS, Unix, Linux, Unix Packaging Tools, WIX, Project- Management, Software Development Life Cycle (SDLC), AWS
-      </Desc>
+      </Skills>
 
       <Title>
         EXPERIENCE
@@ -174,7 +187,7 @@ export default function ResumeSummary() {
       </Title>
       <DescDiv>
         <Education>
-          <Span>General Assembly</Span> | Software Engineering Immersive
+          <Span>General Assembly</Span> | <Span2>Software Engineering Immersive</Span2>
         </Education>
 
         <Time>
@@ -184,7 +197,7 @@ export default function ResumeSummary() {
 
       <DescDiv>
         <Education>
-          <Span>New York University</Span> | Bachelor of Arts in Computer Science
+          <Span>New York University</Span> | <Span2>Bachelor of Arts in Computer Science</Span2>
         </Education>
 
         <Time>
@@ -194,7 +207,7 @@ export default function ResumeSummary() {
 
       <DescDiv>
         <Education>
-          <Span>AWS</Span> | Certified AWS Solutions Architect Associate
+          <Span>AWS</Span> | <Span2>Certified AWS Solutions Architect Associate</Span2>
         </Education>
 
         <Time>
