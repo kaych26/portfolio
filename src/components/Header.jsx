@@ -55,6 +55,9 @@ const NavLink = styled(Link)`
   &:active {
     background-color: #545d5c;
   }
+  /* &::visited {
+    background-color: pink;
+  } */
 `;
 
 const NavResume = styled.div`

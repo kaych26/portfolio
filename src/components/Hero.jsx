@@ -16,6 +16,7 @@ const StyledHero = styled.section`
   background-size: cover;
   /* height: 600px; */
   height: 771px;
+  z-index: -1;
 
 
 `;

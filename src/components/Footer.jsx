@@ -16,12 +16,18 @@ const StyledFooter = styled.section`
   bottom: 0px;
   /* padding: 5px 0 20px 0; */
 
+  
   padding-right: 3em;
+
+  /* display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  align-items: flex-end; */
+
+
+  z-index: auto;
   display: flex;
   justify-content: flex-end;
-
-  /* display: flex;
-  justify-content: flex-end; */
 `;
 
 

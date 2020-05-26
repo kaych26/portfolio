@@ -12,7 +12,7 @@ import AboutSidebar from './AboutSidebar';
 
 const StyledAbout = styled.section`
   display: grid;
-  grid-template-columns: 28% 57% 5% 5%;
+  grid-template-columns: 28% 58% 4% 5%;
   grid-template-rows: 20% 46% 20%;
 
   font-family: 'Shadows Into Light Two', cursive;
