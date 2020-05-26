@@ -4,6 +4,7 @@ import styled, { keyframes } from 'styled-components';
 import { merge, bounceInLeft, zoomInRight, flip, wobble, flipInX, slideInLeft, slideInRight, rollIn, tada, zoomInDown, fadeInDownBig, fadeIn } from 'react-animations';
 import Quote from './Quote';
 import InfoLinks from './InfoLinks';
+import px2vw from '../utils/px2vw';
 
 const StyledHome = styled.section`
   padding-top: 2em;
@@ -15,7 +16,6 @@ const StyledHome = styled.section`
 `;
 
 const HomeTitleLink = styled(Link)`
-  /* animation: .3s ${keyframes`${fadeIn}`}; */
   font-family: 'Fredericka the Great', cursive;
   font-size: 3em;
   padding: 2.3em 0 .8em 0;
@@ -24,6 +24,17 @@ const HomeTitleLink = styled(Link)`
   text-decoration: none;
   color: black;
 `;
+
+// const HomeTitleLink = styled(Link)`
+//   font-family: 'Fredericka the Great', cursive;
+//   font-size: 3em;
+//   padding: 2.3em 0 .8em 0;
+//   letter-spacing: 0.2em;
+//   text-align: center;
+//   text-decoration: none;
+//   color: black;
+// `;
+
 
 const HomeSubTitleFrame = styled.div`
   display: flex;

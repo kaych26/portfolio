@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import GlobalStyle from './components/GlobalStyle';
+// import Global from './components/Global';
 import Hero from './components/Hero';
 import Header from './components/Header';
 import Body from './components/Body';
