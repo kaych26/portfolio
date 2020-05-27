@@ -9,21 +9,25 @@ import AboutSidebar from './AboutSidebar';
 
 const StyledAbout = styled.section`
   display: grid;
-  grid-template-columns: 28% 58% 4% 5%;
-  grid-template-rows: 8% 72% 20%;
+  grid-template-columns: 28% 58%;
+  grid-template-rows: 100%;
 
   font-family: 'Shadows Into Light Two', cursive;
-  padding-top: 1.5em;
+  /* padding-top: 1.5em; */
+  z-index: 999;
 `;
 
 const AboutSidebarDiv = styled.div`
-  padding-top: 1.5em;
-  grid-area: 2/1/3/2;
+  /* padding-top: 1.5em; */
+  /* grid-area: 2/1/3/2; */
+  /* margin-top: 10em; */
+  padding-top: 6em;
+  z-index: 999;
 `;
 
 const AboutMoiDiv = styled.div`
-  grid-area: 1/2/3/2;
-  justify-self: center;
+  /* grid-area: 1/2/3/2; */
+  /* justify-self: center; */
 `;
 
 export default function About() {

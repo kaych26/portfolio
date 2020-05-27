@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import px2vw from "../../utils/px2vw";
+import size from "./size";
 
 export const Container = styled.div`
   display: flex;

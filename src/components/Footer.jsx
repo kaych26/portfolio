@@ -4,17 +4,7 @@ import { Link } from 'react-router-dom';
 import arrow_right_icon from '../assets/icons/arrow_right.svg';
 import arrow_left_icon from '../assets/icons/arrow_left.svg';
 import { merge, flash, lightSpeedIn, slideInLeft, slideInRight} from 'react-animations';
-
-const size = {
-  mobile: '414px',
-  tablet: '768px',
-  tablet_max: '1024px',
-  max_mid: '1110px',
-  max_large: '1280px',
-};
-
-
-const slideSpeed = merge(slideInLeft, lightSpeedIn);
+import size from './size';
 
 const StyledFooter = styled.section`
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import LinkResume from './LinkResume';
+import size from './size';
 
 const StyledResumeSummary = styled.section`
   font-family: 'Montserrat', sans-serif;
@@ -10,9 +11,8 @@ const StyledResumeSummary = styled.section`
 `;
 
 const SummaryHeading = styled.h1`
-
   color: #3a4140;
-  font-size: 2.5em;
+  font-size: 2.3em;
   font-weight: 500;
   padding: .5em 0;
 
@@ -29,17 +29,14 @@ const SummarySubHeading = styled.h2`
   font-weight: 500;
 `;
 
-
 const Summary = styled.p`
-
-
   line-height: 1.15em;
   font-size: .95em;
 `;
 
 const Skills = styled.p`
-  line-height: 1.15em;
-  font-size: .95em;
+  line-height: 1.25em;
+  font-size: .9em;
 `;
 
 const Experience = styled.div`
@@ -48,18 +45,25 @@ const Experience = styled.div`
 
 const Title = styled.h3`
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.1em;
+  font-size: 1.em;
   padding: .8em 0 0.15em 0;
   font-weight: 600;
   color: #175be3;
   /* text-align: center; */
 `;
 
-const DescDiv = styled.div`
-  display: grid;
+const DescOuterFrame = styled.div`
+  /* display: grid;
   grid-template-columns: auto 130px;
-  align-items: center;
+  align-items: center; */
   padding: .1em 0;
+`;
+
+const CompanyFrame = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: .2em;
 `;
 
 const Company = styled.h2`
@@ -71,9 +75,8 @@ const Company = styled.h2`
 const Desc = styled.p`
   font-size: .9em;
   line-height: 1.13em;
-  /* letter-spacing: .03em; */
   font-weight: normal;
-  padding-top: .1em;
+  /* padding-top: .1em; */
   overflow: none;
 `;
 
@@ -110,7 +113,6 @@ export default function ResumeSummary() {
       <SummarySubHeading>
         Software Engineer | Web Developer | Finance Techology
       </SummarySubHeading>
-
       <Summary>
         I am a versatile Software Engineer who holds 10+ years experience working as a Senior Programmer and Manager for major financial corporations. Whether it be writing intricate code or managing cross-functional technology teams, I excel at breaking down complex information into simplistic and intuitive solutions.
       </Summary>
@@ -128,68 +130,82 @@ export default function ResumeSummary() {
       </Title>
 
       <Experience>
-        <DescDiv>
-          <Company>
-            Consultant
+        <DescOuterFrame>
+          <CompanyFrame>
+            <Company>
+              Consultant
+            </Company>
+            <Time>
+              2013-Present
+            </Time>
+          </CompanyFrame>
+
           <Desc>
-              Automation Software Engineer
+            Automation Software Engineer
           </Desc>
-          </Company>
-          <Time>
-            2013-Present
-        </Time>
-        </DescDiv>
+        </DescOuterFrame>
 
-        <DescDiv>
+        <DescOuterFrame>
+          <CompanyFrame>
+            <Company>
+              Parental Leave
+            </Company>
+            <Time>
+              2004 - 2013
+            </Time>
+          </CompanyFrame>
           <Desc>
-            Parental Leave (Mom)
-        </Desc>
-          <Time>
-            2004 - 2013
-        </Time>
-        </DescDiv>
-
-        <DescDiv>
-          <Company>
-            Bank of New York
-          <Desc>
-              Senior Programmer / Manager, VP - Market Data Group
+            Mom
           </Desc>
-          </Company>
-          <Time>
-            1999 - 2003
-          </Time>
-        </DescDiv>
+        </DescOuterFrame>
 
-        <DescDiv>
-          <Company>
+        <DescOuterFrame>
+          <CompanyFrame>
+            <Company>
+              Bank of New York
+            </Company>
+            <Time>
+              1999 - 2003
+            </Time>
+          </CompanyFrame>
+          <Desc>
+            Senior Programmer / Manager, VP - Market Data Group
+          </Desc>
+        </DescOuterFrame>
+
+        <DescOuterFrame>
+          <CompanyFrame>
+            <Company>
             Societe Generale / SG Cowen
+            </Company>
+            <Time>
+              1998 - 1999
+            </Time>
+          </CompanyFrame>
           <Desc>
-              Senior Programmer, Assistant Treasurer - Finance Techology Group
+          Senior Programmer, Assistant Treasurer - Finance Techology Group
           </Desc>
-          </Company>
-          <Time>
-            1998 - 1999
-          </Time>
-        </DescDiv>
+        </DescOuterFrame>
 
-        <DescDiv>
-          <Company>
+        <DescOuterFrame>
+          <CompanyFrame>
+            <Company>
             Citi Group (Formerly Salomon Brothers)
+            </Company>
+            <Time>
+              1994 - 1998
+            </Time>
+          </CompanyFrame>
           <Desc>
-              Team Leader Global Develpment & Deployment Servies
+          Team Leader Global Develpment & Deployment Servies
           </Desc>
-          </Company>
-          <Time>
-            1994 - 1998
-          </Time>
-        </DescDiv>
+        </DescOuterFrame>
       </Experience>
 
       <Title>
         EDUCATION
       </Title>
-      <DescDiv>
+      <CompanyFrame>
         <Education>
           <Span>General Assembly</Span> | <Span2>Software Engineering Immersive</Span2>
         </Education>
@@ -197,9 +213,9 @@ export default function ResumeSummary() {
         <Time>
           New York, NY
         </Time>
-      </DescDiv>
+      </CompanyFrame>
 
-      <DescDiv>
+      <CompanyFrame>
         <Education>
           <Span>New York University</Span> | <Span2>Bachelor of Arts in Computer Science</Span2>
         </Education>
@@ -207,9 +223,9 @@ export default function ResumeSummary() {
         <Time>
           New York, NY
         </Time>
-      </DescDiv>
+      </CompanyFrame>
 
-      <DescDiv>
+      <CompanyFrame>
         <Education>
           <Span>AWS</Span> | <Span2>Certified AWS Solutions Architect Associate</Span2>
         </Education>
@@ -217,7 +233,7 @@ export default function ResumeSummary() {
         <Time>
           New York, NY
         </Time>
-      </DescDiv>
+      </CompanyFrame> 
 
       <LinkResumeDiv>
         <LinkResume imgOption='1'>

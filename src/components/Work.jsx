@@ -9,11 +9,7 @@ import cathay22_img from '../assets/cathay22.png';
 import superhero_img from '../assets/superhero.png';
 import Skills from './Skills';
 import LinkGithub from './LinkGithub';
-
-const size = {
-  mobile: '414px',
-  tablet: '768px',
-};
+import size from './size';
 
 const StyledWork = styled.section`
   animation: 2s ${keyframes`${slideInDown}`};
@@ -21,6 +17,7 @@ const StyledWork = styled.section`
   padding: 1.6em 2em 2em 1.2em;
   @media (max-width: ${size.mobile}) {
     height: 736px;
+    padding-top: 7.5em;
   }
 `;
 
@@ -68,8 +65,15 @@ const ProjectDesc = styled.p`
   @media (max-width: ${size.mobile}) {
 
   }
+  `;
 
+const Span = styled.span`
+  color: #175be3;
+  font-weight: 500;
+color: #175be3;
 `;
+
+  
 
 
 export default function Work() {
@@ -90,7 +94,8 @@ export default function Work() {
             <ProjectImg src={theRecipeBox_img} alt="theRecipeBox" />
             <ProjectDesc>
               <LinkGithub link='https://github.com/kaych26/theRecipeBox' />
-            theRecipeBox, a full CRUD app for users to share recipe and stories and allowing families to connect throught food.  Developed in React, react router, ruby on rails.
+            theRecipeBox, a full CRUD app for users to connect by sharing recipes and cooking stories.  Developed in
+            React, React Router & Ruby on Rails.
           </ProjectDesc>
           </ProjectLink>
         </ProjectDiv>

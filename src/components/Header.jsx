@@ -3,45 +3,31 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { slideInLeft, slideInDown } from 'react-animations';
 import Logo from './Logo';
-
-const size = {
-  mobile: '414px',
-  tablet: '768px',
-};
+import size from './size';
 
 const StyledHeader = styled.header`
   height: 80px;
   /* position: relative; */
   /* height: 100px; */
   position: fixed;
-  z-index: 999;
+  z-index: 99;
   /* top: 0; */
   width: 100%;
 
-  /* display: grid;
-  grid-column-start: 180px auto; */
-
   display: grid;
   grid-template-columns: 180px auto;
-  /* justify-items: end; */
-  /* align-content: space-between; */
-
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* justify-content: space-between; */
-  /* background-color: linear-gradient(rgba(255,255,255 1)); */
-  /* background-color: rgba(255,255,255, .5); */
-  /* @media (max-width: ${size.mobile}) {
-    flex-direction: column;
-  } */
+  
+  @media (max-width: ${size.mobile}) {
+    grid-template-columns: 414px;
+    grid-template-rows: 100px 1fr;
+  }
 `;
-// const HeaderFrame = styled.div`
-//   display: grid;
-//   grid-template-columns: 180px auto;
-// `;
 
-
-const LogoFrame = styled.div``;
+const LogoFrame = styled.div`
+@media (max-width: ${size.mobile}) {
+  grid-area: 1/2/2/2;
+}
+`;
 
 const LogoLink = styled(Link)`
   font-family: 'Londrina Shadow', cursive;
@@ -50,13 +36,15 @@ const LogoLink = styled(Link)`
 `;
 
 const NavContainer = styled.div`
-grid-area: 1 / 2 / 2 / 3;
+grid-area: 1 / 2 / 2 / 2;
 justify-self: end;
-  /* align-self: flex-end; */
-  /* align-items: end; */
   height: 60px;
   padding-top: 1.8em;
   font-size: 16px;
+  @media (max-width: ${size.mobile}) {
+    grid-area: 1/1/3/3;
+    place-self: center;
+  }
 `;
 
 const NavLink = styled(Link)`
@@ -85,7 +73,7 @@ export default function Header(props) {
   }
   if (props.location.pathname === '/about') {
     about = '#ffa500';
-    showLogo = '0';
+    showLogo = '1';
   }
   if (props.location.pathname === '/work') {
     work = '#ffa500';
@@ -93,15 +81,13 @@ export default function Header(props) {
   }
   if (props.location.pathname === '/resume') {
     resume = '#ffa500';
-    showLogo = '0'
+    showLogo = '1'
   }
 
   return (
     <StyledHeader>
 
       {/* <HeaderFrame> */}
-
-
         {showLogo === '1' &&
           <LogoFrame>
             <LogoLink to="/">

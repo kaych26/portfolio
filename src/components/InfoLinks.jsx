@@ -16,10 +16,11 @@ const StyledInfo = styled.section`
 
   display: flex;
   justify-content: center;
+
   @media (max-width: ${size.mobile}) {
     padding: 1.8em 0 1.5em 0;
-    
 
+    
   }
 `;
 
@@ -28,6 +29,10 @@ const InfoContainer = styled.div`
   display: flex;
   width: 30%;
   justify-content: space-between;
+
+  @media (max-width: ${size.mobile}) {
+    width: 60%;
+  }
 `;
 
 export default function InfoLinks() {

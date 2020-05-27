@@ -4,12 +4,13 @@ import styled, { keyframes } from 'styled-components';
 import { merge, bounceInLeft, zoomInRight, flip, wobble, flipInX, slideInLeft, slideInRight, rollIn, tada, zoomInDown, fadeInDownBig, fadeIn } from 'react-animations';
 import Quote from './Quote';
 import InfoLinks from './InfoLinks';
+import size from './size';
 
-const size = {
-  mobile: '414px',
-  tablet: '768px',
-  // tablet_max: '1024px',
-};
+// const size = {
+//   mobile: '414px',
+//   tablet: '768px',
+//   // tablet_max: '1024px',
+// };
 
 const StyledHome = styled.section`
   padding-top: 2em;
@@ -22,15 +23,15 @@ const StyledHome = styled.section`
 
 const HomeTitleLink = styled(Link)`
   font-family: 'Fredericka the Great', cursive;
-  font-size: 3.3em;
+  font-size: 3.8em;
     
-  padding: 2.3em 0 .8em 0;
+  padding: 2.2em 0 .5em 0;
   letter-spacing: 0.2em;
   text-align: center;
   text-decoration: none;
   color: black;
   @media (max-width: ${size.mobile}) {
-    font-size: 1.8em;
+    font-size: 2em;
     padding: 2.5em 0 1.2em 0;
 
   }
@@ -45,7 +46,7 @@ const HomeSubTitle = styled.h2`
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.3em;
   letter-spacing: 0.1em;
-  padding-bottom: 1.8em;
+  padding-bottom: 1.5em;
   @media (max-width: ${size.mobile}) {
     font-size: .8em;
 

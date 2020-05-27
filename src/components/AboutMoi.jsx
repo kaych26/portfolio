@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as Scroll from 'react-scroll';
 import { jello, flash, bounce, flipInY, rotateInDownRight, flip, fadeInRight, slideInUp, rotateIn, slideInDown, swing, zoomInDown, zoomIn, zoomInUp, slideIn, rotateInDownLeft, slideInLeft, slideInRight, fadeIn } from 'react-animations';
 
 import LinkResume from './LinkResume';
+import size from './size';
 
 const StyledAboutMoi = styled.section`
   /* animation: 2s ${keyframes`${slideInDown}`}; */

@@ -8,11 +8,20 @@ import LinkEmail from './LinkEmail';
 import PostIt from './PostIt';
 
 const StyledAboutSidebar = styled.section`
-  display: grid;
+/* height: 100%; */
+  /* grid-template-rows: 180px 200px; */
+  /* row-gap: 3em; */
+  /* column-gap: 1em; */
+  /* display: grid;
   grid-template-columns: 1fr;
-  row-gap: 3em;
-  column-gap: 1em;
+  z-index: 999;
+  justify-content: center; */
   `;
+
+const PostItFrame = styled.div`
+  padding: 2em;
+`;
+
 
 const LinkFrame = styled.div`
   display: grid;
@@ -43,6 +52,9 @@ export default function AboutSidebar() {
   return (
     <>
       <StyledAboutSidebar>
+        
+        <PostItFrame>
+
         <PostIt rotate='3deg' size='160px'>
 
           <LinkFrame>
@@ -67,6 +79,9 @@ export default function AboutSidebar() {
             </LinkTitle>
           </LinkFrame>
         </PostIt>
+        </PostItFrame>
+
+        <PostItFrame>
 
         <PostIt rotate='-5deg' size='160px'>
           <PostItTitle>
@@ -76,6 +91,7 @@ export default function AboutSidebar() {
           Keep hacking, keep exploring & SKY is the limit !'
           </PostItDiv>
         </PostIt>
+        </PostItFrame>
 
       </StyledAboutSidebar>
     </>
