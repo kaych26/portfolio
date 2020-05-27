@@ -5,12 +5,22 @@ import LinkGithub from './LinkGithub';
 import LinkResume from './LinkResume';
 import LinkEmail from './LinkEmail';
 
+const size = {
+  mobile: '414px',
+  tablet: '768px',
+};
+
 const StyledInfo = styled.section`
   width: 100%;
-  padding: 38px 0 30px 0;
+  padding: 3em 0 2.3em 0;
 
   display: flex;
   justify-content: center;
+  @media (max-width: ${size.mobile}) {
+    padding: 1.8em 0 1.5em 0;
+    
+
+  }
 `;
 
 const InfoContainer = styled.div`

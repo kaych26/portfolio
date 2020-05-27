@@ -34,7 +34,7 @@ const StyledFooter = styled.section`
   }
 
   @media (max-width: ${size.mobile}) {
-    padding: 3em 1em;
+    padding: 3em .5em;
   }
 `;
 

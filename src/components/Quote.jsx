@@ -2,15 +2,22 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { bounce, fadeIn, swing, bounceIn, bounceInLeft, slideInDown, flipInX, rollIn, rotateInDownRight} from 'react-animations';
 
+const size = {
+  mobile: '414px',
+  tablet: '768px',
+  // tablet_max: '1024px',
+};
+
 const StyledQuote = styled.section`
 
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
   display: flex;
   padding-top: 2em;
-
+  @media( max-width: ${size.mobile}) {
+    font-size: 1em;
+  }
 `;
-
 
 const WordFrame = styled.div`
   display: flex;
@@ -24,6 +31,9 @@ const ColorChar = styled.h2`
   font-size: 1.8em;
   font-weight: bold;
   transform: rotate(${props => props.rotate});
+  @media(max-width: ${size.mobile}) {
+    font-size: 1.3em;
+  }
 `;
 
 const Sign = styled.h2`

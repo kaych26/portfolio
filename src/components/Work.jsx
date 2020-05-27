@@ -10,19 +10,25 @@ import superhero_img from '../assets/superhero.png';
 import Skills from './Skills';
 import LinkGithub from './LinkGithub';
 
+const size = {
+  mobile: '414px',
+  tablet: '768px',
+};
+
 const StyledWork = styled.section`
   animation: 2s ${keyframes`${slideInDown}`};
-  overflow: auto;
   overflow-x: hidden;
-  
-  /* padding: 1.3em 2em; */
   padding: 1.6em 2em 2em 1.2em;
+  @media (max-width: ${size.mobile}) {
+    height: 736px;
+  }
 `;
 
 const ProjectTitle = styled.h1`
-  font-size: 1.2em;
+  font-size: 1.5em;
   text-align: center;
-  padding: .7em 0;
+  /* padding: .7em 0; */
+  padding: .5em 0 1em 0;;
 `;
 
 const ProjectOuterFrame = styled.div`
@@ -30,6 +36,10 @@ const ProjectOuterFrame = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
   /* justify-items: center; */
+  @media (max-width: ${size.mobile}) {
+    grid-template-columns: 1fr;
+
+  }
 `;
 
 const ProjectDiv = styled.div`
@@ -39,7 +49,6 @@ const ProjectDiv = styled.div`
 
 const ProjectImg = styled.img`
   width: 20em;
-
 `;
 
 const ProjectLink = styled.a`
@@ -56,8 +65,10 @@ const ProjectDesc = styled.p`
   font-size: .8em;
   padding: 0 1em 1.5em 1em;
   color: black;
-  /* text-align: center; */
-  /* width: 24em; */
+  @media (max-width: ${size.mobile}) {
+
+  }
+
 `;
 
 

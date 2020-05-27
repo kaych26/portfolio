@@ -6,30 +6,56 @@ const StyledLogo = styled.section`
   font-family: 'Fredericka the Great', cursive;
   padding: 0.5em 1em;
   color: #ffa500;
+  width: 170px;
 `;
 
 const LogoFrame = styled.div`
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc;
   border-radius: 2px;
   box-shadow: 0 4px 8px #878;
   background-color: #F9F7F2;
-  font-weight: 300;
+  font-weight: 300; */
   /* transform: rotate(-2deg); */
+
+  border-radius: 60%;
+  border: 8px solid #3a4140;
+  border-right: transparent;
+  border-top: transparent;
+
+  /* box-shadow: 0 4px 6px #878; */
+
 `;
 
 const LogoFname = styled.p`
-  font-size: 1.2em;
+  font-size: 2.5em;
   letter-spacing: 0.2em;
   color: #ff2dae;
   font-weight: 300;
-  padding: 0.3em 0.3em 0 0.4em;
+  /* padding: 0.3em 0.3em 0 0.4em; */
+  /* margin-top: -100px;
+  margin-bottom: 30px;
+  margin-top: -50px; */
+
 `;
 
 const LogoLname = styled.p`
-  font-size: 1.2em;
-  color: #ff2dae;
-  padding: 0em 0.3em 0.3em 0.4em;
+  /* background-image: linear-gradient(rgba(246, 244, 241, 0.3), rgba(205, 205, 203, 0.3)); */
+
+  color: #3a4140;
+  /* color: #ff2dae; */
+  /* color: linear-gradient(rgba(6, 0, 2, 0.3), rgba(205, 205, 203, 0.3)); */
+  font-size: 3em;
+  /* padding: 0em 3em 0.3em 1.3em; */
   letter-spacing: 0.02em;
+  /* margin-top: -68px; */
+  /* margin-left: -19px; */
+  transform: rotate(-8deg);
+
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  /* margin-left: -120px;
+ 
+  margin-bottom: -100px; */
 `;
 
 const Span = styled.span`
@@ -45,8 +71,11 @@ export default function Logo() {
   return (
     <StyledLogo>
       <LogoFrame>
-        <LogoFname><LetterSpan>K</LetterSpan><Span>AY</Span></LogoFname>
-        <LogoLname><LetterSpan>C</LetterSpan><Span>HAN</Span></LogoLname>
+        {/* <LogoLname>C</LogoLname> */}
+        <LogoFname><LetterSpan>K</LetterSpan></LogoFname>
+        {/* <LogoLname><LetterSpan>C</LetterSpan></LogoLname> */}
+        {/* <LogoFname><LetterSpan>K</LetterSpan><Span>AY</Span></LogoFname>
+        <LogoLname><LetterSpan>C</LetterSpan><Span>HAN</Span></LogoLname> */}
       </LogoFrame>
     </StyledLogo>
   );

@@ -4,7 +4,6 @@ import styled, { keyframes } from 'styled-components';
 import { merge, bounceInLeft, zoomInRight, flip, wobble, flipInX, slideInLeft, slideInRight, rollIn, tada, zoomInDown, fadeInDownBig, fadeIn } from 'react-animations';
 import Quote from './Quote';
 import InfoLinks from './InfoLinks';
-import px2vw from '../utils/px2vw';
 
 const size = {
   mobile: '414px',
@@ -24,7 +23,6 @@ const StyledHome = styled.section`
 const HomeTitleLink = styled(Link)`
   font-family: 'Fredericka the Great', cursive;
   font-size: 3em;
-  /* font-size:${px2vw(100,100)}; */
     
   padding: 2.3em 0 .8em 0;
   letter-spacing: 0.2em;
@@ -32,6 +30,8 @@ const HomeTitleLink = styled(Link)`
   text-decoration: none;
   color: black;
   @media (max-width: ${size.mobile}) {
+    font-size: 1.8em;
+    padding: 2.5em 0 1.2em 0;
 
   }
 `;
@@ -46,6 +46,10 @@ const HomeSubTitle = styled.h2`
   font-size: 1.3em;
   letter-spacing: 0.1em;
   padding-bottom: 1.8em;
+  @media (max-width: ${size.mobile}) {
+    font-size: .8em;
+
+  }
 `;
 
 export default function Home(props) {

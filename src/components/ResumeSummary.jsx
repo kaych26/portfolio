@@ -11,12 +11,21 @@ const StyledResumeSummary = styled.section`
 `;
 
 const SummaryHeading = styled.h1`
-  color: #175be3;
-  font-size: 1.9em;
-  padding: .2em 0 .1em 0em;
+
+  color: #3a4140;
+  font-size: 3em;
+  font-weight: 300;
+  padding: .5em 0;
+
+  /* color: #175be3;
+  font-size: 1.9em; */
+  padding: .1em 0 .2em 0em;
 `;
 
 const Summary = styled.p`
+
+ 
+
   line-height: 1.15em;
   font-size: .95em;
 `;
@@ -88,7 +97,7 @@ export default function ResumeSummary() {
 
     <StyledResumeSummary>
       <SummaryHeading>
-        SUMMARY
+        Kay Chan
       </SummaryHeading>
 
       <Summary>
