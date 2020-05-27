@@ -7,11 +7,6 @@ import theWeatherGenie_img from '../assets/theWeatherGenie.png';
 import supernovaGems_img from '../assets/supernovaGems.png';
 import cathay22_img from '../assets/cathay22.png';
 import superhero_img from '../assets/superhero.png';
-// import theRecipeBox_img from '../assets/projects/theRecipeBox.png';
-// import theWeatherGenie_img from '../assets/projects/theWeatherGenie.png';
-// import supernovaGems_img from '../assets/projects/supernovaGems.png';
-// import cathay22_img from '../assets/projects/cathay22.png';
-// import superhero_img from '../assets/projects/superhero.png';
 import Skills from './Skills';
 import LinkGithub from './LinkGithub';
 
@@ -30,14 +25,21 @@ const ProjectTitle = styled.h1`
   padding: .7em 0;
 `;
 
-const ProjectFrame = styled.div`
+const ProjectOuterFrame = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
+  /* justify-items: center; */
+`;
+
+const ProjectDiv = styled.div`
+  display: flex;
+  justify-content: center;
 `;
 
 const ProjectImg = styled.img`
   width: 20em;
+
 `;
 
 const ProjectLink = styled.a`
@@ -69,50 +71,65 @@ export default function Work() {
   return (
     <StyledWork>
       <ProjectTitle>PORTFOLIO</ProjectTitle>
-      <ProjectFrame>
+      <ProjectOuterFrame>
 
-        <ProjectLink href={theRecipeBox_link}>
-          <ProjectImg src={theRecipeBox_img} alt="theRecipeBox" />
-          <ProjectDesc>
-            <LinkGithub link='https://github.com/kaych26/theRecipeBox' />
+        <ProjectDiv>
+
+          <ProjectLink href={theRecipeBox_link}>
+            <ProjectImg src={theRecipeBox_img} alt="theRecipeBox" />
+            <ProjectDesc>
+              <LinkGithub link='https://github.com/kaych26/theRecipeBox' />
             theRecipeBox, a full CRUD app for users to share recipe and stories and allowing families to connect throught food.  Developed in React, react router, ruby on rails.
           </ProjectDesc>
-        </ProjectLink>
+          </ProjectLink>
+        </ProjectDiv>
 
-        <ProjectLink href={cathay22_link}>
-          <ProjectImg src={cathay22_img} alt="Cathay22" />
-          <ProjectDesc>
-            <LinkGithub link='https://github.com/CherelleTownes/cathay-22' />
+        <ProjectDiv>
+
+          <ProjectLink href={cathay22_link}>
+            <ProjectImg src={cathay22_img} alt="Cathay22" />
+            <ProjectDesc>
+              <LinkGithub link='https://github.com/CherelleTownes/cathay-22' />
             Cathay22, a React applicaton devloped with UX collaboration for a local Chinese restaurant.
           </ProjectDesc>
-        </ProjectLink>
+          </ProjectLink>
+        </ProjectDiv>
 
-        <ProjectLink href={supernovaGems_link}>
-          <ProjectImg src={supernovaGems_img} alt="SupernovaGems" />
-          <ProjectDesc>
-            <LinkGithub link='https://github.com/Scott-PG/supernova-gems' />
+        <ProjectDiv>
+
+          <ProjectLink href={supernovaGems_link}>
+            <ProjectImg src={supernovaGems_img} alt="SupernovaGems" />
+            <ProjectDesc>
+              <LinkGithub link='https://github.com/Scott-PG/supernova-gems' />
             SuperNovaGems, a Fullstack ecommerce app developed in React and MongoDB.
           </ProjectDesc>
-        </ProjectLink>
+          </ProjectLink>
+        </ProjectDiv>
 
-        <ProjectLink href={theWeatherGenie_link}>
-          <ProjectImg
-            src={theWeatherGenie_img} alt="theWeatherGenie" />
-          <ProjectDesc>
-            <LinkGithub link='https://github.com/kaych26/theWeatherGenie' />
+        <ProjectDiv>
+
+          <ProjectLink href={theWeatherGenie_link}>
+            <ProjectImg
+              src={theWeatherGenie_img} alt="theWeatherGenie" />
+            <ProjectDesc>
+              <LinkGithub link='https://github.com/kaych26/theWeatherGenie' />
             theWeatherGenie, developed using HTML, CSS and Openweather API.
           </ProjectDesc>
-        </ProjectLink>
+          </ProjectLink>
+        </ProjectDiv>
 
-        <ProjectLink href={superhero_link}>
-          <ProjectImg src={superhero_img} alt="superhero" />
-          <ProjectDesc>
-            <LinkGithub link='https://github.com/kaych26/Superheros' />
+        <ProjectDiv>
+
+          <ProjectLink href={superhero_link}>
+            <ProjectImg src={superhero_img} alt="superhero" />
+            <ProjectDesc>
+              <LinkGithub link='https://github.com/kaych26/Superheros' />
             Superhero, developed using HTML, CSS and Marvel API.
           </ProjectDesc>
-        </ProjectLink>
+          </ProjectLink>
+        </ProjectDiv>
         <Skills />
-      </ProjectFrame>
+      </ProjectOuterFrame>
     </StyledWork>
   );
 }

@@ -83,7 +83,6 @@ const Span2 = styled.span`
   font-size: .9em;
 `;
 
-
 export default function ResumeSummary() {
   return (
 
