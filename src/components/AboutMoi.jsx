@@ -123,7 +123,7 @@ export default function AboutMoi() {
               Worked 10+ years for major financial companies as a Unix <Span>C/C+ </Span> programmer and manager of Market Data team. Solid experience in <Span> software development life cycle</Span> and financial application.
             </AboutMe>
             <AboutMe>
-              After becoming a mom, developed passion in web development using <Span>React</Span>, <Span>JavaScript</Span>, <Span>MongoDB</Span> and <Span>Ruby on Rails</Span>. Gained inspirations by communicating and interacting with people.  Love using techology to transform innovated ideas into products. Super rewarding when product delivers positve impact and outcome to others.
+            After becoming a mom, developed passion in web development using <Span>React</Span>, <Span>JavaScript</Span>, <Span>MongoDB</Span> and <Span>Ruby on Rails</Span>. Gained inspirations by communicating and interacting with people.  Love using technology to transform innovative ideas into products. Super rewarding when a product delivers positive impact and outcomes to others.
            </AboutMe>
           </AboutMeDiv>
         )}
@@ -140,7 +140,7 @@ export default function AboutMoi() {
             </AboutMe2>
 
               <AboutMe2>
-                Becoming a mom has brought many joy and challenges.  My daughter, Annie was born premature and thanks to many professional guidances and online resources, we overcame many obstacles. Today, she is fully recovered and healthy! Now, using my experience to actively supporting other families to learn and overcome the unknowns.
+              Becoming a mom has brought many joy and challenges.  My daughter, Annie was born prematurely.  Thanks to many professional guidance and supports, she is fully recovered and healthy!  Today, I share my story and actively help other families to learn the unknowns.
             </AboutMe2>
 
               <LinkResumeDiv>
