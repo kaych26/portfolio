@@ -12,7 +12,7 @@ const StyledResumeSummary = styled.section`
 const SummaryHeading = styled.h1`
 
   color: #3a4140;
-  font-size: 2.3em;
+  font-size: 2.5em;
   font-weight: 500;
   padding: .5em 0;
 
@@ -23,7 +23,8 @@ const SummaryHeading = styled.h1`
 `;
 
 const SummarySubHeading = styled.h2`
-  font-size: 1.1em;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1.2em;
   padding-bottom: .4em;
   font-weight: 500;
 `;
@@ -46,6 +47,7 @@ const Experience = styled.div`
 `;
 
 const Title = styled.h3`
+  font-family: 'Josefin Sans', sans-serif;
   font-size: 1.1em;
   padding: .8em 0 0.15em 0;
   font-weight: 600;
