@@ -91,7 +91,7 @@ export default function Work() {
         <Skills />
         <ProjectDiv>
 
-          <ProjectLink href={theRecipeBox_link}>
+          <ProjectLink href={theRecipeBox_link } target="_blank" rel="noopener noreferrer">
             <ProjectImg src={theRecipeBox_img} alt="theRecipeBox" />
             <ProjectDesc>
               <LinkGithub link='https://github.com/kaych26/theRecipeBox' />
@@ -103,7 +103,7 @@ export default function Work() {
 
         <ProjectDiv>
 
-          <ProjectLink href={cathay22_link}>
+          <ProjectLink href={cathay22_link} target="_blank" rel="noopener noreferrer">
             <ProjectImg src={cathay22_img} alt="Cathay22" />
             <ProjectDesc>
               <LinkGithub link='https://github.com/CherelleTownes/cathay-22' />
@@ -115,7 +115,7 @@ export default function Work() {
 
         <ProjectDiv>
 
-          <ProjectLink href={superhero_link}>
+          <ProjectLink href={superhero_link} target="_blank" rel="noopener noreferrer">
             <ProjectImg src={superhero_img} alt="superhero" />
             <ProjectDesc>
               <LinkGithub link='https://github.com/kaych26/Superheros' />
@@ -126,7 +126,7 @@ export default function Work() {
 
         <ProjectDiv>
 
-          <ProjectLink href={supernovaGems_link}>
+          <ProjectLink href={supernovaGems_link} target="_blank" rel="noopener noreferrer">
             <ProjectImg src={supernovaGems_img} alt="SupernovaGems" />
             <ProjectDesc>
               <LinkGithub link='https://github.com/Scott-PG/supernova-gems' />
@@ -137,7 +137,7 @@ export default function Work() {
 
         <ProjectDiv>
 
-          <ProjectLink href={theWeatherGenie_link}>
+          <ProjectLink href={theWeatherGenie_link} target="_blank" rel="noopener noreferrer">
             <ProjectImg
               src={theWeatherGenie_img} alt="theWeatherGenie" />
             <ProjectDesc>
