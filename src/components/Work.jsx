@@ -2,11 +2,16 @@ import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { slideInDown } from 'react-animations';
 
-import theRecipeBox_img from '../assets/projects/theRecipeBox.png';
-import theWeatherGenie_img from '../assets/projects/theWeatherGenie.png';
-import supernovaGems_img from '../assets/projects/supernovaGems.png';
-import cathay22_img from '../assets/projects/cathay22.png';
-import superhero_img from '../assets/projects/superhero.png';
+import theRecipeBox_img from '../assets/theRecipeBox.png';
+import theWeatherGenie_img from '../assets/theWeatherGenie.png';
+import supernovaGems_img from '../assets/supernovaGems.png';
+import cathay22_img from '../assets/cathay22.png';
+import superhero_img from '../assets/superhero.png';
+// import theRecipeBox_img from '../assets/projects/theRecipeBox.png';
+// import theWeatherGenie_img from '../assets/projects/theWeatherGenie.png';
+// import supernovaGems_img from '../assets/projects/supernovaGems.png';
+// import cathay22_img from '../assets/projects/cathay22.png';
+// import superhero_img from '../assets/projects/superhero.png';
 import Skills from './Skills';
 import LinkGithub from './LinkGithub';
 
