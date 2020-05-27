@@ -54,8 +54,7 @@ export default function AboutSidebar() {
       <StyledAboutSidebar>
         
         <PostItFrame>
-
-        <PostIt rotate='3deg' size='160px'>
+        <PostIt rotate='3deg' size='188px'>
 
           <LinkFrame>
             <LinkTitle>
@@ -83,14 +82,14 @@ export default function AboutSidebar() {
 
         <PostItFrame>
 
-        <PostIt rotate='-5deg' size='160px'>
+        {/* <PostIt rotate='-5deg' size='160px'>
           <PostItTitle>
             To Do
           </PostItTitle>
           <PostItDiv>
           Keep hacking, keep exploring & SKY is the limit !'
           </PostItDiv>
-        </PostIt>
+        </PostIt> */}
         </PostItFrame>
 
       </StyledAboutSidebar>

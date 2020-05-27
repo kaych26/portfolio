@@ -22,19 +22,15 @@ const StyledAbout = styled.section`
 `;
 
 const AboutSidebarDiv = styled.div`
-  padding-top: 7em;
+  padding-top: 14.5em;
   z-index: 999;
 
   @media (max-width: ${size.mobile}) {
-
-    /* visibility: hidden; */
   }
 `;
 
 const AboutMoiDiv = styled.div`
   padding-top: 3em;
-  /* grid-area: 1/2/3/2; */
-  /* justify-self: center; */
 `;
 
 export default function About() {

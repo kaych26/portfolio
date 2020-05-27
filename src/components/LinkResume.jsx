@@ -6,6 +6,7 @@ const StyledImgLink = styled.section`
   font-family: 'Shadows Into Light Two', cursive;
   letter-spacing: .1em;
   display: flex;
+  justify-content: center;
 `;
 
 const Link = styled.a`

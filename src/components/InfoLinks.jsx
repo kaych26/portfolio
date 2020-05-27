@@ -19,8 +19,6 @@ const StyledInfo = styled.section`
 
   @media (max-width: ${size.mobile}) {
     padding: 1.8em 0 1.5em 0;
-
-    
   }
 `;
 

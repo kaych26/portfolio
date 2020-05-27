@@ -1,12 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { slideInDown } from 'react-animations';
 import size from './size';
 import LinkResume from './LinkResume';
 
 const StyledResumeSummary = styled.section`
+animation: 2s ${keyframes`${slideInDown}`};
   font-family: 'Montserrat', sans-serif;
   background-image: linear-gradient(rgba(246, 244, 241, 0.3), rgba(205, 205, 203, 0.3));
   word-spacing: .02em;
+  z-index: 999;
   /* overflow: auto; */
   @media (max-width: ${size.mobile}) {
 
@@ -14,6 +17,7 @@ const StyledResumeSummary = styled.section`
 `;
 
 const SummaryHeading = styled.h1`
+
   color: #3a4140;
   font-size: 2.3em;
   font-weight: 500;
@@ -23,6 +27,7 @@ const SummaryHeading = styled.h1`
   /* color: #175be3;
   font-size: 1.9em; */
   padding: .1em 0 .3em 0em;
+  
 
   @media (max-width: ${size.mobile}) {
     font-size: 1.8em;
@@ -30,10 +35,12 @@ const SummaryHeading = styled.h1`
 `;
 
 const SummarySubHeading = styled.h2`
+
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1.2em;
   padding-bottom: .4em;
   font-weight: 500;
+ 
   @media (max-width: ${size.mobile}) {
     font-size: .9em;
   }
@@ -42,6 +49,7 @@ const SummarySubHeading = styled.h2`
 const Summary = styled.p`
   line-height: 1.15em;
   font-size: .95em;
+
   @media (max-width: ${size.mobile}) {
     font-size: .8em;
   }
@@ -207,28 +215,28 @@ export default function ResumeSummary() {
         <DescOuterFrame>
           <CompanyFrame>
             <Company>
-            Societe Generale / SG Cowen
+              Societe Generale / SG Cowen
             </Company>
             <Time>
               1998 - 1999
             </Time>
           </CompanyFrame>
           <Desc>
-          Senior Programmer, Assistant Treasurer - Finance Techology Group
+            Senior Programmer, Assistant Treasurer - Finance Techology Group
           </Desc>
         </DescOuterFrame>
 
         <DescOuterFrame>
           <CompanyFrame>
             <Company>
-            Citi Group (Formerly Salomon Brothers)
+              Citi Group (Formerly Salomon Brothers)
             </Company>
             <Time>
               1994 - 1998
             </Time>
           </CompanyFrame>
           <Desc>
-          Team Leader Global Develpment & Deployment Servies
+            Team Leader Global Develpment & Deployment Servies
           </Desc>
         </DescOuterFrame>
       </Experience>
@@ -264,7 +272,7 @@ export default function ResumeSummary() {
         <Time>
           New York, NY
         </Time>
-      </CompanyFrame> 
+      </CompanyFrame>
 
       <LinkResumeDiv>
         <LinkResume imgOption='1'>

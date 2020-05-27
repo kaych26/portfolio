@@ -15,6 +15,9 @@ const StyledWork = styled.section`
   animation: 2s ${keyframes`${slideInDown}`};
   overflow-x: hidden;
   padding: 1.6em 2em 2em 1.2em;
+ 
+
+
   @media (max-width: ${size.mobile}) {
     height: 736px;
     padding-top: 3.1em;
@@ -25,13 +28,17 @@ const ProjectTitle = styled.h1`
   font-size: 1.5em;
   text-align: center;
   /* padding: .7em 0; */
-  padding: .5em 0 1em 0;;
+  padding: .5em 0 1em 0;
+
 `;
 
 const ProjectOuterFrame = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
+
+  
+    /*  */
   /* justify-items: center; */
   @media (max-width: ${size.mobile}) {
     grid-template-columns: 1fr;
@@ -40,6 +47,7 @@ const ProjectOuterFrame = styled.div`
 `;
 
 const ProjectDiv = styled.div`
+  z-index: 998;
   display: flex;
   justify-content: center;
 `;
@@ -62,18 +70,11 @@ const ProjectDesc = styled.p`
   font-size: .8em;
   padding: 0 1em 1.5em 1em;
   color: black;
+  
   @media (max-width: ${size.mobile}) {
 
   }
   `;
-
-const Span = styled.span`
-  color: #175be3;
-  font-weight: 500;
-color: #175be3;
-`;
-
-  
 
 
 export default function Work() {
@@ -87,7 +88,7 @@ export default function Work() {
     <StyledWork>
       <ProjectTitle>PORTFOLIO</ProjectTitle>
       <ProjectOuterFrame>
-
+        <Skills />
         <ProjectDiv>
 
           <ProjectLink href={theRecipeBox_link}>
@@ -111,28 +112,6 @@ export default function Work() {
           </ProjectLink>
         </ProjectDiv>
 
-        <ProjectDiv>
-
-          <ProjectLink href={supernovaGems_link}>
-            <ProjectImg src={supernovaGems_img} alt="SupernovaGems" />
-            <ProjectDesc>
-              <LinkGithub link='https://github.com/Scott-PG/supernova-gems' />
-            SuperNovaGems, a Fullstack ecommerce app developed in React and MongoDB.
-          </ProjectDesc>
-          </ProjectLink>
-        </ProjectDiv>
-
-        <ProjectDiv>
-
-          <ProjectLink href={theWeatherGenie_link}>
-            <ProjectImg
-              src={theWeatherGenie_img} alt="theWeatherGenie" />
-            <ProjectDesc>
-              <LinkGithub link='https://github.com/kaych26/theWeatherGenie' />
-            theWeatherGenie, developed using HTML, CSS and Openweather API.
-          </ProjectDesc>
-          </ProjectLink>
-        </ProjectDiv>
 
         <ProjectDiv>
 
@@ -144,7 +123,33 @@ export default function Work() {
           </ProjectDesc>
           </ProjectLink>
         </ProjectDiv>
-        <Skills />
+
+        <ProjectDiv>
+
+          <ProjectLink href={supernovaGems_link}>
+            <ProjectImg src={supernovaGems_img} alt="SupernovaGems" />
+            <ProjectDesc>
+              <LinkGithub link='https://github.com/Scott-PG/supernova-gems' />
+  SuperNovaGems, a Fullstack ecommerce app developed in React and MongoDB.
+</ProjectDesc>
+          </ProjectLink>
+        </ProjectDiv>
+
+        <ProjectDiv>
+
+          <ProjectLink href={theWeatherGenie_link}>
+            <ProjectImg
+              src={theWeatherGenie_img} alt="theWeatherGenie" />
+            <ProjectDesc>
+              <LinkGithub link='https://github.com/kaych26/theWeatherGenie' />
+            theWeatherGenie, developed using React, JavaScript, CSS and Openweather API.
+          </ProjectDesc>
+          </ProjectLink>
+        </ProjectDiv>
+
+        <ProjectDiv></ProjectDiv>
+
+        {/* <Skills /> */}
       </ProjectOuterFrame>
     </StyledWork>
   );

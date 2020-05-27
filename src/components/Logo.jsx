@@ -19,15 +19,28 @@ const LogoFrame = styled.div`
   background-color: #F9F7F2;
   font-weight: 300;
   transform: rotate(-2deg); */
-  
+
 `;
 
 const LogoFname = styled.p`
-  font-size: 5.05em;
+  font-size: 10em;
   letter-spacing: -.09em;
   transform: rotate(-12deg);
+ 
   /* color: #3a4140; */
   color: #ffa500;
+  color: #8d8d8d;
+ 
+  color: #838383;
+  color: #a1a1a1;
+  color: #b4b4b4;
+  color: #ffb6da;
+  color: #ffd4db;
+  color: #d3d3d3;
+  /* color: #c6c6c6; */
+  /* color: #f9f9f9; */
+  /* color: #bababa; */
+  /* color: #ff69b4; */
   /* color: #ff2dae; */
 
   @media (max-width: ${size.mobile}) {
@@ -40,6 +53,7 @@ const LogoLname = styled.p`
   /* background-image: linear-gradient(rgba(246, 244, 241, 0.3), rgba(205, 205, 203, 0.3)); */
 
   color: #3a4140;
+  color: #f9f9f9;
   /* color: #ffa500; */
   /* color: #ff2dae; */
   /* color: linear-gradient(rgba(6, 0, 2, 0.3), rgba(205, 205, 203, 0.3)); */
@@ -65,7 +79,7 @@ export default function Logo() {
     <StyledLogo>
       <LogoFrame>
         <LogoFname>KC</LogoFname>
-        {/* <LogoFname>K<LetterSpan>C</LetterSpan></LogoFname> */}
+        {/* <LogoLname>KC</LogoLname> */}
       </LogoFrame>
     </StyledLogo>
   );

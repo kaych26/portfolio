@@ -15,18 +15,19 @@ const StyledAboutMoi = styled.section`
 
   font-family: 'Montserrat', sans-serif;
   letter-spacing: .03em;
-
   padding: 1em;
   border-radius: 10px;
+  
 `;
 
 const HelloDiv = styled.div`
   animation: 1s ${keyframes`${slideInDown}`};
+  z-index: 999;
 `;
 
 const Hello = styled.h1`
-  color: #1e8ff7;
-
+  /* color: #1e8ff7; */
+  color: #ff69b4;
   font-size: 1.1em;
   font-weight: bold;
   letter-spacing: .1em;
@@ -37,6 +38,7 @@ const Name = styled.h1`
   font-size: 3em;
   font-weight: bold;
   padding: .5em 0;
+  z-index: 999;
 `;
 
 const Title = styled.h1`

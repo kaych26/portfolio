@@ -20,11 +20,12 @@ const StyledResume = styled.section`
 `;
 
 const AboutSidebarDiv = styled.div`
-  padding-top: 7em;
+  padding-top: 14em;
   z-index: 999;
 `;
 
 const ResumeSummaryDiv = styled.div`
+  z-index: 999;
   padding: 2em 1em;
 
   @media (max-width: ${size.mobile}) {

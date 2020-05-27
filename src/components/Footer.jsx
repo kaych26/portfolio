@@ -7,7 +7,6 @@ import { merge, flash, lightSpeedIn, slideInLeft, slideInRight} from 'react-anim
 import size from './size';
 
 const StyledFooter = styled.section`
-
   /* animation: 2s ${keyframes`${slideInLeft}`}; */
 
   width: 100%;

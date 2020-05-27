@@ -8,10 +8,7 @@ import size from './size';
 
 const StyledHeader = styled.header`
   height: 80px;
-  /* position: relative; */
-  /* height: 100px; */
   position: fixed;
-  z-index: 99;
   /* top: 0; */
   width: 100%;
 
@@ -20,13 +17,12 @@ const StyledHeader = styled.header`
   
   @media (max-width: ${size.mobile}) {
     grid-template-columns: 414px;
-    /* grid-template-rows: ; */
   }
 `;
 
 const LogoFrame = styled.div`
-@media (max-width: ${size.mobile}) {
-  /* grid-area: 1/2/2/2; */
+  z-index: 9;
+  @media (max-width: ${size.mobile}) {
 }
 `;
 
@@ -37,8 +33,9 @@ const LogoLink = styled(Link)`
 `;
 
 const NavContainer = styled.div`
-grid-area: 1 / 2 / 2 / 2;
-justify-self: end;
+  z-index: 999;
+  grid-area: 1 / 2 / 2 / 2;
+  justify-self: end;
   height: 60px;
   padding-top: 1.8em;
   font-size: 16px;
@@ -70,7 +67,6 @@ export default function Header(props) {
   let resume = '#000'
   let showLogo = '0';
 
-
   if (props.location.pathname === '/') {
     home = '#ffa500';
     showLogo = '0';
@@ -88,10 +84,6 @@ export default function Header(props) {
     showLogo = '1'
   }
  
-  // if (isMobile) {
-  //   showLogo = '0';
-  // }
-
   return (
     <StyledHeader>
       {/* <HeaderFrame> */}

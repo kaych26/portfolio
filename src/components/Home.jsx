@@ -18,13 +18,14 @@ const StyledHome = styled.section`
 
 const HomeTitleLink = styled(Link)`
   font-family: 'Fredericka the Great', cursive;
-  font-size: 3.8em;
+  font-size: 3.9em;
     
-  padding: 2.2em 0 .5em 0;
+  padding: 2em 0 .5em 0;
   letter-spacing: 0.2em;
   text-align: center;
   text-decoration: none;
   color: black;
+  z-index: 999;
 
   @media (max-width: ${size.mobile}) {
     font-size: 2.3em;
