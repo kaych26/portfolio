@@ -6,25 +6,31 @@ const StyledResumeSummary = styled.section`
   font-family: 'Montserrat', sans-serif;
   background-image: linear-gradient(rgba(246, 244, 241, 0.3), rgba(205, 205, 203, 0.3));
   word-spacing: .02em;
-  font-weight: 300;
   /* overflow: auto; */
 `;
 
 const SummaryHeading = styled.h1`
 
   color: #3a4140;
-  font-size: 3em;
-  font-weight: 300;
+  font-size: 2.3em;
+  font-weight: 500;
   padding: .5em 0;
 
+  font-weight: 600;
   /* color: #175be3;
   font-size: 1.9em; */
-  padding: .1em 0 .2em 0em;
+  padding: .1em 0 .3em 0em;
 `;
+
+const SummarySubHeading = styled.h2`
+  font-size: 1.1em;
+  padding-bottom: .4em;
+  font-weight: 500;
+`;
+
 
 const Summary = styled.p`
 
- 
 
   line-height: 1.15em;
   font-size: .95em;
@@ -71,7 +77,7 @@ const Desc = styled.p`
 
 const Time = styled.h3`
   font-size: .85em;
-  padding-right: 2em;
+  padding-right: 2.2em;
 `;
 
 const Education = styled.h3`
@@ -99,6 +105,9 @@ export default function ResumeSummary() {
       <SummaryHeading>
         Kay Chan
       </SummaryHeading>
+      <SummarySubHeading>
+        Software Engineer | Web Developer | Finance Techology
+      </SummarySubHeading>
 
       <Summary>
         I am a versatile Software Engineer who holds 10+ years experience working as a Senior Programmer and Manager for major financial corporations. Whether it be writing intricate code or managing cross-functional technology teams, I excel at breaking down complex information into simplistic and intuitive solutions.

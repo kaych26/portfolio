@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const StyledBody = styled.section`
-  padding-top: 35px;  
+  padding-top: 20px;  
 `;
 
 export default function Body(props) {

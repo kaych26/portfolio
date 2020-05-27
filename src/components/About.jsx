@@ -10,7 +10,7 @@ import AboutSidebar from './AboutSidebar';
 const StyledAbout = styled.section`
   display: grid;
   grid-template-columns: 28% 58% 4% 5%;
-  grid-template-rows: 20% 46% 20%;
+  grid-template-rows: 8% 72% 20%;
 
   font-family: 'Shadows Into Light Two', cursive;
   padding-top: 1.5em;
@@ -18,11 +18,12 @@ const StyledAbout = styled.section`
 
 const AboutSidebarDiv = styled.div`
   padding-top: 1.5em;
-  grid-area: 2/1/2/1;
+  grid-area: 2/1/3/2;
 `;
 
 const AboutMoiDiv = styled.div`
-  grid-area: 1/2/3/3;
+  grid-area: 1/2/3/2;
+  justify-self: center;
 `;
 
 export default function About() {

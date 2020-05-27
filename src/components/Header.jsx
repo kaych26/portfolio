@@ -85,13 +85,15 @@ export default function Header(props) {
   }
   if (props.location.pathname === '/about') {
     about = '#ffa500';
+    showLogo = '0';
   }
   if (props.location.pathname === '/work') {
     work = '#ffa500';
-    showLogo = '0'
+    showLogo = '1'
   }
   if (props.location.pathname === '/resume') {
     resume = '#ffa500';
+    showLogo = '0'
   }
 
   return (

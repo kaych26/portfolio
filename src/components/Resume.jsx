@@ -5,8 +5,9 @@ import ResumeSummary from './ResumeSummary';
 
 const StyledResume = styled.section`
   display: grid;
-  grid-template-columns: 26% 58% 6% 5%;
-  grid-template-rows: 20% 46% 20%;
+  grid-template-columns: 26% 59% 5% 5%;
+  grid-template-rows: 8% 72% 20%;
+  /* grid-template-rows: 20% 46% 20%; */
 
   font-family: 'Shadows Into Light Two', cursive;
   padding-top: 1.5em;
@@ -14,7 +15,8 @@ const StyledResume = styled.section`
 
 const AboutSidebarDiv = styled.div`
   padding-top: 1.5em;
-  grid-area: 2/1/2/1;
+  grid-area: 2/1/3/2;
+  /* grid-area: 2/1/2/1; */
 `;
 
 const ResumeSummaryDiv = styled.div`
