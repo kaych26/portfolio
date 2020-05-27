@@ -18,49 +18,51 @@ function App() {
     <>
       <Hero>
         <GlobalStyle />
+        {/* <Global /> */}
 
-        <Route
-          path='/'
-          render={route => (<Header {...route} />)}
-        />
-        <Body>
-          <Route exact
-            path="/"
-            render={route => (
-              <>
-                <Home />
-                <Footer {...route} nextUrl="/about" /> </>)}
+          <Route
+            path='/'
+            render={route => (<Header {...route} />)}
           />
-          <Route exact
-            path="/about"
-            render={route => (
-              <>
-                <About />
-                <Footer {...route} prevUrl="/" nextUrl="/work" />
-              </>
-            )}
-          />
+          <Body>
 
-          <Route exact
-            path="/work"
-            render={route => (
-              <>
-                <Work />
-                <Footer {...route} prevUrl="about" nextUrl="/resume" />
-              </>
-            )}
-          />
-          <Route exact
-            path="/resume"
-            render={route => (
-              <>
-                <Resume />
-                <Footer {...route} prevUrl="work" nextUrl="/" />
-              </>
-            )}
-          />
+            <Route exact
+              path="/"
+              render={route => (
+                <>
+                  <Home />
+                  <Footer {...route} nextUrl="/about" /> </>)}
+            />
+            <Route exact
+              path="/about"
+              render={route => (
+                <>
+                  <About />
+                  <Footer {...route} prevUrl="/" nextUrl="/work" />
+                </>
+              )}
+            />
 
-        </Body>
+            <Route exact
+              path="/work"
+              render={route => (
+                <>
+                  <Work />
+                  <Footer {...route} prevUrl="about" nextUrl="/resume" />
+                </>
+              )}
+            />
+            <Route exact
+              path="/resume"
+              render={route => (
+                <>
+                  <Resume />
+                  <Footer {...route} prevUrl="work" nextUrl="/" />
+                </>
+              )}
+            />
+
+          </Body>
 
       </Hero>
     </>
