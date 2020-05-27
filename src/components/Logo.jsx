@@ -19,7 +19,6 @@ const LogoFrame = styled.div`
   background-color: #F9F7F2;
   font-weight: 300;
   transform: rotate(-2deg); */
-
   
 `;
 
@@ -31,8 +30,8 @@ const LogoFname = styled.p`
   color: #ffa500;
   /* color: #ff2dae; */
 
-  @media (max-wdith: ${size.mobile}) {
-    font-szie: 1.2em;
+  @media (max-width: ${size.mobile}) {
+    font-size: 2.8em;
     color: red;
   }
 `;

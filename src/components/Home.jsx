@@ -6,11 +6,6 @@ import Quote from './Quote';
 import InfoLinks from './InfoLinks';
 import size from './size';
 
-// const size = {
-//   mobile: '414px',
-//   tablet: '768px',
-//   // tablet_max: '1024px',
-// };
 
 const StyledHome = styled.section`
   padding-top: 2em;
@@ -30,9 +25,10 @@ const HomeTitleLink = styled(Link)`
   text-align: center;
   text-decoration: none;
   color: black;
+
   @media (max-width: ${size.mobile}) {
-    font-size: 2em;
-    padding: 2.5em 0 1.2em 0;
+    font-size: 2.3em;
+    padding: 2.8em 0 .6em 0;
 
   }
 `;
@@ -49,7 +45,7 @@ const HomeSubTitle = styled.h2`
   padding-bottom: 1.5em;
   @media (max-width: ${size.mobile}) {
     font-size: .8em;
-
+    padding-bottom: .9em;
   }
 `;
 
@@ -60,10 +56,10 @@ export default function Home(props) {
         <HomeTitleLink to="/about">Kay Chan</HomeTitleLink>
         <HomeSubTitleFrame>
           <HomeSubTitle time='1s'>
-            Software Engineer | &nbsp;
+            Software Engineer |&nbsp;
       </HomeSubTitle>
           <HomeSubTitle time='2s'>
-            Web Developer | &nbsp;
+            Web Developer |&nbsp;
       </HomeSubTitle>
           <HomeSubTitle time='3s'>
             Finance Techology

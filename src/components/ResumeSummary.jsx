@@ -1,25 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
-import LinkResume from './LinkResume';
 import size from './size';
+import LinkResume from './LinkResume';
 
 const StyledResumeSummary = styled.section`
   font-family: 'Montserrat', sans-serif;
   background-image: linear-gradient(rgba(246, 244, 241, 0.3), rgba(205, 205, 203, 0.3));
   word-spacing: .02em;
   /* overflow: auto; */
+  @media (max-width: ${size.mobile}) {
+
+  }
 `;
 
 const SummaryHeading = styled.h1`
   color: #3a4140;
   font-size: 2.3em;
   font-weight: 500;
-  padding: .5em 0;
+  /* padding: .5em 0; */
 
   font-weight: 600;
   /* color: #175be3;
   font-size: 1.9em; */
   padding: .1em 0 .3em 0em;
+
+  @media (max-width: ${size.mobile}) {
+    font-size: 1.8em;
+  }
 `;
 
 const SummarySubHeading = styled.h2`
@@ -27,16 +34,26 @@ const SummarySubHeading = styled.h2`
   font-size: 1.2em;
   padding-bottom: .4em;
   font-weight: 500;
+  @media (max-width: ${size.mobile}) {
+    font-size: .9em;
+  }
 `;
 
 const Summary = styled.p`
   line-height: 1.15em;
   font-size: .95em;
+  @media (max-width: ${size.mobile}) {
+    font-size: .8em;
+  }
 `;
 
 const Skills = styled.p`
   line-height: 1.25em;
   font-size: .9em;
+  @media (max-width: ${size.mobile}) {
+    font-size: .8em;
+
+  }
 `;
 
 const Experience = styled.div`
@@ -50,6 +67,9 @@ const Title = styled.h3`
   font-weight: 600;
   color: #175be3;
   /* text-align: center; */
+  @media (max-width: ${size.mobile}) {
+    font-size: .8em;
+  }
 `;
 
 const DescOuterFrame = styled.div`
@@ -70,24 +90,35 @@ const Company = styled.h2`
   font-size: .95em;
   font-weight: 600;
   padding: .1em 0;
+  @media (max-width: ${size.mobile}) {
+    font-size: .8em;
+  }
 `;
 
 const Desc = styled.p`
   font-size: .9em;
   line-height: 1.13em;
   font-weight: normal;
-  /* padding-top: .1em; */
   overflow: none;
+  @media (max-width: ${size.mobile}) {
+    font-size: .8em;
+  }
 `;
 
 const Time = styled.h3`
   font-size: .85em;
   padding-right: 2.2em;
+  @media (max-width: ${size.mobile}) {
+    font-size: .7em;
+  }
 `;
 
 const Education = styled.h3`
   font-size: .95em;
   line-height: 1em;
+  @media (max-width: ${size.mobile}) {
+    font-size: .8em;
+  }
 `;
 
 const LinkResumeDiv = styled.div`

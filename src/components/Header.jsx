@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useMediaQuery } from 'react-responsive';
 import styled from 'styled-components';
 import { slideInLeft, slideInDown } from 'react-animations';
 import Logo from './Logo';
@@ -19,13 +20,13 @@ const StyledHeader = styled.header`
   
   @media (max-width: ${size.mobile}) {
     grid-template-columns: 414px;
-    grid-template-rows: 100px 1fr;
+    /* grid-template-rows: ; */
   }
 `;
 
 const LogoFrame = styled.div`
 @media (max-width: ${size.mobile}) {
-  grid-area: 1/2/2/2;
+  /* grid-area: 1/2/2/2; */
 }
 `;
 
@@ -61,47 +62,54 @@ const NavLink = styled(Link)`
 `;
 
 export default function Header(props) {
+  // const isMobile = useMediaQuery({ query: `(max-wdith: ${size.mobile})` });
+  const isMobile = useMediaQuery({ query: `(max-width: ${size.mobile})` })
   let home = '#000';
   let about = '#000';
   let work = '#000';
   let resume = '#000'
-  let showLogo = '1';
+  let showLogo = '0';
+
 
   if (props.location.pathname === '/') {
     home = '#ffa500';
     showLogo = '0';
   }
-  if (props.location.pathname === '/about') {
+  else if (props.location.pathname === '/about' && !isMobile) {
     about = '#ffa500';
     showLogo = '1';
   }
-  if (props.location.pathname === '/work') {
+  else if (props.location.pathname === '/work' && !isMobile) {
     work = '#ffa500';
     showLogo = '1'
   }
-  if (props.location.pathname === '/resume') {
+  else if (props.location.pathname === '/resume' && !isMobile) {
     resume = '#ffa500';
     showLogo = '1'
   }
+ 
+  // if (isMobile) {
+  //   showLogo = '0';
+  // }
 
   return (
     <StyledHeader>
-
       {/* <HeaderFrame> */}
-        {showLogo === '1' &&
-          <LogoFrame>
-            <LogoLink to="/">
-              <Logo />
-            </LogoLink>
-          </LogoFrame>
-        }
 
-        <NavContainer>
-          <NavLink to="/" color={home}>Home</NavLink>
-          <NavLink to="/about" color={about}>About</NavLink>
-          <NavLink to="/work" color={work}>Work</NavLink>
-          <NavLink to="/resume" color={resume}>Resume</NavLink>
-        </NavContainer>
+      {showLogo === '1' &&
+        <LogoFrame>
+          <LogoLink to="/">
+            <Logo />
+          </LogoLink>
+        </LogoFrame>
+      }
+
+      <NavContainer>
+        <NavLink to="/" color={home}>Home</NavLink>
+        <NavLink to="/about" color={about}>About</NavLink>
+        <NavLink to="/work" color={work}>Work</NavLink>
+        <NavLink to="/resume" color={resume}>Resume</NavLink>
+      </NavContainer>
       {/* </HeaderFrame> */}
 
     </StyledHeader>

@@ -32,6 +32,7 @@ const InfoContainer = styled.div`
 
   @media (max-width: ${size.mobile}) {
     width: 60%;
+    padding-bottom: 5em;
   }
 `;
 
