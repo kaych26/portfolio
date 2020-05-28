@@ -3,8 +3,9 @@ import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
 import arrow_right_icon from '../assets/icons/arrow_right.svg';
 import arrow_left_icon from '../assets/icons/arrow_left.svg';
-import { merge, flash, lightSpeedIn, slideInLeft, slideInRight} from 'react-animations';
+import { merge, flash, lightSpeedIn, slideInLeft, slideInRight } from 'react-animations';
 import size from './size';
+import Copyright from './Copyright';
 
 const StyledFooter = styled.section`
   /* animation: 2s ${keyframes`${slideInLeft}`}; */
@@ -12,11 +13,16 @@ const StyledFooter = styled.section`
   width: 100%;
   position: fixed;
   bottom: 0px;
+  padding: 3em 15em;
 
   z-index: auto;
+
   display: flex;
   justify-content: space-between;
-  padding: 3em 15em;
+
+  /* display: grid;
+  grid-template-columns: 50px 1fr 1fr 50px; */
+
 
   @media (max-width: ${size.tablet_max}) {
     padding: 3em 6em;
@@ -46,21 +52,32 @@ const FooterImg = styled.img`
   width: 48px;
 `;
 
+const CopyrightFrame = styled.div`
+  text-align: right;
+  padding: 6em 1em 0 0;
+`;
+
+
 export default function Footer(props) {
 
   return (
-    <StyledFooter>
-      <FooterRightContainer>
-        <FooterLink to={props.prevUrl}>
-          <FooterImg src={arrow_left_icon} />
-        </FooterLink>
-      </FooterRightContainer>
+    <>
+      <StyledFooter>
+        <FooterRightContainer>
+          <FooterLink to={props.prevUrl}>
+            <FooterImg src={arrow_left_icon} />
+          </FooterLink>
+        </FooterRightContainer>
+        <FooterLeftContainer>
+          <FooterLink to={props.nextUrl}>
+            <FooterImg src={arrow_right_icon} />
+          </FooterLink>
+        </FooterLeftContainer>
+      </StyledFooter>
+      <CopyrightFrame>
 
-      <FooterLeftContainer>
-        <FooterLink to={props.nextUrl}>
-          <FooterImg src={arrow_right_icon} />
-        </FooterLink>
-      </FooterLeftContainer>
-    </StyledFooter>
+        <Copyright />
+      </CopyrightFrame>
+    </>
   );
 }
