@@ -15,10 +15,13 @@ const StyledWork = styled.section`
   animation: 2s ${keyframes`${slideInDown}`};
   overflow-x: hidden;
   padding: 1.6em 2em 2em 1.2em;
+
+  @media (max-width: ${size.tablet}) {
+    padding: 2em 0;
+  }
  
   @media (max-width: ${size.mobile}) {
-    height: 736px;
-    padding-top: 3.1em;
+    height: 100vh;
     padding: 2em 0;
   }
 `;
@@ -95,7 +98,7 @@ export default function Work() {
         <Skills />
         <ProjectDiv>
 
-          <ProjectLink href={theRecipeBox_link } target="_blank" rel="noopener noreferrer">
+          <ProjectLink href={theRecipeBox_link} target="_blank" rel="noopener noreferrer">
             <ProjectImg src={theRecipeBox_img} alt="theRecipeBox" />
             <ProjectDesc>
               <LinkGithub link='https://github.com/kaych26/theRecipeBox' />
