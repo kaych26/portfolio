@@ -43,9 +43,9 @@ export default function Resume() {
         <AboutSidebarDiv>
         <AboutSidebar />
         {/* <LinkResumeDiv> */}
-        <LinkResume imgOption='1'>
+        {/* <LinkResume imgOption='1'>
           View FULL Resume
-        </LinkResume>
+        </LinkResume> */}
       {/* </LinkResumeDiv> */}
         </AboutSidebarDiv>
       }

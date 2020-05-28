@@ -137,7 +137,7 @@ export default function AboutMoi() {
             </AboutMe2>
 
               <AboutMe2>
-              Becoming a mom has brought many joy and challenges.  My daughter, Annie was born prematurely.  Thanks to many professional guidance and supports, she is fully recovered and healthy!  Today, I share my story and actively help other families to learn the unknowns.
+              Becoming a mom has brought many joy and challenges.  My daughter, Annie was a preemie baby.  Thanks to many professional guidance and supports, she is fully recovered and healthy!  This journey has taught me to stay open minded, reach out and connect.
             </AboutMe2>
 
               <LinkResumeDiv>

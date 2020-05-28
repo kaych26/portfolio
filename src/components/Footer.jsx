@@ -11,18 +11,15 @@ const StyledFooter = styled.section`
   /* animation: 2s ${keyframes`${slideInLeft}`}; */
 
   width: 100%;
-  position: fixed;
-  bottom: 0px;
-  padding: 3em 15em;
+  /* position: fixed; */
+  /* bottom: 0px; */
+  
+  padding: 0em 15em 0em 15em; 
   /* height: 10px; */
-  z-index: 5;
+  z-index: 1;
 
   display: flex;
   justify-content: space-between;
-
-  /* display: grid;
-  grid-template-columns: 50px 1fr 1fr 50px; */
-
 
   @media (max-width: ${size.tablet_max}) {
     padding: 3em 6em;
@@ -32,7 +29,6 @@ const StyledFooter = styled.section`
     padding: 3em .5em;
   }
 `;
-
 
 const FooterRightContainer = styled.div`
   animation: 2s ${keyframes`${slideInLeft}`};
@@ -54,7 +50,7 @@ const FooterImg = styled.img`
 
 const CopyrightFrame = styled.div`
   text-align: right;
-  padding: 3.5em 1.5em 0 0;
+  padding: 0em 1.5em 1em 0;
 `;
 
 
@@ -76,10 +72,10 @@ export default function Footer(props) {
           </FooterLink>
         </FooterLeftContainer>
       </StyledFooter>
-
       <CopyrightFrame>
         <Copyright />
       </CopyrightFrame>
+
     </>
   );
 }

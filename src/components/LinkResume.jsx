@@ -22,8 +22,8 @@ const Img = styled.img`
 
 const NavResume = styled.h2`
   font-family: 'Roboto', sans-serif;
-  font-size: .9em;
-  padding: 15px 8px;
+  font-size: .7em;
+  padding: .8em .8em;
  
   text-decoration: none;
   color: #fff;

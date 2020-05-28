@@ -274,11 +274,11 @@ export default function ResumeSummary() {
         </Time>
       </CompanyFrame>
 
-      {/* <LinkResumeDiv>
+      <LinkResumeDiv>
         <LinkResume imgOption='1'>
           View FULL Resume
         </LinkResume>
-      </LinkResumeDiv> */}
+      </LinkResumeDiv>
 
     </StyledResumeSummary>
   )

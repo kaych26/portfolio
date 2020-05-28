@@ -14,7 +14,6 @@ const StyledAbout = styled.section`
   grid-template-columns: 25% 68%;
   grid-template-rows: 100%;
   font-family: 'Shadows Into Light Two', cursive;
-  
 
   @media (max-width: ${size.mobile}) {
     grid-template-columns: 1fr;

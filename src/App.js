@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
+import styled from 'styled-components';
 import GlobalStyle from './components/GlobalStyle';
 // import Global from './components/Global';
 import Hero from './components/Hero';
@@ -14,64 +15,106 @@ import Work from './components/Work';
 import Footer from './components/Footer';
 import size from './components/size';
 
+const pageFrame = styled.section`
+  position: relative;
+  /* height: 80%%; */
+`;
+
+const BodyFrame = styled.section`
+  padding-bottom: 5rem;
+  `;
+
+const FooterFrame = styled.section`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* height: 3.5rem; */
+`;
+
 function App() {
   return (
-    <>
+    <pageFrame>
       <Hero>
         <GlobalStyle />
-        {/* <Global /> */}
 
-          <Route
-            path='/'
+        <Route
+          path='/'
           render={route => (
             <>
-              <Logo {...route}/>
+              <Logo {...route} />
               <Header {...route} />
             </>)}
-          />
-    
-          <Body>
+        />
 
-            <Route exact
-              path="/"
-              render={route => (
-                <>
+
+        <Body>
+
+          <Route exact
+            path="/"
+            render={route => (
+              <>
+                <BodyFrame>
                   <Home />
-                  <Footer {...route} nextUrl="/about" /> </>)}
-            />
-            <Route exact
-              path="/about"
-              render={route => (
-                <>
+                </BodyFrame>
+                <FooterFrame>
+                  <Footer {...route} nextUrl="/about" />
+                </FooterFrame>
+              </>
+            )}
+          />
+          <Route exact
+            path="/about"
+            render={route => (
+              <>
+                <BodyFrame>
+
                   <About />
+                </BodyFrame>
+                <FooterFrame>
+
                   <Footer {...route} prevUrl="/" nextUrl="/work" />
-                </>
-              )}
-            />
+                </FooterFrame>
+              </>
+            )}
+          />
 
-            <Route exact
-              path="/work"
-              render={route => (
-                <>
+          <Route exact
+            path="/work"
+            render={route => (
+              <>
+                <BodyFrame>
+
                   <Work />
-                  <Footer {...route} prevUrl="about" nextUrl="/resume" />
-                </>
-              )}
-            />
-            <Route exact
-              path="/resume"
-              render={route => (
-                <>
-                  <Resume />
-                  <Footer {...route} prevUrl="work" nextUrl="/" />
-                </>
-              )}
-            />
+                </BodyFrame>
+                <FooterFrame>
 
-          </Body>
+                  <Footer {...route} prevUrl="about" nextUrl="/resume" />
+                </FooterFrame>
+              </>
+            )}
+          />
+          <Route exact
+            path="/resume"
+            render={route => (
+              <>
+                <BodyFrame>
+
+                  <Resume />
+                </BodyFrame>
+                <FooterFrame>
+
+                  <Footer {...route} prevUrl="work" nextUrl="/" />
+                </FooterFrame>
+              </>
+            )}
+          />
+
+        </Body>
+
+
 
       </Hero>
-    </>
+    </pageFrame>
   );
 }
 
