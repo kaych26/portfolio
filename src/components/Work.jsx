@@ -21,7 +21,8 @@ const StyledWork = styled.section`
   }
  
   @media (max-width: ${size.mobile}) {
-    height: 100vh;
+    height: 772px;
+    /* height: 100vh; */
     /* padding: 2em 0; */
   }
 `;
