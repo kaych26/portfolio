@@ -7,16 +7,20 @@ const StyledImgLink = styled.section`
 `;
 
 const Link = styled.a`
+  font-family: 'Montserrat', sans-serif;
   text-decoration: none;
   color: #000;
+  font-size: .8em;
+  display: flex;
+  align-items: center;
 `;
 
 const Img = styled.img`
-  width: 35px;
+  width: 30px;
 `;
 
-export default function LinkGithub(props) {
-  let link = 'https://github.com/kaych26';
+export default function LinkPortfolioGit(props) {
+  let link = 'https://github.com/kaych26/portfolio';
 
   if (props.link) {
     link = props.link;
@@ -28,7 +32,7 @@ export default function LinkGithub(props) {
         href={link} target="_blank" rel="noopener noreferrer">
         <Img
           src={icon} alt='github' />
-         {props.desc}
+        {props.desc}
       </Link>
 
     </StyledImgLink>

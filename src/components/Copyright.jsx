@@ -5,6 +5,8 @@ import { getByPlaceholderText } from '@testing-library/react';
 const StyledCopyright = styled.h1`
   font-size: .8em;
   font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
 `;
 
 export default function Copyright() {

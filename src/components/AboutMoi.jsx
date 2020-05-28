@@ -94,8 +94,9 @@ const LinkResumeDiv = styled.div`
 const ScrollTo = styled.a`
   animation: 4s ${keyframes`${flash}`};
   cursor: pointer;
-  text-align: center;
+  text-align: right;
   text-decoration: none;
+  font-weight: bold;
   color: #175be3;
   font-weight: 500;
 `;

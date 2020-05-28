@@ -7,12 +7,15 @@ import arrow_left_icon from '../assets/icons/arrow_left.svg';
 import { merge, flash, lightSpeedIn, slideInLeft, slideInRight } from 'react-animations';
 import size from './size';
 import Copyright from './Copyright';
+import LinkGitPortfolio from './LinkGitPortfolio';
 
 const StyledFooter = styled.section`
   /* animation: 2s ${keyframes`${slideInLeft}`}; */
   width: 100%;
   
-  padding: 0em 4em .5em 15em; 
+  /* padding: 0em 4em .5em 15em;  */
+  padding: 0em 2.8em .5em 2.8em; 
+
   /* height: 10px; */
   z-index: 1;
 
@@ -25,16 +28,16 @@ const StyledFooter = styled.section`
   }
 
   @media (max-width: ${size.mobile}) {
-    padding: 3em .5em;
+    /* padding: 3em .5em; */
   }
 `;
 
 const FooterRightContainer = styled.div`
-  animation: 2s ${keyframes`${slideInLeft}`};
+  /* animation: 2s ${keyframes`${slideInLeft}`}; */
 `;
 
 const FooterLeftContainer = styled.div`
-  animation: 2s ${keyframes`${slideInRight}`};
+  /* animation: 2s ${keyframes`${slideInRight}`}; */
 `;
 
 const FooterLink = styled(Link)`
@@ -47,9 +50,16 @@ const FooterImg = styled.img`
   width: 48px;
 `;
 
+const GithubFrame = styled.div`
+  padding: 0 .5em;
+`;
+
+
 const CopyrightFrame = styled.div`
   text-align: right;
   padding: 0em 1.5em 1em 0;
+  display: flex;
+  justify-content: center;
 `;
 
 
@@ -79,6 +89,10 @@ export default function Footer(props) {
       )}
 
       <CopyrightFrame>
+        <GithubFrame>
+
+          <LinkGitPortfolio desc='Code for this Portfolio' />
+        </GithubFrame>
         <Copyright />
       </CopyrightFrame>
 
