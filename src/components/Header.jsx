@@ -59,7 +59,6 @@ const NavLink = styled(Link)`
 `;
 
 export default function Header(props) {
-  // const isMobile = useMediaQuery({ query: `(max-wdith: ${size.mobile})` });
   const isMobile = useMediaQuery({ query: `(max-width: ${size.mobile})` })
   let home = '#000';
   let about = '#000';

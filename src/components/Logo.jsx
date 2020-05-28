@@ -28,20 +28,15 @@ const LogoFname = styled.p`
   transform: rotate(-12deg);
  
   /* color: #3a4140; */
-  color: #ffa500;
+  /* color: #ffa500;
   color: #8d8d8d;
  
   color: #838383;
   color: #a1a1a1;
   color: #b4b4b4;
   color: #ffb6da;
-  color: #ffd4db;
+  color: #ffd4db; */
   color: #d3d3d3;
-  /* color: #c6c6c6; */
-  /* color: #f9f9f9; */
-  /* color: #bababa; */
-  /* color: #ff69b4; */
-  /* color: #ff2dae; */
 
   @media (max-width: ${size.mobile}) {
     font-size: 2.8em;
