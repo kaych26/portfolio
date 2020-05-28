@@ -1,11 +1,13 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 
 import LinkLinkedin from './LinkLinkedin';
 import LinkGithub from './LinkGithub';
 import LinkResume from './LinkResume';
 import LinkEmail from './LinkEmail';
 import PostIt from './PostIt';
+import size from './size';
 
 const StyledAboutSidebar = styled.section`
 /* height: 100%; */
@@ -48,40 +50,48 @@ const PostItDiv = styled.div`
 `;
 
 export default function AboutSidebar() {
+  const isTablet = useMediaQuery({ query: `(max-width: ${size.tablet})` });
+  let postSize = '188px';
+
+  if ({ isTablet }) {
+     postSize = '160px';
+  }
+
   return (
     <>
       <StyledAboutSidebar>
-        
-        <PostItFrame>
-        <PostIt rotate='3deg' size='188px'>
 
-          <LinkFrame>
-            <LinkTitle>
-              <LinkResume />
+        <PostItFrame>
+          <PostIt rotate='3deg' size={postSize}>
+            {/* <PostIt rotate='3deg' size='188px'> */}
+
+            <LinkFrame>
+              <LinkTitle>
+                <LinkResume />
               Resume
             </LinkTitle>
 
-            <LinkTitle>
-              <LinkLinkedin />
+              <LinkTitle>
+                <LinkLinkedin />
               LinkedIn
             </LinkTitle>
 
-            <LinkTitle>
-              <LinkGithub />
+              <LinkTitle>
+                <LinkGithub />
               Github
             </LinkTitle>
 
-            <LinkTitle>
-              <LinkEmail />
+              <LinkTitle>
+                <LinkEmail />
               Email
             </LinkTitle>
-          </LinkFrame>
-        </PostIt>
+            </LinkFrame>
+          </PostIt>
         </PostItFrame>
 
         <PostItFrame>
 
-        {/* <PostIt rotate='-5deg' size='160px'>
+          {/* <PostIt rotate='-5deg' size='160px'>
           <PostItTitle>
             To Do
           </PostItTitle>

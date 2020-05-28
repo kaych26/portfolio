@@ -1,5 +1,7 @@
 import React from 'react';
+
 import styled, { keyframes } from 'styled-components';
+import size from './size';
 import { slideInDown, swing, fadeIn } from 'react-animations';
 
 const StyledPostIt = styled.section`
@@ -21,6 +23,7 @@ const PostItQuote = styled.p`
 
   background: #eae672;
   transform: rotate(${(props) => props.rotate});
+
 `;
 
 // create small metal part of the pin

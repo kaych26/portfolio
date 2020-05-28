@@ -10,7 +10,6 @@ import Copyright from './Copyright';
 
 const StyledFooter = styled.section`
   /* animation: 2s ${keyframes`${slideInLeft}`}; */
-
   width: 100%;
   
   padding: 0em 4em .5em 15em; 
@@ -21,7 +20,8 @@ const StyledFooter = styled.section`
   justify-content: space-between;
 
   @media (max-width: ${size.tablet_max}) {
-    padding: 3em 6em;
+    /* justify-content: center;
+    padding: 10em 10em; */
   }
 
   @media (max-width: ${size.mobile}) {
@@ -54,7 +54,8 @@ const CopyrightFrame = styled.div`
 
 
 export default function Footer(props) {
-  const isMobile = useMediaQuery({ query: `(max-width: ${size.mobile})` });
+  const isMobile = useMediaQuery({ query: `(max-width: ${size.tablet})` });
+
   return (
     <>
       {!isMobile && (
@@ -72,6 +73,7 @@ export default function Footer(props) {
               <FooterImg src={arrow_right_icon} />
             </FooterLink>
           </FooterLeftContainer>
+
         </StyledFooter>
 
       )}

@@ -35,7 +35,11 @@ const ProjectOuterFrame = styled.div`
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto;
 
-  
+  @media (max-width: ${size.tablet}) {
+    grid-template-columns: 1fr 1fr;
+
+
+  }
   @media (max-width: ${size.mobile}) {
     grid-template-columns: 1fr;
    

@@ -15,6 +15,11 @@ const StyledAbout = styled.section`
   grid-template-rows: 100%;
   font-family: 'Shadows Into Light Two', cursive;
 
+  @media (max-width: ${size.tablet}) {
+    grid-template-columns: 28% 68%
+    /* grid-template-row: 1fr; */
+  }
+
   @media (max-width: ${size.mobile}) {
     grid-template-columns: 1fr;
     grid-template-row: 1fr;
@@ -24,14 +29,16 @@ const StyledAbout = styled.section`
 const AboutSidebarDiv = styled.div`
   padding-top: 14.5em;
 
-  @media (max-width: ${size.mobile}) {
+  @media (max-width: ${size.tablet}) {
+    
   }
 `;
 
 const AboutMoiDiv = styled.div`
   z-index: 2;
   padding-top: 3em;
-  @media (max-width: ${size.mobile}) {
+  @media (max-width: ${size.tablet}) {
+   
     /* overflow: auto; */
   }
 `;

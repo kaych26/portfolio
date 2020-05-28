@@ -31,7 +31,7 @@ const SummaryHeading = styled.h1`
 
   @media (max-width: ${size.mobile}) {
     font-size: 1.7em;
-    padding: 0 0 .2em 0;
+    padding: 0 0 .4em 0;
   }
 `;
 
@@ -104,6 +104,8 @@ const Company = styled.h2`
   padding: .1em 0;
   @media (max-width: ${size.mobile}) {
     font-size: .8em;
+    letter-spacing: .05em;
+    word-spacing: .01em;
   }
 `;
 
@@ -113,7 +115,8 @@ const Desc = styled.p`
   font-weight: normal;
   overflow: none;
   @media (max-width: ${size.mobile}) {
-    font-size: .8em;
+    font-size: .75em;
+    
   }
 `;
 

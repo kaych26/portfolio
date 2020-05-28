@@ -5,8 +5,14 @@ import size from './size';
 
 const StyledBody = styled.section`
   padding-top: 1.5em;  
-  @media (max-width: ${size.mobile}) {
-    padding: 1.4em;
+
+  @media (max-width: ${size.tablet}) {
+
+      padding: 5em .2em .2em .5em;
+      
+    }
+    @media (max-width: ${size.mobile}) {
+      padding: 1.6em .2em .2em .5em;
   }
 `;
 

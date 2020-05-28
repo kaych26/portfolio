@@ -10,7 +10,8 @@ const StyledHero = styled.section`
     url(${hero_img});
   background-size: cover;
   /* height: 600px; */
-  height: 771px;
+  /* height: 771px; */
+  height: 100vh;
   z-index: -100;
 `;
 
