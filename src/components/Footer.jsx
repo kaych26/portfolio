@@ -11,10 +11,8 @@ const StyledFooter = styled.section`
   /* animation: 2s ${keyframes`${slideInLeft}`}; */
 
   width: 100%;
-  /* position: fixed; */
-  /* bottom: 0px; */
   
-  padding: 0em 15em 0em 15em; 
+  padding: 0em 4em .5em 15em; 
   /* height: 10px; */
   z-index: 1;
 

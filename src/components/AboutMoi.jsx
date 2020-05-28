@@ -20,7 +20,7 @@ const StyledAboutMoi = styled.section`
 `;
 
 const HelloDiv = styled.div`
-  animation: 1s ${keyframes`${slideInDown}`};
+  animation: 2s ${keyframes`${fadeIn}`};
 `;
 
 const Hello = styled.h1`
@@ -58,10 +58,14 @@ const AboutMeDiv = styled.div`
 `;
 
 const AboutMe = styled.p`
-  animation: 1s ${keyframes`${fadeIn}`};
+  animation: 1s ${keyframes`${slideInLeft}`};
   font-size: .95em;
   line-height: 1.5em;
   padding: .5em 0;
+`;
+const AboutMe2 = styled(AboutMe)`
+  animation: 1s ${keyframes`${slideInRight}`};
+  padding-bottom: 1em;
 `;
 
 const LinkResumeDiv = styled.div`
@@ -69,7 +73,7 @@ const LinkResumeDiv = styled.div`
 `;
 
 const ScrollTo = styled.a`
-  animation: 2s ${keyframes`${flash}`};
+  animation: 4s ${keyframes`${flash}`};
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -77,7 +81,6 @@ const ScrollTo = styled.a`
   font-weight: 500;
 `;
 
-const AboutMe2 = styled(AboutMe)``;
 
 const Span = styled.span`
   color: #175be3;

@@ -11,7 +11,7 @@ import size from './size';
 
 const StyledAbout = styled.section`
   display: grid;
-  grid-template-columns: 25% 68%;
+  grid-template-columns: 24% 66%;
   grid-template-rows: 100%;
   font-family: 'Shadows Into Light Two', cursive;
 
