@@ -37,13 +37,18 @@ const Name = styled.h1`
   font-size: 3em;
   font-weight: bold;
   padding: .5em 0;
-
+  @media (max-width: ${size.mobile}) {
+    font-size: 2.5em;
+  }
 `;
 
 const Title = styled.h1`
   color: #191b1b;
   font-size: 1.9em;
   padding-bottom: .7em;
+  @media (max-width: ${size.mobile}) {
+    font-size: 1.5em;
+  }
 `;
 
 const AboutMeOuterDiv = styled.div`
@@ -56,7 +61,6 @@ const AboutMeOuterDiv = styled.div`
   @media (max-width: ${size.mobile}) {
     overflow: auto;
 }
-
 `;
 
 const AboutMeDiv = styled.div`
@@ -68,6 +72,12 @@ const AboutMe = styled.p`
   font-size: .95em;
   line-height: 1.5em;
   padding: .5em 0;
+
+  @media (max-width: ${size.mobile}) {
+    font-size: .9em;
+    line-height: 1.1em;
+
+  }
 `;
 const AboutMe2 = styled(AboutMe)`
   animation: 1s ${keyframes`${slideInRight}`};
@@ -75,7 +85,10 @@ const AboutMe2 = styled(AboutMe)`
 `;
 
 const LinkResumeDiv = styled.div`
-  padding: .6em 0 0em 0;
+  padding: .6em 0 0 0;
+  @media (max-width: ${size.mobile}) {
+    padding: .2em 0 .8em 0;
+  }
 `;
 
 const ScrollTo = styled.a`
