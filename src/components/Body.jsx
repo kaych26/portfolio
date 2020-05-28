@@ -4,12 +4,10 @@ import styled from 'styled-components';
 import size from './size';
 
 const StyledBody = styled.section`
-  padding-top: 1.5em;  
+  padding-top: 1.3em;  
 
   @media (max-width: ${size.tablet}) {
-
-      padding: 5em .2em .2em .5em;
-      
+      padding: 3.5em .2em .2em .5em;
     }
     @media (max-width: ${size.mobile}) {
       padding: 1.6em .2em .2em .5em;

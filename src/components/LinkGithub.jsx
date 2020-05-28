@@ -4,6 +4,7 @@ import icon from '../assets/icons/github.svg';
 
 const StyledImgLink = styled.section`
   display: flex;
+  justify-content: center;
 `;
 
 const Link = styled.a`

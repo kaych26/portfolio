@@ -16,7 +16,7 @@ const StyledAbout = styled.section`
   font-family: 'Shadows Into Light Two', cursive;
 
   @media (max-width: ${size.tablet}) {
-    grid-template-columns: 28% 68%
+    grid-template-columns: 30% 70%
     /* grid-template-row: 1fr; */
   }
 

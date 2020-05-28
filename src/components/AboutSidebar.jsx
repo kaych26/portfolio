@@ -38,11 +38,20 @@ const LinkTitle = styled.h2`
   letter-spacing: .1em;
 `;
 
-const PostItTitle = styled.h2`
+const PostitMsg = styled.h3`
   text-align: center;
-  font-weight: bold;
+  font-size: .85em;
+  letter-spacing: .02em;
   color: #ff69b4;
-  padding: .5em;
+  padding-top: .5em;
+  @media (max-width: ${size.tablet}) {
+    font-size: .9em;
+    padding-top: .5em;
+    letter-spacing: .01em;
+    line-height: 1.3em;
+  }
+
+
 `;
 const PostItDiv = styled.div`
   text-align: center;
@@ -50,11 +59,13 @@ const PostItDiv = styled.div`
 `;
 
 export default function AboutSidebar() {
+  const isMobile = useMediaQuery({ query: `(max-width: ${size.mobile})` })
   const isTablet = useMediaQuery({ query: `(max-width: ${size.tablet})` });
-  let postSize = '188px';
+  // let postSize = '188px';
+  let postSize = '230px';
 
-  if ({ isTablet }) {
-     postSize = '165px';
+  if (isTablet) {
+     postSize = '190px';
   }
 
   return (
@@ -86,6 +97,12 @@ export default function AboutSidebar() {
               Email
             </LinkTitle>
             </LinkFrame>
+
+            {/* {!isTablet && */}
+            <PostitMsg>
+              Keep hacking, keep exploring & SKY is the limit !'
+            </PostitMsg>
+            {/* } */}
           </PostIt>
         </PostItFrame>
 

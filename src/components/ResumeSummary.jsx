@@ -127,8 +127,14 @@ const Desc = styled.p`
 const Time = styled.h3`
   font-size: .85em;
   padding-right: 2.2em;
+
+  @media (max-width: ${size.tablet}) {
+    padding-right: 1em;
+  }
+  
   @media (max-width: ${size.mobile}) {
     font-size: .7em;
+    padding-right: .8em;
   }
 `;
 

@@ -37,6 +37,10 @@ const Name = styled.h1`
   font-size: 3em;
   font-weight: bold;
   padding: .5em 0;
+
+  @media (max-width: ${size.tablet}) {
+    font-size: 2.9em;
+  }
   @media (max-width: ${size.mobile}) {
     font-size: 2.5em;
   }
@@ -46,6 +50,10 @@ const Title = styled.h1`
   color: #191b1b;
   font-size: 1.9em;
   padding-bottom: .7em;
+
+  @media (max-width: ${size.tablet}) {
+    font-size: 1.8em;
+  }
   @media (max-width: ${size.mobile}) {
     font-size: 1.5em;
   }
@@ -73,10 +81,13 @@ const AboutMe = styled.p`
   line-height: 1.5em;
   padding: .5em 0;
 
+  @media (max-width: ${size.tablet}) {
+  
+
+  }
   @media (max-width: ${size.mobile}) {
     font-size: .9em;
     line-height: 1.1em;
-
   }
 `;
 const AboutMe2 = styled(AboutMe)`

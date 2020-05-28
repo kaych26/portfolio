@@ -15,7 +15,7 @@ const StyledResume = styled.section`
   font-family: 'Shadows Into Light Two', cursive;
  
   @media (max-width: ${size.tablet}) {
-    grid-template-columns: 28% 70%;
+    grid-template-columns: 29% 71%;
     grid-template-row: 1fr;
   
   }

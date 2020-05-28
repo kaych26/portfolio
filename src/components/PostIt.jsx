@@ -24,6 +24,14 @@ const PostItQuote = styled.p`
   background: #eae672;
   transform: rotate(${(props) => props.rotate});
 
+  @media (max-width: ${size.tablet}) {
+    padding: .8em .2em .2em .2em;
+    font-size: 1em;
+    line-height: 1em;
+    letter-spacing: .1em;
+  }
+
+
 `;
 
 // create small metal part of the pin
