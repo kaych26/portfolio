@@ -13,7 +13,6 @@ const StyledResume = styled.section`
 
   font-family: 'Shadows Into Light Two', cursive;
   @media (max-width: ${size.mobile}) {
-    /* height: 2000px; */
     grid-template-columns: 1fr;
     grid-template-row: 1fr;
   }
