@@ -17,7 +17,7 @@ const StyledWork = styled.section`
   padding: 1.6em 2em 2em 1.2em;
 
   @media (max-width: ${size.tablet}) {
-    padding: 2em 0;
+    padding: 0;
   }
  
   @media (max-width: ${size.mobile}) {
