@@ -23,7 +23,7 @@ const StyledSkills = styled.section`
   justify-content: space-around;
   align-self: center;
   background-image: linear-gradient(rgba(246, 244, 241, 0.3), rgba(205, 205, 203, 0.3));
-  z-index: 999;
+  z-index: 5;
 `;
 
 const SkillFrame = styled.div`

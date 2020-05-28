@@ -7,6 +7,7 @@ const StyledImgLink = styled.section`
   letter-spacing: .1em;
   display: flex;
   justify-content: center;
+  z-index: 8;
 `;
 
 const Link = styled.a`
@@ -21,15 +22,17 @@ const Img = styled.img`
 
 const NavResume = styled.h2`
   font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  padding: .3em 2em;
+  font-size: .9em;
+  padding: 15px 8px;
+ 
   text-decoration: none;
   color: #fff;
-  background-color: #878d8c;
-  /* background-color: rgba(252, 251, 248, 0.8); */
+  text-align: center;
+  /* background-color: #878d8c; */
+  background-color: #175be3;
+  box-shadow: .2em .3em #888;
   border-radius: 10px;
-  height: 26px;
-
+  
   &:hover {
     background-color: #878d8c
   }

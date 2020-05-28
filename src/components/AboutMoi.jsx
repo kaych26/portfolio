@@ -17,12 +17,10 @@ const StyledAboutMoi = styled.section`
   letter-spacing: .03em;
   padding: 1em;
   border-radius: 10px;
-  
 `;
 
 const HelloDiv = styled.div`
   animation: 1s ${keyframes`${slideInDown}`};
-  z-index: 999;
 `;
 
 const Hello = styled.h1`
@@ -38,7 +36,7 @@ const Name = styled.h1`
   font-size: 3em;
   font-weight: bold;
   padding: .5em 0;
-  z-index: 999;
+
 `;
 
 const Title = styled.h1`
@@ -77,7 +75,6 @@ const ScrollTo = styled.a`
   text-decoration: none;
   color: #175be3;
   font-weight: 500;
-  z-index: 1;
 `;
 
 const AboutMe2 = styled(AboutMe)``;

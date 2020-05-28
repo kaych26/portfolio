@@ -14,8 +14,8 @@ const StyledFooter = styled.section`
   position: fixed;
   bottom: 0px;
   padding: 3em 15em;
-
-  z-index: auto;
+  /* height: 10px; */
+  z-index: 5;
 
   display: flex;
   justify-content: space-between;
@@ -54,7 +54,7 @@ const FooterImg = styled.img`
 
 const CopyrightFrame = styled.div`
   text-align: right;
-  padding: 6em 1em 0 0;
+  padding: 3.5em 1.5em 0 0;
 `;
 
 
@@ -67,15 +67,17 @@ export default function Footer(props) {
           <FooterLink to={props.prevUrl}>
             <FooterImg src={arrow_left_icon} />
           </FooterLink>
+
         </FooterRightContainer>
+
         <FooterLeftContainer>
           <FooterLink to={props.nextUrl}>
             <FooterImg src={arrow_right_icon} />
           </FooterLink>
         </FooterLeftContainer>
       </StyledFooter>
-      <CopyrightFrame>
 
+      <CopyrightFrame>
         <Copyright />
       </CopyrightFrame>
     </>

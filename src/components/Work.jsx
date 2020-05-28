@@ -29,7 +29,6 @@ const ProjectTitle = styled.h1`
   text-align: center;
   /* padding: .7em 0; */
   padding: .5em 0 1em 0;
-
 `;
 
 const ProjectOuterFrame = styled.div`
@@ -38,16 +37,12 @@ const ProjectOuterFrame = styled.div`
   grid-template-rows: auto auto auto;
 
   
-    /*  */
-  /* justify-items: center; */
   @media (max-width: ${size.mobile}) {
     grid-template-columns: 1fr;
-
   }
 `;
 
 const ProjectDiv = styled.div`
-  z-index: 998;
   display: flex;
   justify-content: center;
 `;

@@ -14,7 +14,6 @@ const StyledAboutSidebar = styled.section`
   /* column-gap: 1em; */
   /* display: grid;
   grid-template-columns: 1fr;
-  z-index: 999;
   justify-content: center; */
   `;
 

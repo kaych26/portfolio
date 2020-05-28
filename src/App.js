@@ -8,7 +8,7 @@ import Body from './components/Body';
 import Home from './components/Home';
 import About from './components/About';
 import Resume from './components/Resume';
-import Skills from './components/Skills';
+import Logo from './components/Logo';
 
 import Work from './components/Work';
 import Footer from './components/Footer';
@@ -23,8 +23,13 @@ function App() {
 
           <Route
             path='/'
-            render={route => (<Header {...route} />)}
+          render={route => (
+            <>
+              <Logo {...route}/>
+              <Header {...route} />
+            </>)}
           />
+    
           <Body>
 
             <Route exact

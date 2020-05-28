@@ -25,7 +25,6 @@ const HomeTitleLink = styled(Link)`
   text-align: center;
   text-decoration: none;
   color: black;
-  z-index: 999;
 
   @media (max-width: ${size.mobile}) {
     font-size: 2.3em;

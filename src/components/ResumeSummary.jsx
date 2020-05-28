@@ -9,8 +9,7 @@ animation: 2s ${keyframes`${slideInDown}`};
   font-family: 'Montserrat', sans-serif;
   background-image: linear-gradient(rgba(246, 244, 241, 0.3), rgba(205, 205, 203, 0.3));
   word-spacing: .02em;
-  z-index: 999;
-  /* overflow: auto; */
+
   @media (max-width: ${size.mobile}) {
 
   }
@@ -26,7 +25,7 @@ const SummaryHeading = styled.h1`
   font-weight: 600;
   /* color: #175be3;
   font-size: 1.9em; */
-  padding: .1em 0 .3em 0em;
+  padding: 0 0 .3em 0em;
   
 
   @media (max-width: ${size.mobile}) {
@@ -131,6 +130,7 @@ const Education = styled.h3`
 
 const LinkResumeDiv = styled.div`
   padding-top: .9em;
+ 
 `;
 
 const Span = styled.span`
@@ -274,11 +274,11 @@ export default function ResumeSummary() {
         </Time>
       </CompanyFrame>
 
-      <LinkResumeDiv>
+      {/* <LinkResumeDiv>
         <LinkResume imgOption='1'>
           View FULL Resume
         </LinkResume>
-      </LinkResumeDiv>
+      </LinkResumeDiv> */}
 
     </StyledResumeSummary>
   )

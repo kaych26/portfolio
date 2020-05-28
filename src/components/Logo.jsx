@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 import size from './size';
 
 
@@ -9,6 +10,8 @@ const StyledLogo = styled.section`
   padding: 0.8em 1em;
   color: #ffa500;
   width: 170px;
+  position: fixed;
+z-index: 0;
 `;
 
 const LogoFrame = styled.div`
@@ -19,11 +22,11 @@ const LogoFrame = styled.div`
   background-color: #F9F7F2;
   font-weight: 300;
   transform: rotate(-2deg); */
-
+  
 `;
 
 const LogoFname = styled.p`
-  font-size: 10em;
+  font-size: 20em;
   letter-spacing: -.09em;
   transform: rotate(-12deg);
  
@@ -37,6 +40,7 @@ const LogoFname = styled.p`
   color: #ffb6da;
   color: #ffd4db; */
   color: #d3d3d3;
+
 
   @media (max-width: ${size.mobile}) {
     font-size: 2.8em;
@@ -60,22 +64,37 @@ const LogoLname = styled.p`
   /* font-family: 'Montserrat', sans-serif; */
 `;
 
-const Span = styled.span`
-  font-size: .5em;
-  color: black;
-`;
 
-const LetterSpan = styled.span`
-  color: #ff2dae;
-`;
+export default function Logo(props) {
 
-export default function Logo() {
+  const isMobile = useMediaQuery({ query: `(max-width: ${size.mobile})` })
+
+  let showLogo = '0';
+
+  if (props.location.pathname === '/') {
+    showLogo = '0';
+  }
+  else if (props.location.pathname === '/about' && !isMobile) {
+
+    showLogo = '1';
+  }
+  else if (props.location.pathname === '/work' && !isMobile) {
+
+    showLogo = '1'
+  }
+  else if (props.location.pathname === '/resume' && !isMobile) {
+    showLogo = '1'
+  }
+
   return (
     <StyledLogo>
-      <LogoFrame>
-        <LogoFname>KC</LogoFname>
-        {/* <LogoLname>KC</LogoLname> */}
-      </LogoFrame>
+      {showLogo === '1' && (
+
+        <LogoFrame>
+          <LogoFname>KC</LogoFname>
+
+        </LogoFrame>
+      )}
     </StyledLogo>
   );
 }

@@ -3,15 +3,17 @@ import { useMediaQuery } from 'react-responsive';
 import styled, { keyframes } from 'styled-components';
 import AboutSidebar from './AboutSidebar';
 import ResumeSummary from './ResumeSummary';
+import LinkResume from './LinkResume';
 import size from './size';
 
 const StyledResume = styled.section`
   display: grid;
   grid-template-columns: 25% 68%;
   grid-template-rows: 37% 43% 20%;
-  /* grid-template-rows: 20% 46% 20%; */
 
   font-family: 'Shadows Into Light Two', cursive;
+ 
+
   @media (max-width: ${size.mobile}) {
     grid-template-columns: 1fr;
     grid-template-row: 1fr;
@@ -20,12 +22,12 @@ const StyledResume = styled.section`
 
 const AboutSidebarDiv = styled.div`
   padding-top: 14em;
-  z-index: 999;
+
 `;
 
 const ResumeSummaryDiv = styled.div`
-  z-index: 999;
   padding: 2em 1em;
+  z-index: 2;
 
   @media (max-width: ${size.mobile}) {
     padding-top: 3.1em;
@@ -39,7 +41,12 @@ export default function Resume() {
     <StyledResume >
       {!isMobile &&
         <AboutSidebarDiv>
-          <AboutSidebar />
+        <AboutSidebar />
+        {/* <LinkResumeDiv> */}
+        <LinkResume imgOption='1'>
+          View FULL Resume
+        </LinkResume>
+      {/* </LinkResumeDiv> */}
         </AboutSidebarDiv>
       }
       <ResumeSummaryDiv>

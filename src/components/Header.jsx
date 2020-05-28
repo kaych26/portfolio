@@ -14,26 +14,15 @@ const StyledHeader = styled.header`
 
   display: grid;
   grid-template-columns: 180px auto;
+  z-index: 99;
   
   @media (max-width: ${size.mobile}) {
     grid-template-columns: 414px;
   }
 `;
 
-const LogoFrame = styled.div`
-  z-index: 9;
-  @media (max-width: ${size.mobile}) {
-}
-`;
-
-const LogoLink = styled(Link)`
-  font-family: 'Londrina Shadow', cursive;
-  font-size: 2em;
-  text-decoration: none;
-`;
-
 const NavContainer = styled.div`
-  z-index: 999;
+  
   grid-area: 1 / 2 / 2 / 2;
   justify-self: end;
   height: 60px;
@@ -52,7 +41,7 @@ const NavLink = styled(Link)`
   background-color: rgba(252, 251, 248, 0.8);
   border-radius: 10px;
   height: 26px;
-
+ 
   &:hover {
     border: 1px solid #ffa500;
   }
@@ -87,13 +76,6 @@ export default function Header(props) {
     <StyledHeader>
       {/* <HeaderFrame> */}
 
-      {showLogo === '1' &&
-        <LogoFrame>
-          <LogoLink to="/">
-            <Logo />
-          </LogoLink>
-        </LogoFrame>
-      }
 
       <NavContainer>
         <NavLink to="/" color={home}>Home</NavLink>
