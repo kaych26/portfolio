@@ -57,7 +57,7 @@ function App() {
                   <Home />
                 </BodyFrame>
                 <FooterFrame>
-                  <Footer {...route} nextUrl="/about" />
+                  <Footer {...route} prevUrl="/resume" nextUrl="/about" />
                 </FooterFrame>
               </>
             )}
