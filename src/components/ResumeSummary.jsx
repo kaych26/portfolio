@@ -27,7 +27,11 @@ const SummaryHeading = styled.h1`
   /* color: #175be3;
   font-size: 1.9em; */
   padding: 0 0 .3em 0em;
-  
+
+  @media (max-width: ${size.tablet}) {
+    
+    padding: 0 0 .4em 0;
+  }
 
   @media (max-width: ${size.mobile}) {
     font-size: 1.7em;
@@ -138,6 +142,10 @@ const Education = styled.h3`
 
 const LinkResumeDiv = styled.div`
   padding-top: .9em;
+
+  @media (max-width: ${size.tablet}) {
+    /* padding-top: 3em; */
+  }
  
 `;
 
