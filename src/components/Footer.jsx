@@ -1,4 +1,5 @@
 import React from 'react';
+import { useMediaQuery } from 'react-responsive';
 import styled, { keyframes } from 'styled-components';
 import { Link } from 'react-router-dom';
 import arrow_right_icon from '../assets/icons/arrow_right.svg';
@@ -53,23 +54,28 @@ const CopyrightFrame = styled.div`
 
 
 export default function Footer(props) {
-
+  const isMobile = useMediaQuery({ query: `(max-width: ${size.mobile})` });
   return (
     <>
-      <StyledFooter>
-        <FooterRightContainer>
-          <FooterLink to={props.prevUrl}>
-            <FooterImg src={arrow_left_icon} />
-          </FooterLink>
+      {!isMobile && (
 
-        </FooterRightContainer>
+        <StyledFooter>
+          <FooterRightContainer>
+            <FooterLink to={props.prevUrl}>
+              <FooterImg src={arrow_left_icon} />
+            </FooterLink>
 
-        <FooterLeftContainer>
-          <FooterLink to={props.nextUrl}>
-            <FooterImg src={arrow_right_icon} />
-          </FooterLink>
-        </FooterLeftContainer>
-      </StyledFooter>
+          </FooterRightContainer>
+
+          <FooterLeftContainer>
+            <FooterLink to={props.nextUrl}>
+              <FooterImg src={arrow_right_icon} />
+            </FooterLink>
+          </FooterLeftContainer>
+        </StyledFooter>
+
+      )}
+
       <CopyrightFrame>
         <Copyright />
       </CopyrightFrame>

@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import icon from '../assets/icons/resume.svg';
+import size from './size';
 
 const StyledImgLink = styled.section`
   font-family: 'Shadows Into Light Two', cursive;
@@ -14,6 +15,9 @@ const Link = styled.a`
   text-decoration: none;  
   color: #000;
   font-size: 1.2em;
+  /* @media (max-width: ${size.mobile}) {
+    font-size: 1em;
+  } */
 `;
 
 const Img = styled.img`
@@ -38,6 +42,10 @@ const NavResume = styled.h2`
   }
   &:active {
     background-color: #545d5c;
+  }
+
+  @media (max-width: ${size.mobile}) {
+    font-size: .6em;
   }
 `;
 

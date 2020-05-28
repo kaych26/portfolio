@@ -16,11 +16,10 @@ const StyledWork = styled.section`
   overflow-x: hidden;
   padding: 1.6em 2em 2em 1.2em;
  
-
-
   @media (max-width: ${size.mobile}) {
     height: 736px;
     padding-top: 3.1em;
+    padding: 2em 0;
   }
 `;
 
@@ -39,12 +38,16 @@ const ProjectOuterFrame = styled.div`
   
   @media (max-width: ${size.mobile}) {
     grid-template-columns: 1fr;
+   
   }
 `;
 
 const ProjectDiv = styled.div`
   display: flex;
   justify-content: center;
+  /* align-items: center;
+  align-content: center; */
+  /* align-self: center; */
 `;
 
 const ProjectImg = styled.img`
@@ -54,6 +57,7 @@ const ProjectImg = styled.img`
 const ProjectLink = styled.a`
   text-decoration: none;
   text-align: center;
+  /* align-self: center; */
 `;
 
 const ProjectDesc = styled.p`
@@ -65,6 +69,7 @@ const ProjectDesc = styled.p`
   font-size: .8em;
   padding: 0 1em 1.5em 1em;
   color: black;
+  
   
   @media (max-width: ${size.mobile}) {
 

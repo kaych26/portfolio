@@ -21,12 +21,6 @@ const StyledAbout = styled.section`
   }
 `;
 
-const LogoFrame = styled.div`
-position: fixed;
-  /* width: 30%; */
-`;
-
-
 const AboutSidebarDiv = styled.div`
   padding-top: 14.5em;
 
@@ -35,15 +29,18 @@ const AboutSidebarDiv = styled.div`
 `;
 
 const AboutMoiDiv = styled.div`
-z-index: 2;
+  z-index: 2;
   padding-top: 3em;
+  @media (max-width: ${size.mobile}) {
+    /* overflow: auto; */
+  }
 `;
 
 export default function About() {
   const isMobile = useMediaQuery({ query: `(max-width: ${size.mobile})` });
   return (
     <StyledAbout>
-      {/* <Logo/> */}
+     
       {!isMobile &&
         <AboutSidebarDiv>
           <AboutSidebar />

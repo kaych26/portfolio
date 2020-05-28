@@ -17,7 +17,7 @@ import size from './components/size';
 
 const pageFrame = styled.section`
   position: relative;
-  /* height: 80%%; */
+
 `;
 
 const BodyFrame = styled.section`
@@ -28,7 +28,7 @@ const FooterFrame = styled.section`
   position: absolute;
   bottom: 0;
   width: 100%;
-  /* height: 3.5rem; */
+
 `;
 
 function App() {
@@ -45,7 +45,6 @@ function App() {
               <Header {...route} />
             </>)}
         />
-
 
         <Body>
 
@@ -110,8 +109,6 @@ function App() {
           />
 
         </Body>
-
-
 
       </Hero>
     </pageFrame>

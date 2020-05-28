@@ -5,12 +5,13 @@ import size from './size';
 import LinkResume from './LinkResume';
 
 const StyledResumeSummary = styled.section`
-animation: 2s ${keyframes`${slideInDown}`};
+  animation: 2s ${keyframes`${slideInDown}`};
   font-family: 'Montserrat', sans-serif;
   background-image: linear-gradient(rgba(246, 244, 241, 0.3), rgba(205, 205, 203, 0.3));
   word-spacing: .02em;
 
   @media (max-width: ${size.mobile}) {
+    word-spacing: .01em;
 
   }
 `;
@@ -29,7 +30,8 @@ const SummaryHeading = styled.h1`
   
 
   @media (max-width: ${size.mobile}) {
-    font-size: 1.8em;
+    font-size: 1.7em;
+    padding: 0 0 .2em 0;
   }
 `;
 
@@ -51,6 +53,7 @@ const Summary = styled.p`
 
   @media (max-width: ${size.mobile}) {
     font-size: .8em;
+    line-height: 1em;
   }
 `;
 
@@ -59,6 +62,7 @@ const Skills = styled.p`
   font-size: .9em;
   @media (max-width: ${size.mobile}) {
     font-size: .8em;
+    line-height: 1.1em;
 
   }
 `;
@@ -69,7 +73,7 @@ const Experience = styled.div`
 
 const Title = styled.h3`
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 1.em;
+  font-size: 1em;
   padding: .8em 0 0.15em 0;
   font-weight: 600;
   color: #175be3;
@@ -80,10 +84,11 @@ const Title = styled.h3`
 `;
 
 const DescOuterFrame = styled.div`
-  /* display: grid;
-  grid-template-columns: auto 130px;
-  align-items: center; */
+ 
   padding: .1em 0;
+  @media (max-width: ${size.mobile}) {
+  padding: 0;
+    
 `;
 
 const CompanyFrame = styled.div`

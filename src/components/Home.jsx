@@ -35,7 +35,19 @@ const HomeTitleLink = styled(Link)`
 
 const HomeSubTitleFrame = styled.div`
   display: flex;
+  @media (max-width: ${size.mobile}) {
+    display: block;
+    padding-bottom: 1.5em;
+  }
+
 `;
+
+const SubTitleDivider = styled.h3`
+  @media (max-width: ${size.mobile}) {
+    visibility: hidden;
+  }
+`;
+
 
 const HomeSubTitle = styled.h2`
   animation: ${props => props.time} ${keyframes`${zoomInRight}`};
@@ -44,8 +56,9 @@ const HomeSubTitle = styled.h2`
   letter-spacing: 0.1em;
   padding-bottom: 1.5em;
   @media (max-width: ${size.mobile}) {
-    font-size: .8em;
-    padding-bottom: .9em;
+    font-size: 1em;
+    padding-bottom: 0em;
+    letter-spacing: .05em;
   }
 `;
 
@@ -56,14 +69,21 @@ export default function Home(props) {
         <HomeTitleLink to="/about">Kay Chan</HomeTitleLink>
         <HomeSubTitleFrame>
           <HomeSubTitle time='1s'>
-            Software Engineer |&nbsp;
-      </HomeSubTitle>
+            Software Engineer
+          </HomeSubTitle>
+          <SubTitleDivider>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+          </SubTitleDivider>
           <HomeSubTitle time='2s'>
-            Web Developer |&nbsp;
-      </HomeSubTitle>
+            Web Developer
+          </HomeSubTitle>
+          <SubTitleDivider>
+            &nbsp;&nbsp;|&nbsp;&nbsp;
+          </SubTitleDivider>
           <HomeSubTitle time='3s'>
             Finance Techology
-      </HomeSubTitle>
+          </HomeSubTitle>
+
         </HomeSubTitleFrame>
 
         <InfoLinks />

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled, { keyframes } from 'styled-components';
+import { useMediaQuery } from 'react-responsive';
 import { motion, AnimatePresence } from 'framer-motion';
 import * as Scroll from 'react-scroll';
 import { jello, flash, bounce, flipInY, rotateInDownRight, flip, fadeInRight, slideInUp, rotateIn, slideInDown, swing, zoomInDown, zoomIn, zoomInUp, slideIn, rotateInDownLeft, slideInLeft, slideInRight, fadeIn } from 'react-animations';
@@ -51,6 +52,11 @@ const AboutMeOuterDiv = styled.div`
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 60px;
   overflow: hidden;
+
+  @media (max-width: ${size.mobile}) {
+    overflow: auto;
+}
+
 `;
 
 const AboutMeDiv = styled.div`
@@ -88,11 +94,17 @@ const Span = styled.span`
 `;
 
 export default function AboutMoi() {
+  const isMobile = useMediaQuery({ query: `(max-width: ${size.mobile})` })
   const [isOpen, setIsOpen] = useState(false);
 
   const handleOpen = (e) => {
     setIsOpen(!isOpen);
   }
+
+  // if (isMobile) {
+  //   setIsOpen(!isOpen);
+  // }
+
 
   return (
     <StyledAboutMoi>
@@ -112,7 +124,6 @@ export default function AboutMoi() {
       <AboutMeOuterDiv>
 
         {!isOpen && (
-
           <AboutMeDiv id="AboutPart1">
 
             <AboutMe>
@@ -123,7 +134,7 @@ export default function AboutMoi() {
               Worked 10+ years for major financial companies as a Unix <Span>C/C+ </Span> programmer and manager of Market Data team. Solid experience in <Span> software development life cycle</Span> and financial application.
             </AboutMe>
             <AboutMe>
-            After becoming a mom, developed passion in web development using <Span>React</Span>, <Span>JavaScript</Span>, <Span>MongoDB</Span> and <Span>Ruby on Rails</Span>. Gained inspirations by communicating and interacting with people.  Love using technology to transform innovative ideas into products. Super rewarding when a product delivers positive impact and outcomes to others.
+              After becoming a mom, developed passion in web development using <Span>React</Span>, <Span>JavaScript</Span>, <Span>MongoDB</Span> and <Span>Ruby on Rails</Span>. Gained inspirations by communicating and interacting with people.  Love using technology to transform innovative ideas into products. Super rewarding when a product delivers positive impact and outcomes to others.
            </AboutMe>
           </AboutMeDiv>
         )}
@@ -140,22 +151,24 @@ export default function AboutMoi() {
             </AboutMe2>
 
               <AboutMe2>
-              Becoming a mom has brought many joy and challenges.  My daughter, Annie was a preemie baby.  Thanks to many professional guidance and supports, she is fully recovered and healthy!  This journey has taught me to stay open minded, reach out and connect.
+                Becoming a mom has brought many joy and challenges.  My daughter, Annie was a preemie baby.  Thanks to many professional guidance and supports, she is fully recovered and healthy!  This journey has taught me to stay open minded, reach out and connect.
             </AboutMe2>
 
               <LinkResumeDiv>
-              <LinkResume imgOption='1'>
-                View Resume
+                <LinkResume imgOption='1'>
+                  View Resume
               </LinkResume>
               </LinkResumeDiv>
             </AboutMeDiv>
           </>
         )}
 
-        {!isOpen &&
+        {/* {!isMobile && ( */}
+
+          {!isOpen &&
           (
             <ScrollTo href="#AboutPart2" onClick={(e) => handleOpen(e)}>
-              MORE about me ...
+          MORE about me ...
             </ScrollTo>
           )}
 
@@ -165,6 +178,7 @@ export default function AboutMoi() {
               PREVIOUS
             </ScrollTo>
           )}
+        {/* )} */}
       </AboutMeOuterDiv>
     </StyledAboutMoi>
   )

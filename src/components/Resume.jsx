@@ -9,14 +9,15 @@ import size from './size';
 const StyledResume = styled.section`
   display: grid;
   grid-template-columns: 25% 68%;
-  grid-template-rows: 37% 43% 20%;
+  grid-template-rows: 100%;
+  /* grid-template-rows: 37% 43% 20%; */
 
   font-family: 'Shadows Into Light Two', cursive;
  
-
   @media (max-width: ${size.mobile}) {
     grid-template-columns: 1fr;
     grid-template-row: 1fr;
+  
   }
 `;
 
@@ -31,6 +32,8 @@ const ResumeSummaryDiv = styled.div`
 
   @media (max-width: ${size.mobile}) {
     padding-top: 3.1em;
+    
+    /* padding: 1em .2em .2em 1em; */
   }
 `;
 
@@ -42,11 +45,6 @@ export default function Resume() {
       {!isMobile &&
         <AboutSidebarDiv>
         <AboutSidebar />
-        {/* <LinkResumeDiv> */}
-        {/* <LinkResume imgOption='1'>
-          View FULL Resume
-        </LinkResume> */}
-      {/* </LinkResumeDiv> */}
         </AboutSidebarDiv>
       }
       <ResumeSummaryDiv>

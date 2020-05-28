@@ -28,6 +28,7 @@ const NavContainer = styled.div`
   height: 60px;
   padding-top: 1.8em;
   font-size: 16px;
+  padding-right: 1em;
   @media (max-width: ${size.mobile}) {
     grid-area: 1/1/3/3;
     place-self: center;
