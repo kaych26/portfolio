@@ -54,7 +54,7 @@ export default function AboutSidebar() {
   let postSize = '188px';
 
   if ({ isTablet }) {
-     postSize = '160px';
+     postSize = '165px';
   }
 
   return (
