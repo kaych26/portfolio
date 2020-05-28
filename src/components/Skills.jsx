@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
-import { bounce, bounceInLeft, flip, swing, slideInDown, slideInRight, fadeInRightBig, fadeInLeft, rollIn, rotateInDownLeft } from 'react-animations';
+import { bounce, bounceInLeft, flip, swing, slideInDown, slideInLeft, slideInRight, fadeInRightBig, fadeInLeft, rollIn, rotateInDownLeft } from 'react-animations';
 
 import react_img from '../assets/skills/react2.png';
 import rails_img from '../assets/skills/rails.svg';
@@ -17,7 +17,7 @@ import mongoose_img from '../assets/skills/mongoose.png';
 import LinkGithub2 from './LinkGithub2';
 
 const StyledSkills = styled.section`
-  animation: 3s ${keyframes`${slideInRight}`} ;
+  animation: 3s ${keyframes`${rotateInDownLeft}`} ;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
