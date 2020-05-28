@@ -10,6 +10,7 @@ const StyledBody = styled.section`
       padding: 3.5em .2em .2em .5em;
     }
     @media (max-width: ${size.mobile}) {
+      height: 100vh;
       padding: 1.6em .2em .2em .5em;
   }
 `;
@@ -17,7 +18,7 @@ const StyledBody = styled.section`
 export default function Body(props) {
   return (
     <StyledBody>
-      {props.children}    
+      {props.children}
     </StyledBody>
   );
 }
