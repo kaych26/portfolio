@@ -18,6 +18,7 @@ const StyledWork = styled.section`
 
   @media (max-width: ${size.tablet}) {
     padding: 0;
+    overflow: auto;
   }
  
   @media (max-width: ${size.mobile}) {
