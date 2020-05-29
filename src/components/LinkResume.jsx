@@ -50,7 +50,7 @@ const NavResume = styled.h2`
 `;
 
 export default function LinkResume(props) {
-  const link = 'https://drive.google.com/file/d/1D5qEa7BiQs2DNpuOEX81wkibF2fvfz1z/view';
+  const link = 'https://drive.google.com/file/d/1jmgUCwIiNrLxGu7WqSvCOAhAFIbw1wU2/view?usp=sharing';
   return (
     <StyledImgLink>
       <Link
