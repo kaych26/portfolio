@@ -93,7 +93,7 @@ export default function AboutSidebar() {
 
             {/* {!isTablet && */}
             <PostitMsg>
-              Keep hacking, keep exploring & SKY is the limit !'
+              "Keep hacking, keep exploring & SKY is the limit !"
             </PostitMsg>
             {/* } */}
           </PostIt>
