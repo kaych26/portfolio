@@ -176,7 +176,7 @@ export default function ResumeSummary() {
       </Title>
 
       <Skills>
-        ReactJS, JavaScript, HTML, CSS, NodeJS, MongoDB, Mongoose JS, Express JS, Ruby, Ruby on Rails, Jest, RestfulAPI, Sequelize, C/C++, Python3, Perl, Shell, SQL, Oracle, Sybase, Github, SCCS, Unix, Linux, Unix Packaging Tools, WIX, Project- Management, Software Development Life Cycle (SDLC), AWS
+        Reactjs, JavaScript, HTML, CSS, Nodejs, MongoDB, Mongoose, Express, Ruby, Ruby on Rails, Jest, RestfulAPI, Postgresql, C/C++, Python3, Perl, Shell, SQL, Oracle, Sybase, Github, SCCS, Unix, Linux, Unix Packaging Tools, WIX, Project- Management, Software Development Life Cycle (SDLC), AWS
       </Skills>
 
       <Title>
