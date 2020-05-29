@@ -21,7 +21,7 @@ const StyledWork = styled.section`
   }
  
   @media (max-width: ${size.mobile}) {
-    /* height: 772px; */
+
     height: 100vh;
     /* padding: 2em 0; */
   }
@@ -32,6 +32,9 @@ const ProjectTitle = styled.h1`
   text-align: center;
   /* padding: .7em 0; */
   padding: .5em 0 1em 0;
+  @media (max-width: ${size.tablet}) {
+    padding: 0;
+  }
 `;
 
 const ProjectOuterFrame = styled.div`
@@ -77,10 +80,9 @@ const ProjectDesc = styled.p`
   font-size: .8em;
   padding: 0 1em 1.5em 1em;
   color: black;
-  
-  
-  @media (max-width: ${size.mobile}) {
 
+  @media (max-width: ${size.tablet}) {
+    padding: 0 1em 1em .5em;
   }
   `;
 
