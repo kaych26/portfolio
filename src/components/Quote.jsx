@@ -8,7 +8,7 @@ const StyledQuote = styled.section`
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
   display: flex;
-  /* padding-top: 2em; */
+  
   @media( max-width: ${size.mobile}) {
     font-size: 1em;
   }

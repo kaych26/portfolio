@@ -11,7 +11,6 @@ import javascript_img from '../assets/skills/javascript.png';
 import html_img from '../assets/skills/html5.svg';
 import cplus_img from '../assets/skills/cplus.png';
 import css_img from '../assets/skills/css.svg';
-import github_img from '../assets/skills/github.png';
 import mongoose_img from '../assets/skills/mongoose.png';
 
 import LinkGithub2 from './LinkGithub2';
@@ -29,15 +28,14 @@ const StyledSkills = styled.section`
 const SkillFrame = styled.div`
   /* animation: 5s ${keyframes`${bounceInLeft}`} ; */
   animation: 3s ${keyframes`${bounce}`} ;
-  padding: 0.2em .8em;
+  padding: 0.2em .7em;
 `;
+
 const GithubFrame = styled.div`
   font-family: 'Montserrat', sans-serif;
   font-size: .8em;
   animation: 8s ${keyframes`${swing}`} infinite;
 `;
-
-
 
 export default function Skills() {
   return (
@@ -90,7 +88,7 @@ export default function Skills() {
 
       <SkillFrame>
         <img
-          src={cplus_img} alt='c++' width='60px' />
+          src={cplus_img} alt='c++' width='70px' />
       </SkillFrame>
 
       <GithubFrame>

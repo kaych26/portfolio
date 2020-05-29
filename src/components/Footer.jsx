@@ -91,7 +91,7 @@ export default function Footer(props) {
       <CopyrightFrame>
         <GithubFrame>
 
-          <LinkGitPortfolio desc='Code for this Portfolio' />
+          <LinkGitPortfolio desc='React Website by Kay Chan' />
         </GithubFrame>
         <Copyright />
       </CopyrightFrame>

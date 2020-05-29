@@ -22,16 +22,14 @@ const StyledWork = styled.section`
   }
  
   @media (max-width: ${size.mobile}) {
-
     height: 100vh;
-    /* padding: 2em 0; */
   }
 `;
 
 const ProjectTitle = styled.h1`
-  font-size: 1.5em;
+  font-size: 1.6em;
   text-align: center;
-  /* padding: .7em 0; */
+ 
   padding: .5em 0 1em 0;
   @media (max-width: ${size.tablet}) {
     padding: 0;
@@ -45,21 +43,15 @@ const ProjectOuterFrame = styled.div`
 
   @media (max-width: ${size.tablet}) {
     grid-template-columns: 1fr 1fr;
-
-
   }
   @media (max-width: ${size.mobile}) {
     grid-template-columns: 1fr;
-   
   }
 `;
 
 const ProjectDiv = styled.div`
   display: flex;
   justify-content: center;
-  /* align-items: center;
-  align-content: center; */
-  /* align-self: center; */
 `;
 
 const ProjectImg = styled.img`
@@ -69,24 +61,22 @@ const ProjectImg = styled.img`
 const ProjectLink = styled.a`
   text-decoration: none;
   text-align: center;
-  /* align-self: center; */
 `;
 
 const ProjectDesc = styled.p`
   /* width: 180px; */
-  width: 365px;
+  width: 370px;
   display: flex;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
   font-size: .8em;
-  padding: 0 1em 1.5em 1em;
+  padding: 0 1em 1.5em .3em;
   color: black;
 
   @media (max-width: ${size.tablet}) {
     padding: 0 1em 1em .5em;
   }
   `;
-
 
 export default function Work() {
   const theRecipeBox_link = 'https://therecipesbox.netlify.app/';
@@ -158,9 +148,6 @@ export default function Work() {
           </ProjectLink>
         </ProjectDiv>
 
-        <ProjectDiv></ProjectDiv>
-
-        {/* <Skills /> */}
       </ProjectOuterFrame>
     </StyledWork>
   );

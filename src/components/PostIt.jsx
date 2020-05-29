@@ -31,7 +31,6 @@ const PostItQuote = styled.p`
     letter-spacing: .1em;
   }
 
-
 `;
 
 // create small metal part of the pin

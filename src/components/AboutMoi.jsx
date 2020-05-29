@@ -96,7 +96,8 @@ const AboutMe2 = styled(AboutMe)`
 `;
 
 const LinkResumeDiv = styled.div`
-  padding: .6em 0 0 0;
+  padding: .8em 0 0 0;
+
   @media (max-width: ${size.mobile}) {
     padding: .2em 0 .8em 0;
   }

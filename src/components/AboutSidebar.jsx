@@ -10,13 +10,6 @@ import PostIt from './PostIt';
 import size from './size';
 
 const StyledAboutSidebar = styled.section`
-/* height: 100%; */
-  /* grid-template-rows: 180px 200px; */
-  /* row-gap: 3em; */
-  /* column-gap: 1em; */
-  /* display: grid;
-  grid-template-columns: 1fr;
-  justify-content: center; */
   `;
 
 const PostItFrame = styled.div`
@@ -40,17 +33,17 @@ const LinkTitle = styled.h2`
 
 const PostitMsg = styled.h3`
   text-align: center;
-  font-size: .85em;
-  letter-spacing: .02em;
+  font-size: .95em;
+  letter-spacing: .01em;
   color: #ff69b4;
-  padding-top: .5em;
+  padding-top: 1em;
+
   @media (max-width: ${size.tablet}) {
     font-size: .9em;
     padding-top: .5em;
     letter-spacing: .01em;
     line-height: 1.3em;
   }
-
 
 `;
 const PostItDiv = styled.div`
@@ -61,8 +54,8 @@ const PostItDiv = styled.div`
 export default function AboutSidebar() {
   const isMobile = useMediaQuery({ query: `(max-width: ${size.mobile})` })
   const isTablet = useMediaQuery({ query: `(max-width: ${size.tablet})` });
-  // let postSize = '188px';
-  let postSize = '230px';
+ 
+  let postSize = '240px';
 
   if (isTablet) {
      postSize = '190px';
@@ -104,18 +97,6 @@ export default function AboutSidebar() {
             </PostitMsg>
             {/* } */}
           </PostIt>
-        </PostItFrame>
-
-        <PostItFrame>
-
-          {/* <PostIt rotate='-5deg' size='160px'>
-          <PostItTitle>
-            To Do
-          </PostItTitle>
-          <PostItDiv>
-          Keep hacking, keep exploring & SKY is the limit !'
-          </PostItDiv>
-        </PostIt> */}
         </PostItFrame>
 
       </StyledAboutSidebar>

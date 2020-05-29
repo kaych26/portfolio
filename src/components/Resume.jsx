@@ -17,19 +17,16 @@ const StyledResume = styled.section`
   @media (max-width: ${size.tablet}) {
     grid-template-columns: 29% 71%;
     grid-template-row: 1fr;
-  
   }
 
   @media (max-width: ${size.mobile}) {
     grid-template-columns: 1fr;
     grid-template-row: 1fr;
-  
   }
 `;
 
 const AboutSidebarDiv = styled.div`
   padding-top: 14em;
-
 `;
 
 const ResumeSummaryDiv = styled.div`
@@ -38,8 +35,7 @@ const ResumeSummaryDiv = styled.div`
 
   @media (max-width: ${size.mobile}) {
     padding-top: 3.1em;
-    
-    /* padding: 1em .2em .2em 1em; */
+
   }
 `;
 

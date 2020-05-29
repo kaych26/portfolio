@@ -12,24 +12,18 @@ const StyledResumeSummary = styled.section`
 
   @media (max-width: ${size.mobile}) {
     word-spacing: .01em;
-
   }
 `;
 
 const SummaryHeading = styled.h1`
-
   color: #3a4140;
   font-size: 2.3em;
   font-weight: 500;
-  /* padding: .5em 0; */
 
   font-weight: 600;
-  /* color: #175be3;
-  font-size: 1.9em; */
   padding: 0 0 .3em 0em;
 
   @media (max-width: ${size.tablet}) {
-    
     padding: 0 0 .4em 0;
   }
 
@@ -67,7 +61,6 @@ const Skills = styled.p`
   @media (max-width: ${size.mobile}) {
     font-size: .8em;
     line-height: 1.1em;
-
   }
 `;
 
@@ -81,18 +74,18 @@ const Title = styled.h3`
   padding: .8em 0 0.15em 0;
   font-weight: 600;
   color: #175be3;
-  /* text-align: center; */
+
   @media (max-width: ${size.mobile}) {
     font-size: .8em;
   }
 `;
 
 const DescOuterFrame = styled.div`
- 
   padding: .1em 0;
+
   @media (max-width: ${size.mobile}) {
-  padding: 0;
-    
+    padding: 0;
+  }
 `;
 
 const CompanyFrame = styled.div`
@@ -106,6 +99,7 @@ const Company = styled.h2`
   font-size: .95em;
   font-weight: 600;
   padding: .1em 0;
+
   @media (max-width: ${size.mobile}) {
     font-size: .8em;
     letter-spacing: .05em;
@@ -120,7 +114,6 @@ const Desc = styled.p`
   overflow: none;
   @media (max-width: ${size.mobile}) {
     font-size: .75em;
-    
   }
 `;
 

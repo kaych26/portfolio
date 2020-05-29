@@ -18,12 +18,12 @@ const GlobalStyle = createGlobalStyle`
 
   html {
     font-size: 62.5%;
-    height: 100%;
+    height: 100vh;
   } 
 
   body,
   #root {
-    height: 100%;
+    height: 100vh;
     font-size: 1.6rem;
   }
 `;

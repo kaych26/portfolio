@@ -14,7 +14,7 @@ export default function Copyright() {
   return (
 
     <StyledCopyright>
-      &copy; {year} Kay Chan
+      &copy; {year}
     </StyledCopyright>
   )
 
