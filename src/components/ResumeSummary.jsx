@@ -51,7 +51,7 @@ const Summary = styled.p`
 
   @media (max-width: ${size.mobile}) {
     font-size: .8em;
-    line-height: 1em;
+    line-height: 1.05em;
   }
 `;
 

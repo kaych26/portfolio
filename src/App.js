@@ -16,12 +16,16 @@ import Footer from './components/Footer';
 import size from './components/size';
 
 const pageFrame = styled.section`
+  height: 100vh;
   position: relative;
 
 `;
 
 const BodyFrame = styled.section`
   padding-bottom: 5rem;
+  @media (max-width: ${size.mobile}) {
+    padding-bottom: 0;
+  }
   `;
 
 const FooterFrame = styled.section`

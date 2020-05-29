@@ -10,7 +10,6 @@ const StyledResume = styled.section`
   display: grid;
   grid-template-columns: 25% 68%;
   grid-template-rows: 100%;
-  /* grid-template-rows: 37% 43% 20%; */
 
   font-family: 'Shadows Into Light Two', cursive;
  
@@ -20,7 +19,7 @@ const StyledResume = styled.section`
   }
 
   @media (max-width: ${size.mobile}) {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-row: 1fr;
   }
 `;
@@ -34,7 +33,7 @@ const ResumeSummaryDiv = styled.div`
   z-index: 2;
 
   @media (max-width: ${size.mobile}) {
-    padding-top: 3.1em;
+    padding: 3.1em .5em 1em .5em;
 
   }
 `;
